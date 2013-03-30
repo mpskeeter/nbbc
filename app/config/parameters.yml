@@ -1,0 +1,20 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 10.1.1.202
+    database_port: null
+    database_name: symfony_test
+    database_user: bw
+    database_password: Mast!Mage
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: 59030baff1b9d1954257d43897cdde5fcd80e3a4
+    database_path: null
+#BallardWoods
+#    facebook_app_id:      94695343479
+#    facebook_app_secret:  0712087bf2e15d7219edb3fa0ecd3508
+#BallardWoods_Test
+    facebook_app_id:      126694607516663
+    facebook_app_secret:  5741f397294cbf2e82f5cb5dfb32ac51
