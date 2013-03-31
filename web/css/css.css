@@ -90,7 +90,7 @@ a:hover, a:active {
 	font-weight: bold;
 }
 .leftnavbg {
-    background: url(../../web/bundles/poademo/images/bg_leftnav.jpg) no-repeat;
+    background: url(../bundles/poacore/images/bg_leftnav.jpg) no-repeat;
 }
 .textsmred {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -134,7 +134,7 @@ a:hover, a:active {
 	font-weight: bold;
 	color: #990000;
 	letter-spacing: 3px;
-    background: #DCE0BB url(../../web/bundles/poademo/images/bg_title.jpg) no-repeat;
+    background: #DCE0BB url(../bundles/poacore/images/bg_title.jpg) no-repeat;
     padding-right: 20px;
 	text-align: right;
 }
@@ -176,7 +176,7 @@ a:hover, a:active {
 	color: #333333;
 	text-align: center;
 	letter-spacing: 1px;
-	background-image: url(../../web/bundles/poademo/images/bg_body.jpg);
+	background-image: url(../bundles/poacore/images/bg_body.jpg);
 }
 .colortext {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -246,31 +246,31 @@ li {
 	margin: 0;
 }
 .t_one a {
-	background: url(../../web/bundles/poademo/images/t_one.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_one.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_two a {
-	background: url(../../web/bundles/poademo/images/t_two.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_two.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_three a {
-	background: url(../../web/bundles/poademo/images/t_three.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_three.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_four a {
-	background: url(../../web/bundles/poademo/images/t_four.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_four.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_five a {
-	background: url(../../web/bundles/poademo/images/t_five.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_five.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_six a {
-	background: url(../../web/bundles/poademo/images/t_six.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_six.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .t_seven a {
-	background: url(../../web/bundles/poademo/images/t_seven.jpg) 0 0 no-repeat;
+	background: url(../bundles/poacore/images/t_seven.jpg) 0 0 no-repeat;
 	width: 0;
 }
 .roll a:hover {
@@ -314,7 +314,7 @@ li {
 
 /* Panel Tab/button */
 .tab {
-  background: url(../../web/bundles/poademo/images/tab_b.png) repeat-x 0 0;
+  background: url(../bundles/poacore/images/tab_b.png) repeat-x 0 0;
 	height: 42px;
 	position: relative;
 	top: 0;
@@ -338,7 +338,7 @@ li {
 }
 
 .tab ul.login li.left {
-  background: url(../../web/bundles/poademo/images/tab_l.png) no-repeat left 0;
+  background: url(../bundles/poacore/images/tab_l.png) no-repeat left 0;
   height: 42px;
 	width: 30px;
 	padding: 0;
@@ -348,7 +348,7 @@ li {
 }
 
 .tab ul.login li.right {
-	background: url(../../web/bundles/poademo/images/tab_r.png) no-repeat left 0;
+	background: url(../bundles/poacore/images/tab_r.png) no-repeat left 0;
 	height: 42px;
 	width: 30px;
 	padding: 0;
@@ -363,7 +363,7 @@ li {
 	display: block;
 	float: left;
 	height: 42px;
-	background: url(../../web/bundles/poademo/images/tab_m.png) repeat-x 0 0;
+	background: url(../bundles/poacore/images/tab_m.png) repeat-x 0 0;
 }
 
 .tab ul.login li a {
@@ -387,10 +387,10 @@ li {
 	top: 11px;
 }
 
-.tab a.open {background: url(../../web/bundles/poademo/images/bt_open.png) no-repeat left 0;}
-.tab a.close {background: url(../../web/bundles/poademo/images/bt_close.png) no-repeat left 0;}
-.tab a:hover.open {background: url(../../web/bundles/poademo/images/bt_open.png) no-repeat left -19px;}
-.tab a:hover.close {background: url(../../web/bundles/poademo/images/bt_close.png) no-repeat left -19px;}
+.tab a.open {background: url(../bundles/poacore/images/bt_open.png) no-repeat left 0;}
+.tab a.close {background: url(../bundles/poacore/images/bt_close.png) no-repeat left 0;}
+.tab a:hover.open {background: url(../bundles/poacore/images/bt_open.png) no-repeat left -19px;}
+.tab a:hover.close {background: url(../bundles/poacore/images/bt_close.png) no-repeat left -19px;}
 
 /* sliding panel */
 #toppanel {
@@ -510,13 +510,13 @@ li {
 
 #panel .content input.bt_login {
 	width: 74px;
-	background: transparent url(../../web/bundles/poademo/images/bt_login.png) no-repeat 0 0;
+	background: transparent url(../bundles/poacore/images/bt_login.png) no-repeat 0 0;
 }
 
 #panel .content input.bt_register {
 	width: 94px;
 	color: white;
-	background: transparent url(../../web/bundles/poademo/images/bt_register.png) no-repeat 0 0;
+	background: transparent url(../bundles/poacore/images/bt_register.png) no-repeat 0 0;
 }
 
 #panel .lost-pwd {
@@ -718,7 +718,7 @@ color: #555;
 text-decoration: none;
 font-size: 13px;
 font-family: Arial;
-background-image: url('../../web/bundles/poademo/images/large_grey_button.png');
+background-image: url('../bundles/poacore/images/large_grey_button.png');
 background-position: 0px 0px;
 background-repeat: no-repeat;
 height: 19px;

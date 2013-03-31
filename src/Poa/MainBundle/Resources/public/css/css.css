@@ -5,17 +5,12 @@ body .title2	{
     height: 20px;
 }
 html, body {
-	margin: 0px;
+	margin: 0;
 	height: 100%;
 }
 .body {
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	background-color: #E9ECD7;
-	background-image: url(../bundles/poacore/images/bg_body.jpg);
-	background-repeat: repeat-x;
+    margin: 0;
+    background: #E9ECD7 url(bundles/poamain/images/bg_body.jpg) repeat-x;
 }
 .main {
 	height: 100%;
@@ -44,7 +39,7 @@ div.text {
 div.centerdiv {
     border: none;
     width: 94%;
-    margin: 0px auto;
+    margin: 0 auto;
     /*table-layout: fixed;*/
     /*float: clear;*/
     /*display: inline-block;*/
@@ -95,8 +90,7 @@ a:hover, a:active {
 	font-weight: bold;
 }
 .leftnavbg {
-	background-image: url(../bundles/poacore/images/bg_leftnav.jpg);
-	background-repeat: no-repeat;
+    background: url(bundles/poamain/images/bg_leftnav.jpg) no-repeat;
 }
 .textsmred {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -135,15 +129,13 @@ a:hover, a:active {
 	text-decoration: none;
 }
 .title {
-	font-family: "Trebuchet MS", Arial;
+	font-family: "Trebuchet MS", Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #990000;
 	letter-spacing: 3px;
-	background-image: url(../bundles/poacore/images/bg_title.jpg);
-	background-color: #DCE0BB;
-	background-repeat: no-repeat;
-	padding-right: 20px;
+    background: #DCE0BB url(bundles/poamain/images/bg_title.jpg) no-repeat;
+    padding-right: 20px;
 	text-align: right;
 }
 .title3 {
@@ -178,13 +170,13 @@ a:hover, a:active {
 	font-weight: bold;
 }
 .title2 {
-	font-family: "Trebuchet MS", Arial;
+	font-family: "Trebuchet MS", Arial,sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	color: #333333;
 	text-align: center;
 	letter-spacing: 1px;
-	background-image: url(../bundles/poacore/images/bg_body.jpg);
+	background-image: url(bundles/poamain/images/bg_body.jpg);
 }
 .colortext {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -202,14 +194,13 @@ a:hover, a:active {
 	color: #FFFFFF;
 }
 .bgleft {
-	background-image: url(../bundles/poacore/images/bg_left.jpg);
+	background-image: url(bundles/poamain/images/bg_left.jpg);
 }
 .bgtitle {
-	background-image: url(../bundles/poacore/images/bg_title.gif);
+	background-image: url(bundles/poamain/images/bg_title.gif);
 }
 .bgleft {
-	background-image: url(../bundles/poacore/images/bg_bodyleft.jpg);
-	background-repeat: repeat-x;
+    background: url(bundles/poamain/images/bg_bodyleft.jpg) repeat-x;
 }
 li {
 	padding-bottom: 4px;
@@ -255,32 +246,32 @@ li {
 	margin: 0;
 }
 .t_one a {
-	background: url(../bundles/poacore/images/t_one.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_one.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_two a {
-	background: url(../bundles/poacore/images/t_two.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_two.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_three a {
-	background: url(../bundles/poacore/images/t_three.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_three.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_four a {
-	background: url(../bundles/poacore/images/t_four.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_four.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_five a {
-	background: url(../bundles/poacore/images/t_five.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_five.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_six a {
-	background: url(../bundles/poacore/images/t_six.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_six.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .t_seven a {
-	background: url(../bundles/poacore/images/t_seven.jpg) 0 0 no-repeat;
-	width: 0px;
+	background: url(bundles/poamain/images/t_seven.jpg) 0 0 no-repeat;
+	width: 0;
 }
 .roll a:hover {
 	background-position: 0 -38px;
@@ -323,7 +314,7 @@ li {
 
 /* Panel Tab/button */
 .tab {
-  background: url(../bundles/poacore/images/tab_b.png) repeat-x 0 0;
+  background: url(bundles/poamain/images/tab_b.png) repeat-x 0 0;
 	height: 42px;
 	position: relative;
 	top: 0;
@@ -347,7 +338,7 @@ li {
 }
 
 .tab ul.login li.left {
-  background: url(../bundles/poacore/images/tab_l.png) no-repeat left 0;
+  background: url(bundles/poamain/images/tab_l.png) no-repeat left 0;
   height: 42px;
 	width: 30px;
 	padding: 0;
@@ -357,7 +348,7 @@ li {
 }
 
 .tab ul.login li.right {
-	background: url(../bundles/poacore/images/tab_r.png) no-repeat left 0;
+	background: url(bundles/poamain/images/tab_r.png) no-repeat left 0;
 	height: 42px;
 	width: 30px;
 	padding: 0;
@@ -372,7 +363,7 @@ li {
 	display: block;
 	float: left;
 	height: 42px;
-	background: url(../bundles/poacore/images/tab_m.png) repeat-x 0 0;
+	background: url(bundles/poamain/images/tab_m.png) repeat-x 0 0;
 }
 
 .tab ul.login li a {
@@ -396,10 +387,10 @@ li {
 	top: 11px;
 }
 
-.tab a.open {background: url(../bundles/poacore/images/bt_open.png) no-repeat left 0;}
-.tab a.close {background: url(../bundles/poacore/images/bt_close.png) no-repeat left 0;}
-.tab a:hover.open {background: url(../bundles/poacore/images/bt_open.png) no-repeat left -19px;}
-.tab a:hover.close {background: url(../bundles/poacore/images/bt_close.png) no-repeat left -19px;}
+.tab a.open {background: url(bundles/poamain/images/bt_open.png) no-repeat left 0;}
+.tab a.close {background: url(bundles/poamain/images/bt_close.png) no-repeat left 0;}
+.tab a:hover.open {background: url(bundles/poamain/images/bt_open.png) no-repeat left -19px;}
+.tab a:hover.close {background: url(bundles/poamain/images/bt_close.png) no-repeat left -19px;}
 
 /* sliding panel */
 #toppanel {
@@ -519,13 +510,13 @@ li {
 
 #panel .content input.bt_login {
 	width: 74px;
-	background: transparent url(../bundles/poacore/images/bt_login.png) no-repeat 0 0;
+	background: transparent url(bundles/poamain/images/bt_login.png) no-repeat 0 0;
 }
 
 #panel .content input.bt_register {
 	width: 94px;
 	color: white;
-	background: transparent url(../bundles/poacore/images/bt_register.png) no-repeat 0 0;
+	background: transparent url(bundles/poamain/images/bt_register.png) no-repeat 0 0;
 }
 
 #panel .lost-pwd {
@@ -658,12 +649,10 @@ table.posts td {
 div.posts {
 /*    border: thin dotted gray; */
 
-    border-width: thin;
-/*
+    /*
     border-spacing: 5px;
 */
-    border-style: outset;
-    border-color: gray;
+    border: thin outset gray;
     border-collapse: separate;
 /*    border-spacing: 10px;*/
 }
@@ -729,7 +718,7 @@ color: #555;
 text-decoration: none;
 font-size: 13px;
 font-family: Arial;
-background-image: url('../bundles/poacore/images/large_grey_button.png');
+background-image: url('bundles/poamain/images/large_grey_button.png');
 background-position: 0px 0px;
 background-repeat: no-repeat;
 height: 19px;

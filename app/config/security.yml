@@ -33,12 +33,12 @@ security:
             form_login:
                 provider: fos_userbundle
 #                check_path: _security_check
-                login_path: _demo_login
+                login_path: _core_login
                 csrf_provider: form.csrf_provider
             logout: true
             anonymous: ~
             #http_basic:
-            #    realm: "Secured Demo Area"
+            #    realm: "Secured Main Area"
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

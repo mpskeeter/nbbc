@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: @UserBundle/Resources/config/services.yml }
+#    - { resource: services.yml }
 framework:
     #esi:             ~
     translator:      { fallback: %locale% }
@@ -29,7 +30,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [PoaDemoBundle]
+    bundles:        [PoaMainBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

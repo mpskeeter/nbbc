@@ -1,15 +1,15 @@
 _welcome:
     pattern:  /
-    defaults: { _controller: PoaDemoBundle:Welcome:index }
+    defaults: { _controller: PoaMainBundle:Welcome:index }
 
-_demo_secured:
-    resource: "@PoaDemoBundle/Controller/SecuredController.php"
+_main_secured:
+    resource: "@PoaMainBundle/Controller/SecuredController.php"
     type:     annotation
 
-_demo:
-    resource: "@PoaDemoBundle/Controller/DemoController.php"
+_main:
+    resource: "@PoaMainBundle/Controller/MainController.php"
     type:     annotation
-    prefix:   /demo
+    prefix:   /main
 
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
