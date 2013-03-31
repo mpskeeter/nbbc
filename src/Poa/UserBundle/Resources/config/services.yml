@@ -1,0 +1,6 @@
+services:
+    poa_user.registration.form.type:
+        class: Poa\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: poa_user_registration }

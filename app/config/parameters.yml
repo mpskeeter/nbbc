@@ -12,9 +12,9 @@ parameters:
     locale: en
     secret: 59030baff1b9d1954257d43897cdde5fcd80e3a4
     database_path: null
-#BallardWoods
+# use this for BallardWoods production
 #    facebook_app_id:      94695343479
 #    facebook_app_secret:  0712087bf2e15d7219edb3fa0ecd3508
-#BallardWoods_Test
+# user this for BallardWoods_Test testing
     facebook_app_id:      126694607516663
     facebook_app_secret:  5741f397294cbf2e82f5cb5dfb32ac51

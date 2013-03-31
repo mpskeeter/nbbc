@@ -1,6 +1,20 @@
 services:
+    twig.extension.poa.demo:
+        class: Poa\DemoBundle\Twig\Extension\DemoExtension
+        public: false
+        arguments: [%twig.loader%]
+        tags:
+            - {name: twig.extension }
+
+    poa.demo.listener:
+        class: Poa\DemoBundle\EventListener\ControllerListener
+        arguments: [%twig.extension.poa.demo%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
     poa_user.registration.form.type:
-        class: Acme\UserBundle\Form\Type\RegistrationFormType
+        class: Poa\UserBundle\Form\Type\RegistrationFormType
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: poa_user_registration }
+

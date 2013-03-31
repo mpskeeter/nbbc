@@ -20,9 +20,11 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 		                                         '2001:470:8:92e:2543:9705:7b:565c',
                                                  '2001:470:8:92e:e8c2:bdc6:f1a2:b841',
 		                                         '2001:470:8:92e:1097:2b00:8011:8bd6',
+		                                         '2001:470:8:92e:3dc1:bbea:3758:ecdb',
+                                                 '2001:470:8:92e:3dc1:bbea:3758:ecdb',
 		                                         'fe80::1',
 		                                         '::1'))
-	|| strpos(@$_SERVER['REMOTE_ADDR'],'2001:470:8:92e:') === FALSE
+	|| strpos(' '.@$_SERVER['REMOTE_ADDR'],'2001:470:8:92e:') === FALSE
 ) {
     header('HTTP/1.0 403 Forbidden');
 	echo 'Host: ' . $_SERVER['REMOTE_ADDR']."<br/>\n";
