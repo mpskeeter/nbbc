@@ -1,0 +1,27 @@
+services:
+    poa_main.menu_builder:
+        class: Poa\MainBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+
+    poa_main.menu.main:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: poa_main.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+
+    twig.extension.poa.main:
+        class: Poa\MainBundle\Twig\Extension\MainExtension
+        public: false
+        arguments: [%twig.loader%]
+        tags:
+            - { name: twig.extension }
+
+    poa.main.listener:
+        class: Poa\MainBundle\EventListener\ControllerListener
+        arguments: [%twig.extension.poa.main%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+

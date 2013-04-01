@@ -1,2 +1,6 @@
+_welcome:
+    pattern:  /
+    defaults: { _controller: PoaMainBundle:Welcome:index }
+
 _user_bundle:
     resource: "@UserBundle/Resources/config/routing.yml"

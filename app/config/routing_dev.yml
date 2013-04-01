@@ -1,7 +1,3 @@
-_welcome:
-    pattern:  /
-    defaults: { _controller: PoaMainBundle:Welcome:index }
-
 _main_secured:
     resource: "@PoaMainBundle/Controller/SecuredController.php"
     type:     annotation

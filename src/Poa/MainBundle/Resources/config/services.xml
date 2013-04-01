@@ -5,6 +5,15 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+        <service id="poa_main.menu_builder" class="Poa\MainBundle\Menu\MenuBuilder">
+            <argument type="service" id="knp_menu.factory" />
+        </service>
+
+        <service id="poa_main.menu.main" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createMainMenu" scope="request">
+            <tag name="knp_menu.menu" alias="main"/>
+            <argument type="service" id="request" />
+        </service>
+
         <service id="twig.extension.poa.main" class="Poa\MainBundle\Twig\Extension\MainExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="twig.loader" />
