@@ -84,6 +84,8 @@ fos_user:
             template:   FOSUserBundle:Registration:email.txt.twig
 
 knp_menu:
+#    twig:
+#        template: PoaMainBundle::knp_menu.html.twig
     providers:
         builder_alias: false    # disable the builder-based provider
         container_aware: true   # keep this one enabled. Can be omitted as it is the default
@@ -94,3 +96,33 @@ knp_menu:
 #    secret: %facebook_app_secret%
 #    cookie: true
 #    permissions: [email, user_birthday, user_location, user_about_me, offline_access]
+
+raul_fraile_ladybug:
+    general:
+        expanded:             false
+    object:
+        max_nesting_level:    3
+        show_data:            true
+        show_classinfo:       true
+        show_constants:       true
+        show_methods:         true
+        show_properties:      true
+    array:
+        max_nesting_level:    8
+    processor:
+        active:               true
+    bool:
+        html_color:           #008
+        cli_color:            blue
+    float:
+        html_color:           #800
+        cli_color:            red
+    int:
+        html_color:           #800
+        cli_color:            red
+    string:
+        html_color:           #080
+        cli_color:            green
+        show_quotes:          true
+    css:
+        path:                 /Asset/tree.min.css

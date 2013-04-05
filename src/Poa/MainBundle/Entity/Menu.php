@@ -30,7 +30,8 @@
 		/**
 		 * @var string $slug
 		 *
-		 * @ORM\Column(name="slug", type="string", length=80, unique=true)
+		 * @ORM\Column(name="slug", type="string", length=80)
+		 * Column(name="slug", type="string", length=80, unique=true)
 		 */
 		private $slug;
 
@@ -51,14 +52,15 @@
 		/**
 		 * @var string $status
 		 *
-		 * @ORM\Column(name="status", type="string", length=20)
+		 * @ORM\Column(name="status", type="string", length=20, nullable=true)
 		 */
 		private $status;
 
 		/**
 		 * @var integer $parent
 		 *
-		 * @ORM\Column(name="parent", type="integer", nullable=true)
+		 * @ORM\ManyToOne(targetEntity="Menu")
+		 * @ORM\JoinColumn(name="parent", referencedColumnName="id")
 		 */
 		private $parent;
 
@@ -70,7 +72,7 @@
 		private $menu_order;
 
 		/**
-		 * @var integer $menu_order
+		 * @var integer $menu_depth
 		 *
 		 * @ORM\Column(name="menu_depth", type="integer")
 		 */

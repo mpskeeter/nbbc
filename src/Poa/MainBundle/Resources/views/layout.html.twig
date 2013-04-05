@@ -32,10 +32,23 @@
                     <td width="175" valign="top" class="leftnavbg">
                         <table width="170" border="0" align="right" cellpadding="0" cellspacing="0">
                             <tr><td height="30" valign="bottom" class="textsmred">&nbsp;</td></tr>
-                            <tr><td height="120" valign="bottom" class="textsmred" align="center"><a href="controller.php?view=index"><img src="{{ asset('bundles/poamain/images/logo.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="140" height="75" border="0"></a><br/>Harnett County, NC</td></tr>
+                            <tr><td height="120" valign="bottom" class="textsmred" align="center"><a href="{{  path('_welcome') }}"><img src="{{ asset('bundles/poamain/images/logo.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="140" height="75" border="0"></a><br/>Harnett County, NC</td></tr>
                             <tr><td>&nbsp;</td></tr>
+                            <tr><td><div align="center">{{ knp_menu_render('login', {template: 'PoaMainBundle:Menu:login.html.twig', allow_safe_labels: true}) }}</div></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/welcome.gif') }}" border="0" /></div></td></tr>
+                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
 
-                            {{ knp_menu_render('main') }}
+                            {{ knp_menu_render('welcome', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
+
+                            </table></td></tr>
+                            <tr><td><div align="center">&nbsp;</div></td></tr>
+                            <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/members.gif') }}" border="0" /></div></td></tr>
+                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
+
+                            {{ knp_menu_render('residents', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
+
+                            </table></td></tr>
 
                             {#
                                                         <!-- begin nav -->
@@ -73,5 +86,23 @@
         </div><!-- / content -->
     </div><!-- / container -->
 
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11773878-2']);
+        _gaq.push(['_setDomainName', 'ballardwoods.org']);
+        _gaq.push(['_trackPageview']);
+        //  _gaq.push(['_deleteCustomVar',1]);
+        //  _gaq.push(['_deleteCustomVar',2]);
+        _gaq.push(['_setCustomVar',1,'userid','75.138.196.0'],3);
+        _gaq.push(['_setCustomVar',2,'login','Guest!'],3);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </body>
 </html>

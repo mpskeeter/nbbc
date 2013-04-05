@@ -12,47 +12,74 @@
 	 */
 	class MenuRepository extends EntityRepository
 	{
-		public function getNavMenu() {
+		public function getNavMenu($name) {
 			$nav = array();
 
-			//- Max 2 DEPTH
-			$menus = $this->getMenusByDepth(0);
-			$childPages = $this->getMenusByDepth(1);
+			$menu_id = $this->getMainMenuID($name);
+			$menus = $this->getMenuForParent($menu_id);
 
-			//- We need a special route for home
 			foreach ($menus as $menu) {
-				$slug = $menu->getSlug() == 'home' ? '' : $menu->getSlug();
 
-				$childs = array();
+				$children = array();
+				$childPages = $this->getMenuForParent($menu->getId());
 				foreach($childPages as $c) {
-					if($c->getParent() == $menu->getId()) {
-						$childs[] = array(
-							'id' => $c->getId(),
-							'name' => $c->getName(),
-							'slug' => $c->getSlug(),
-						);
-					}
+					$children[] = array(
+						'id'    => $c->getId(),
+						'name'  => $c->getName(),
+						'route' => $c->getSlug()
+					);
 				}
 				$nav[] = array(
-					'id' => $menu->getId(),
-					'name' => $menu->getName(),
-					'slug' => $slug,
-					'childs' => $childs,
+					'id'       => $menu->getId(),
+					'name'     => $menu->getName(),
+					'slug'     => $menu->getSlug(),
+					'children' => $children
 				);
 			}
 
 			return $nav;
 		}
 
+		public function getMainMenuID($name) {
+			$pages = $this->createQueryBuilder('n')
+				->andWhere('n.menu_active = ?1')
+				->andWhere('n.menu_depth = ?2')
+				->andWhere('n.menu_order = ?3')
+				->andWhere('n.name = ?4')
+				->addOrderBy('n.menu_order')
+				->setParameter(1, true)
+				->setParameter(2, 0)
+				->setParameter(3, 0)
+				->setParameter(4, $name)
+				->getQuery()->getResult();
+			return $pages;
+		}
+
+		public function getMenuForParent($parent_id) {
+			$pages = $this->createQueryBuilder('n')
+				->andWhere('n.menu_active = ?1')
+				->andWhere('n.parent = ?2')
+				->addOrderBy('n.menu_order')
+				->setParameter(1, true)
+				->setParameter(2, $parent_id)
+				->getQuery()->getResult();
+			return $pages;
+//			$pages = $this->getDoctrine()
+//				->getManager()
+//				->createQuery('SELECT n FROM Menu n WHERE n.menu_active = ?1 AND n.parent = ?2 ORDER BY n.menu_order')
+//				->setParameter(1, true)
+//				->setParameter(2, $parent_id)
+//				->getResult();
+//			return $pages;
+		}
+
 		public function getMenusByDepth($depth) {
 			$pages = $this->createQueryBuilder('n')
-				->andWhere('n.status = ?1')
-				->andWhere('n.menu_active = ?2')
-				->andWhere('n.menu_depth = ?3')
+				->andWhere('n.menu_active = ?1')
+				->andWhere('n.menu_depth = ?2')
 				->addOrderBy('n.menu_order')
-				->setParameter(1, 'online')
-				->setParameter(2, true)
-				->setParameter(3, $depth)
+				->setParameter(1, true)
+				->setParameter(2, $depth)
 				->getQuery()->getResult();
 			return $pages;
 		}

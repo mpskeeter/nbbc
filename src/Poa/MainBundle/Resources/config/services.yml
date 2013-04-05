@@ -3,14 +3,23 @@ services:
         class: Poa\MainBundle\Menu\MenuBuilder
         arguments: ["@knp_menu.factory"]
 
-    poa_main.menu.main:
+    poa_main.menu.welcome:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory_service: poa_main.menu_builder
-        factory_method: createMainMenu
+        factory_method: createWelcomeMenu
         arguments: ["@request"]
         scope: request # needed as we have the request as a dependency here
         tags:
-            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+            - { name: knp_menu.menu, alias: welcome } # The alias is what is used to retrieve the menu
+
+    poa_main.menu.residents:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: poa_main.menu_builder
+        factory_method: createResidentsMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: residents } # The alias is what is used to retrieve the menu
 
     twig.extension.poa.main:
         class: Poa\MainBundle\Twig\Extension\MainExtension

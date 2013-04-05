@@ -7,10 +7,21 @@
     <services>
         <service id="poa_main.menu_builder" class="Poa\MainBundle\Menu\MenuBuilder">
             <argument type="service" id="knp_menu.factory" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
         </service>
 
-        <service id="poa_main.menu.main" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createMainMenu" scope="request">
-            <tag name="knp_menu.menu" alias="main"/>
+        <service id="poa_main.menu.login" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createLoginMenu" scope="request">
+            <tag name="knp_menu.menu" alias="login"/>
+            <argument type="service" id="request" />
+        </service>
+
+        <service id="poa_main.menu.welcome" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createWelcomeMenu" scope="request">
+            <tag name="knp_menu.menu" alias="welcome"/>
+            <argument type="service" id="request" />
+        </service>
+
+        <service id="poa_main.menu.residents" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createResidentsMenu" scope="request">
+            <tag name="knp_menu.menu" alias="residents"/>
             <argument type="service" id="request" />
         </service>
 
