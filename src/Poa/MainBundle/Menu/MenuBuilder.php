@@ -1,5 +1,5 @@
 <?php
-// src/Poa/MainBundle/Menu/MenuBuilder.php
+// src/Poa/MenuBundle/Menu/MenuBuilder.php
 
 	namespace Poa\MainBundle\Menu;
 
@@ -9,11 +9,16 @@
 
 	class MenuBuilder
 	{
+
+		/** @var \Knp\Menu\FactoryInterface */
 		private $factory;
+
+		/** @var \Doctrine\ORM\EntityManager */
 		private $entityManager;
 
 		/**
-		 * @param FactoryInterface $factory
+		 * @param \Knp\Menu\FactoryInterface  $factory
+		 * @param \Doctrine\ORM\EntityManager $entityManager
 		 */
 		public function __construct(FactoryInterface $factory, EntityManager $entityManager)
 		{
@@ -21,63 +26,92 @@
 			$this->entityManager = $entityManager;
 		}
 
+		/**
+		 * @param \Symfony\Component\HttpFoundation\Request $request
+		 * @return array
+		 */
 		public function createLoginMenu(Request $request)
 		{
 			$menu = $this->factory->createItem('login');
 
 			$menu->addChild('Login',    array('route' => 'fos_user_security_login'));			// fos_user_security_login
 			$menu->addChild('Register', array('route' => 'fos_user_registration_register'));	// fos_user_registration_register
-			// ... add more children
-
 			return $menu;
 		}
 
-		private function buildMenu($menu_name)
-		{
-			$em = $this->entityManager->getRepository('PoaMainBundle:Menu');
-			$menus = $em->getNavMenu(ucwords($menu_name));
+		/**
+		 * @param \Poa\MainBundle\Entity\Menu $menu
+		 * @return array
+		 */
+		public function getChildrenMenu($menu) {
+			$nav = array();
+			/** @var \Poa\MainBundle\Entity\Menu $menu */
+			foreach($menu->getChildren() as $c) {
+				$nav[] = array(
+					'id'       => $c->getId(),
+					'name'     => $c->getName(),
+					'slug'     => $c->getSlug(),
+					'children' => $this->getChildrenMenu($c)
+				);
+			}
+			return $nav;
+		}
 
+		/**
+		 * @param integer $id
+		 * @return array
+		 */
+		public function getNavMenu($id) {
+			$nav = array();
+
+			/** @var $em \Poa\MainBundle\Entity\MenuRepository */
+			$em = $this->entityManager->getRepository('PoaMainBundle:Menu');
+			foreach ($em->getMenuID($id) as $menu) {
+				/** @var $menu \Poa\MainBundle\Entity\Menu */
+				foreach($menu->getChildren() as $c) {
+					/** @var $c \Poa\MainBundle\Entity\Menu */
+					$nav[] = array(
+						'id'       => $c->getId(),
+						'name'     => $c->getName(),
+						'slug'     => $c->getSlug(),
+//						'children' => $this->getChildrenMenu($c)
+					);
+				}
+			}
+
+			return $nav;
+		}
+
+		/**
+		 * @param integer $id
+		 * @param $menu_name string
+		 * @return \Knp\Menu\ItemInterface
+		 */
+		private function buildMenu($id,$menu_name)
+		{
+			/** @var $menu \Knp\Menu\ItemInterface */
 			$menu = $this->factory->createItem($menu_name);
-			foreach ($menus as $menuItem) {
+			foreach ($this->getNavMenu($id) as $menuItem) {
 				$menu->addChild($menuItem['name'], array('route' => $menuItem['slug']));		// _welcome
 			}
 			return $menu;
 		}
 
+		/**
+		 * @param \Symfony\Component\HttpFoundation\Request $request
+		 * @return \Knp\Menu\ItemInterface
+		 */
 		public function createWelcomeMenu(Request $request)
 		{
-			return $this->buildMenu('welcome');
-
-//			$menu = $this->factory->createItem('welcome');
-//			$menu->addChild('Home',       array('route' => '_welcome'));		// _welcome
-//			$menu->addChild('About Us',   array('route' => '_welcome'));		// _about_us
-//			$menu->addChild('Amenities',  array('route' => '_welcome'));		// _amenities
-//			$menu->addChild('Contact Us', array('route' => '_welcome'));		// _contact_us
-//
-//			return $menu;
+			return $this->buildMenu(1,'welcome');
 		}
 
+		/**
+		 * @param \Symfony\Component\HttpFoundation\Request $request
+		 * @return \Knp\Menu\ItemInterface
+		*/
 		public function createResidentsMenu(Request $request)
 		{
-			return $this->buildMenu('residents');
-
-//			$menu = $this->factory->createItem('residents');
-//			$menu->addChild('Board Members',      array('route' => '_welcome'));	// _board_members
-//			$menu->addChild('Management',         array('route' => '_welcome'));	// _management
-//			$menu->addChild('Committees',         array('route' => '_welcome'));	// _committees
-//			$menu->addChild('Pool/Recreation',    array('route' => '_welcome'));	// _pool
-//			$menu->addChild('Documents',          array('route' => '_welcome'));	// _documents
-//			$menu->addChild('Newsletters',        array('route' => '_welcome'));	// _newsletters
-//			$menu->addChild('FAQS',               array('route' => '_welcome'));	// _faqs
-//			$menu->addChild('Community Links',    array('route' => '_welcome'));	// _community
-//			$menu->addChild('Utility Services',   array('route' => '_welcome'));	// _utilities
-//			$menu->addChild('Newsletters',        array('route' => '_welcome'));	// _newsletters
-//
-//			$menu->addChild('Facebook Posts',     array('route' => '_welcome'));	// (Group) _facebook
-//			$menu->addChild('Resident Directory', array('route' => '_welcome'));	// (Group) _residents
-//			$menu->addChild('Forums',             array('route' => '_welcome'));	// (Group) _forums
-//			$menu->addChild('Board Only',         array('route' => '_welcome'));	// (Group) _board
-//
-//			return $menu;
+			return $this->buildMenu(2,'residents');
 		}
 	}

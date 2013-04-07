@@ -2,6 +2,7 @@
 
 	namespace Poa\MainBundle\Entity;
 
+	use Doctrine\Common\Collections\ArrayCollection;
 	use Doctrine\ORM\Mapping as ORM;
 
 	/**
@@ -36,14 +37,14 @@
 		private $slug;
 
 		/**
-		 * @var datetime $created_at
+		 * @var \DateTime $created_at
 		 *
 		 * @ORM\Column(name="created_at", type="datetime")
 		 */
 		private $created_at;
 
 		/**
-		 * @var datetime $updated_at
+		 * @var \DateTime $updated_at
 		 *
 		 * @ORM\Column(name="updated_at", type="datetime")
 		 */
@@ -57,9 +58,12 @@
 		private $status;
 
 		/**
-		 * @var integer $parent
-		 *
-		 * @ORM\ManyToOne(targetEntity="Menu")
+		 * @ORM\OneToMany(targetEntity="Menu", mappedBy="parent")
+		 **/
+		private $children;
+
+		/**
+		 * @ORM\ManyToOne(targetEntity="Menu", inversedBy="children")
 		 * @ORM\JoinColumn(name="parent", referencedColumnName="id")
 		 */
 		private $parent;
@@ -94,6 +98,8 @@
 
 		public function __construct() {
 			$this->menu_depth = 0;
+			$this->menu_active = 0;
+			$this->children = new ArrayCollection();
 		}
 
 		/**
@@ -149,7 +155,7 @@
 		/**
 		 * Set created_at
 		 *
-		 * @param datetime $createdAt
+		 * @param \DateTime $createdAt
 		 */
 		public function setCreatedAt($createdAt)
 		{
@@ -159,7 +165,7 @@
 		/**
 		 * Get created_at
 		 *
-		 * @return datetime
+		 * @return \DateTime
 		 */
 		public function getCreatedAt()
 		{
@@ -169,7 +175,7 @@
 		/**
 		 * Set updated_at
 		 *
-		 * @param datetime $updatedAt
+		 * @param \DateTime $updatedAt
 		 */
 		public function setUpdatedAt($updatedAt)
 		{
@@ -179,7 +185,7 @@
 		/**
 		 * Get updated_at
 		 *
-		 * @return datetime
+		 * @return \DateTime
 		 */
 		public function getUpdatedAt()
 		{
@@ -207,13 +213,34 @@
 		}
 
 		/**
+		 * Add children
+		 *
+		 * @param Menu $children
+		 */
+		public function addChildren(Menu $children)
+		{
+			$this->children[] = $children;
+			$children->setParent($this);
+		}
+		/**
+		 * Get children
+		 *
+		 * @return Menu[]|null
+		 */
+		public function getChildren()
+		{
+			return $this->children;
+		}
+
+		/**
 		 * Set parent
 		 *
-		 * @param integer $parent
+		 * @param Menu $parent
 		 */
-		public function setParent($parent)
+		public function setParent(Menu $parent)
 		{
 			$this->parent = $parent;
+			$parent->addChildren($this);
 		}
 
 		/**
@@ -312,7 +339,7 @@
 		public function prePersist()
 		{
 			$this->created_at = new \DateTime('now');
-			$this->preUpdate();
+//			$this->preUpdate();
 		}
 
 		/**

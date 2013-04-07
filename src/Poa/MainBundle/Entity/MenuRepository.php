@@ -12,50 +12,21 @@
 	 */
 	class MenuRepository extends EntityRepository
 	{
-		public function getNavMenu($name) {
-			$nav = array();
-
-			$menu_id = $this->getMainMenuID($name);
-			$menus = $this->getMenuForParent($menu_id);
-
-			foreach ($menus as $menu) {
-
-				$children = array();
-				$childPages = $this->getMenuForParent($menu->getId());
-				foreach($childPages as $c) {
-					$children[] = array(
-						'id'    => $c->getId(),
-						'name'  => $c->getName(),
-						'route' => $c->getSlug()
-					);
-				}
-				$nav[] = array(
-					'id'       => $menu->getId(),
-					'name'     => $menu->getName(),
-					'slug'     => $menu->getSlug(),
-					'children' => $children
-				);
-			}
-
-			return $nav;
-		}
-
-		public function getMainMenuID($name) {
-			$pages = $this->createQueryBuilder('n')
-				->andWhere('n.menu_active = ?1')
-				->andWhere('n.menu_depth = ?2')
-				->andWhere('n.menu_order = ?3')
-				->andWhere('n.name = ?4')
-				->addOrderBy('n.menu_order')
-				->setParameter(1, true)
-				->setParameter(2, 0)
-				->setParameter(3, 0)
-				->setParameter(4, $name)
+		public function getMenuID($id) {
+			$pages = $this->createQueryBuilder('m')
+				->andWhere('m.menu_order = ?1')
+				->andWhere('m.menu_active = ?2')
+				->andWhere('m.menu_depth = 0')
+				->addOrderBy('m.menu_order')
+				->setParameter(1, $id)
+				->setParameter(2, true)
 				->getQuery()->getResult();
 			return $pages;
 		}
 
 		public function getMenuForParent($parent_id) {
+// TODO: Change to the following query:
+// select *, COALESCE(C.count_children,0) from poa_menu A left join (select parent, count(id) as count_children from poa_menu group by parent) C on C.parent = A.id
 			$pages = $this->createQueryBuilder('n')
 				->andWhere('n.menu_active = ?1')
 				->andWhere('n.parent = ?2')
@@ -64,12 +35,14 @@
 				->setParameter(2, $parent_id)
 				->getQuery()->getResult();
 			return $pages;
-//			$pages = $this->getDoctrine()
-//				->getManager()
-//				->createQuery('SELECT n FROM Menu n WHERE n.menu_active = ?1 AND n.parent = ?2 ORDER BY n.menu_order')
+//			$pages = $this->createQueryBuilder('n')
+//				->leftJoin('SELECT c.parent, COALESC(COUNT(C.id),0) AS child_recs FROM Menu c GROUP BY c.parent')
+//				->andWhere('n.menu_active = ?1')
+//				->andWhere('n.parent = ?2')
+//				->addOrderBy('n.menu_order')
 //				->setParameter(1, true)
 //				->setParameter(2, $parent_id)
-//				->getResult();
+//				->getQuery()->getResult();
 //			return $pages;
 		}
 
