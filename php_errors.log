@@ -1,0 +1,1 @@
+[16-Apr-2013 19:53:15 America/New_York] PHP Fatal error:  Cannot redeclare class EnhancedProxy_67c9a652deabbfb604070f0a7c3b533996c1ec4b\__CG__\Poa\MainBundle\Controller\SecuredController in /var/www/frameworks/Symfony-2.2.0/app/cache/de_/jms_diextra/proxies/Poa-MainBundle-Controller-SecuredController.php on line 28

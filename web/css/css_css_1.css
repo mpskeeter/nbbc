@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* CSS Document */
 
 body .title2	{
@@ -727,6 +727,25 @@ padding: 5px 0px;
 margin: 2px;
 text-align: center;
 }
+
+.clear { clear: both; display: block; }
+.float-right { float: right; }
+.float-left { float: left; }
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+.decoda-quote { background: #FFFFCC; padding: 10px; margin: 0 0 15px 15px; border-radius: 10px; }
+.decoda-quote .decoda-quote { background: khaki; margin: 15px 0; }
+.decoda-quote .decoda-quote .decoda-quote { background: goldenrod; }
+.decoda-quote-head { font-weight: bold; margin-bottom: 5px; }
+.decoda-quote-date { float: right; }
+.decoda-code { background: lightgray; padding: 10px; border-radius: 10px; }
+.decoda-alert { background: lightpink; padding: 10px; border-radius: 10px; }
+.decoda-note { background: powderblue; padding: 10px; border-radius: 10px; }
+.decoda-spoiler-content { background: palegreen; margin-top: 5px; padding: 10px; border-radius: 10px; }
+.decoda-spoiler-content .decoda-spoiler { margin-top: 10px; }
+.decoda-spoiler-content .decoda-spoiler-content { background: oldlace; }
 
 /* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ */
 div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}

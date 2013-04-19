@@ -3,7 +3,7 @@
 
 	namespace Poa\UserBundle\Entity;
 
-	use FOS\UserBundle\Entity\User as BaseUser;
+	use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 	use Doctrine\ORM\Mapping as ORM;
 	use Symfony\Component\Validator\Constraints as Assert;
 
@@ -30,25 +30,25 @@
 		 */
 		protected $groups;
 
-		/**
-		 * @var string
-		 *
-		 * @ORM\Column(name="firstname", type="string", length=255)
-		 * @Assert\NotBlank(message="Please enter your first name.", groups={"Registration", "Profile"})
-		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
-		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
-		 */
-		protected $firstname;
-
-		/**
-		 * @var string
-		 *
-		 * @ORM\Column(name="lastname", type="string", length=255)
-		 * @Assert\NotBlank(message="Please enter your last name.", groups={"Registration", "Profile"})
-		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
-		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
-		 */
-		protected $lastname;
+//		/**
+//		 * @var string
+//		 *
+//		 * @ORM\Column(name="firstname", type="string", length=255)
+//		 * @Assert\NotBlank(message="Please enter your first name.", groups={"Registration", "Profile"})
+//		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
+//		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
+//		 */
+//		protected $firstname;
+//
+//		/**
+//		 * @var string
+//		 *
+//		 * @ORM\Column(name="lastname", type="string", length=255)
+//		 * @Assert\NotBlank(message="Please enter your last name.", groups={"Registration", "Profile"})
+//		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
+//		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
+//		 */
+//		protected $lastname;
 
 		/**
 		 * @var text
@@ -70,7 +70,7 @@
 		/**
 		 * @var string
 		 *
-		 * @ORM\Column(name="facebookId", type="string", length=255)
+		 * @ORM\Column(name="facebookId", type="string", length=255, nullable=true)
 		 */
 		protected $facebookId;
 
@@ -89,38 +89,6 @@
 		{
 			list($this->facebookId, $parentData) = unserialize($data);
 			parent::unserialize($parentData);
-		}
-
-		/**
-		 * @return string
-		 */
-		public function getFirstname()
-		{
-			return $this->firstname;
-		}
-
-		/**
-		 * @param string $firstname
-		 */
-		public function setFirstname($firstname)
-		{
-			$this->firstname = $firstname;
-		}
-
-		/**
-		 * @return string
-		 */
-		public function getLastname()
-		{
-			return $this->lastname;
-		}
-
-		/**
-		 * @param string $lastname
-		 */
-		public function setLastname($lastname)
-		{
-			$this->lastname = $lastname;
 		}
 
 		/**

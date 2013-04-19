@@ -1,0 +1,240 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Poa\UserBundle\Entity\User
+    group:
+        group_class: Poa\UserBundle\Entity\Group
+    registration:
+        form:
+            type:               poa_user_registration
+#            name:               fos_user_registration
+#            validation_groups:  [Registration, Default]
+        confirmation:
+            from_email: # Use this node only if you don't want the global email address for the confirmation email
+                address:        "mpskeeter@gmail.com"
+                sender_name:    "Mark Peters"
+            enabled:    true # change to true for required email confirmation
+            template:   FOSUserBundle:Registration:email.txt.twig
+
+knp_menu:
+#    twig:
+#        template: PoaMainBundle::knp_menu.html.twig
+    providers:
+#        builder_alias: false    # disable the builder-based provider
+        builder_alias: true    # disable the builder-based provider
+        container_aware: true   # keep this one enabled. Can be omitted as it is the default
+
+fm_bbcode:
+    filter_sets:
+        my_default_filter:
+          locale: en
+          xhtml: true
+          filters: [ default, text, image, block, list, url ]
+
+sonata_admin:
+    # default value, change it to sonata.admin.security.handler.acl to use ACL
+#    security:
+#        handler: sonata.admin.security.handler.role
+    security:
+        handler: sonata.admin.security.handler.noop
+    title:      Ballard Woods
+    title_logo: /test/web/bundles/poamain/images/logo.jpg
+    templates:
+        # default global templates
+        layout:    SonataAdminBundle::standard_layout.html.twig
+        ajax:      SonataAdminBundle::ajax_layout.html.twig
+        dashboard: SonataAdminBundle:Core:dashboard.html.twig
+#        markup:    SonataAdminBundle::layout.html.twig
+
+        # default actions templates, should extend a global templates
+        list:      SonataAdminBundle:CRUD:list.html.twig
+        show:      SonataAdminBundle:CRUD:show.html.twig
+        edit:      SonataAdminBundle:CRUD:edit.html.twig
+
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: left, type: sonata.admin.block.admin_list }
+            # Customize this part to add new block configuration
+            - { position: right, type: sonata.block.service.text, settings: { content: "<h2>Welcome to the Sonata Admin</h2> <p>This is a <code>sonata.block.service.text</code> from the Block Bundle, you can create and add new block in these area by configuring the <code>sonata_admin</code> section.</p> <br /> For instance, here a RSS feed parser (<code>sonata.block.service.rss</code>):"} }
+#            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
+
+        groups:
+#            default: ~
+            system:
+                label: System
+                items: ~
+#            sonata_page:
+#                label: Page
+#                items: ~
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        sonata.admin_doctrine_orm.block.audit:
+            contexts:   [admin]
+
+        sonata.block.service.text:   ~
+        sonata.block.service.action: ~
+        sonata.block.service.rss:    ~
+        sonata.formatter.block.formatter: ~
+#        sonata.page.block.container:
+#        sonata.page.block.children_pages:
+#        sonata.media.block.media:
+#        sonata.media.block.gallery:
+#        sonata.media.block.feature_media:
+    profiler:
+        enabled: %kernel.debug%
+        container_types: [sonata.admin.block.admin_list]
+        template: SonataBlockBundle:Profiler:block.html.twig
+
+sonata_user:
+    security_acl:     false
+    class:
+        user:         Poa\UserBundle\Entity\User
+    admin:                  # Admin Classes
+        user:
+            class:          Sonata\UserBundle\Admin\Entity\UserAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+
+        group:
+            class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+    profile:  # Profile Form (firstname, lastname, etc ...)
+        form:
+            type:               sonata_user_profile
+            handler:            sonata.user.profile.form.handler.default
+            name:               sonata_user_profile_form
+            validation_groups:  [Profile]
+
+sonata_doctrine_orm_admin:
+    # default value is null, so doctrine uses the value defined in the configuration
+    entity_manager: ~
+
+    templates:
+        form:
+            - SonataDoctrineORMAdminBundle:Form:form_admin_fields.html.twig
+        filter:
+            - SonataDoctrineORMAdminBundle:Form:filter_admin_fields.html.twig
+        types:
+            list:
+                array:      SonataAdminBundle:CRUD:list_array.html.twig
+                boolean:    SonataAdminBundle:CRUD:list_boolean.html.twig
+                date:       SonataAdminBundle:CRUD:list_date.html.twig
+                time:       SonataAdminBundle:CRUD:list_time.html.twig
+                datetime:   SonataAdminBundle:CRUD:list_datetime.html.twig
+                text:       SonataAdminBundle:CRUD:base_list_field.html.twig
+                trans:      SonataAdminBundle:CRUD:list_trans.html.twig
+                string:     SonataAdminBundle:CRUD:base_list_field.html.twig
+                smallint:   SonataAdminBundle:CRUD:base_list_field.html.twig
+                bigint:     SonataAdminBundle:CRUD:base_list_field.html.twig
+                integer:    SonataAdminBundle:CRUD:base_list_field.html.twig
+                decimal:    SonataAdminBundle:CRUD:base_list_field.html.twig
+                identifier: SonataAdminBundle:CRUD:base_list_field.html.twig
+
+            show:
+                array:      SonataAdminBundle:CRUD:show_array.html.twig
+                boolean:    SonataAdminBundle:CRUD:show_boolean.html.twig
+                date:       SonataAdminBundle:CRUD:show_date.html.twig
+                time:       SonataAdminBundle:CRUD:show_time.html.twig
+                datetime:   SonataAdminBundle:CRUD:show_datetime.html.twig
+                text:       SonataAdminBundle:CRUD:base_show_field.html.twig
+                trans:      SonataAdminBundle:CRUD:show_trans.html.twig
+                string:     SonataAdminBundle:CRUD:base_show_field.html.twig
+                smallint:   SonataAdminBundle:CRUD:base_show_field.html.twig
+                bigint:     SonataAdminBundle:CRUD:base_show_field.html.twig
+                integer:    SonataAdminBundle:CRUD:base_show_field.html.twig
+                decimal:    SonataAdminBundle:CRUD:base_show_field.html.twig
+
+sonata_cache:
+    caches:
+        esi:
+            token: an unique security key # a random one is generated by default
+            servers:
+                - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+#        ssi:
+#            token: an unique security key # a random one is generated by default
+#
+#        mongo:
+#            database:   cache
+#            collection: cache
+#            servers:
+#                - {host: 127.0.0.1, port: 27017, user: username, password: pASS'}
+#                - {host: 127.0.0.2}
+#
+#        memcached:
+#            prefix: test     # prefix to ensure there is no clash between instances
+#            servers:
+#                - {host: 127.0.0.1, port: 11211, weight: 0}
+#
+        apc:
+            token:  s3cur3   # token used to clear the related cache
+            prefix: test     # prefix to ensure there is no clash between instances
+            servers:
+                - { domain: kooqit.local, ip: 127.0.0.1, port: 80}
+
+sonata_formatter:
+    formatters:
+        markdown:
+            service: sonata.formatter.text.markdown
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+        text:
+            service: sonata.formatter.text.text
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+        rawhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+        richhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+                - sonata.media.formatter.twig
+
+        twig:
+            service: sonata.formatter.text.twigengine
+            extensions: [] # Twig formatter cannot have extensions
+
+sonata_media:
+    default_context: default
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                small: { width: 100 , quality: 70}
+                big:   { width: 500 , quality: 70}
+
+    cdn:
+        server:
+            path: /uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false
+
+sonata_notification:
+    backend: sonata.notification.backend.runtime

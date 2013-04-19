@@ -24,6 +24,15 @@
 			return $pages;
 		}
 
+		public function getIdForRoute($route_name) {
+			$menuItem = $this->createQueryBuilder('m')
+				->andWhere('m.slug = ?1')
+				->addOrderBy('m.menu_order')
+				->setParameter(1, $route_name)
+				->getQuery()->getSingleResult();
+			return $menuItem;
+		}
+
 		public function getMenuForParent($parent_id) {
 // TODO: Change to the following query:
 // select *, COALESCE(C.count_children,0) from poa_menu A left join (select parent, count(id) as count_children from poa_menu group by parent) C on C.parent = A.id

@@ -6,6 +6,7 @@
 	use Doctrine\ORM\EntityManager;
 	use Knp\Menu\FactoryInterface;
 	use Symfony\Component\HttpFoundation\Request;
+	use Symfony\Component\Security\Core\SecurityContextInterface;
 
 	class MenuBuilder
 	{
@@ -16,26 +17,37 @@
 		/** @var \Doctrine\ORM\EntityManager */
 		private $entityManager;
 
+		/** @var \Symfony\Component\Security\Core\SecurityContextInterface  */
+		private $securityContext;
+
 		/**
 		 * @param \Knp\Menu\FactoryInterface  $factory
 		 * @param \Doctrine\ORM\EntityManager $entityManager
+		 * @param \Symfony\Component\Security\Core\SecurityContextInterface $securityContext
 		 */
-		public function __construct(FactoryInterface $factory, EntityManager $entityManager)
+		public function __construct(FactoryInterface $factory, EntityManager $entityManager, SecurityContextInterface $securityContext)
 		{
 			$this->factory = $factory;
 			$this->entityManager = $entityManager;
+			$this->securityContext = $securityContext;
 		}
 
 		/**
 		 * @param \Symfony\Component\HttpFoundation\Request $request
-		 * @return array
+		 * @return \Knp\Menu\ItemInterface
 		 */
 		public function createLoginMenu(Request $request)
 		{
 			$menu = $this->factory->createItem('login');
 
-			$menu->addChild('Login',    array('route' => 'fos_user_security_login'));			// fos_user_security_login
-			$menu->addChild('Register', array('route' => 'fos_user_registration_register'));	// fos_user_registration_register
+			if( $this->securityContext->isGranted('IS_AUTHENTICATED_FULLY') ){
+				$menu->addChild('Logout',    array('route' => 'fos_user_security_logout'));			// fos_user_security_login
+			}
+			else
+			{
+				$menu->addChild('Login',    array('route' => 'fos_user_security_login'));			// fos_user_security_login
+				$menu->addChild('Register', array('route' => 'fos_user_registration_register'));	// fos_user_registration_register
+			}
 			return $menu;
 		}
 
@@ -66,19 +78,22 @@
 
 			/** @var $em \Poa\MainBundle\Entity\MenuRepository */
 			$em = $this->entityManager->getRepository('PoaMainBundle:Menu');
+			/** @var $menu \Poa\MainBundle\Entity\Menu */
 			foreach ($em->getMenuID($id) as $menu) {
-				/** @var $menu \Poa\MainBundle\Entity\Menu */
+				/** @var $c \Poa\MainBundle\Entity\Menu */
 				foreach($menu->getChildren() as $c) {
-					/** @var $c \Poa\MainBundle\Entity\Menu */
-					$nav[] = array(
-						'id'       => $c->getId(),
-						'name'     => $c->getName(),
-						'slug'     => $c->getSlug(),
-//						'children' => $this->getChildrenMenu($c)
-					);
+					$role_required = $c->getRole();
+					if (is_null($role_required) || $this->securityContext->isGranted($role_required) !== false) {
+
+						$nav[] = array(
+							'id'       => $c->getId(),
+							'name'     => $c->getName(),
+							'slug'     => $c->getSlug(),
+//							'children' => $this->getChildrenMenu($c)
+						);
+					}
 				}
 			}
-
 			return $nav;
 		}
 
@@ -92,7 +107,7 @@
 			/** @var $menu \Knp\Menu\ItemInterface */
 			$menu = $this->factory->createItem($menu_name);
 			foreach ($this->getNavMenu($id) as $menuItem) {
-				$menu->addChild($menuItem['name'], array('route' => $menuItem['slug']));		// _welcome
+				$menu->addChild($menuItem['name'], array('route' => $menuItem['slug']));
 			}
 			return $menu;
 		}

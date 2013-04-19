@@ -8,6 +8,7 @@ class UserBundle extends Bundle
 {
 	public function getParent()
 	{
-		return 'FOSUserBundle';
+//		return 'FOSUserBundle';
+		return 'SonataUserBundle';
 	}
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkRootSettings" id="Symfony2">
+    <option name="typedPaths">
+      <list>
+        <element elementPath="X:/src" typeId="src_directory" />
+        <element elementPath="X:/vendor" typeId="vendor_directory" />
+        <element elementPath="X:/web" typeId="web_directory" />
+        <element elementPath="X:/app" typeId="app_directory" />
+      </list>
+    </option>
+  </component>
+</project>
+

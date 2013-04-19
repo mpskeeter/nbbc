@@ -20,13 +20,33 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
+// extra bundles added after symfony installation
 			new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 			new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+
 			new FOS\UserBundle\FOSUserBundle(),
+
+			new Sonata\BlockBundle\SonataBlockBundle(),
+			new Sonata\jQueryBundle\SonatajQueryBundle(),
+			new Sonata\AdminBundle\SonataAdminBundle(),
+			new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+			new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+			new Sonata\CacheBundle\SonataCacheBundle(),
+			new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+			new Sonata\NotificationBundle\SonataNotificationBundle(),
+			new Sonata\MediaBundle\SonataMediaBundle(),
+			new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
+			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+			new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+			new Sonata\FormatterBundle\SonataFormatterBundle(),
+
 #			new FOS\FacebookBundle\FOSFacebookBundle(),
 			new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+			new FM\BbcodeBundle\FMBbcodeBundle(),
 
+//			new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 			new \Poa\UserBundle\UserBundle(),
+			new \Poa\AdminBundle\PoaAdminBundle(),
 		);
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

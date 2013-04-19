@@ -96,6 +96,18 @@
 		 */
 		private $layout;
 
+		/**
+		 * @var string $role
+		 *
+		 * @ORM\Column(name="role", type="string", length=120, nullable=true)
+		 */
+		private $role;
+
+		/**
+		 * @ORM\OneToMany(targetEntity="Content", mappedBy="menu_item")
+		 **/
+		private $content_items;
+
 		public function __construct() {
 			$this->menu_depth = 0;
 			$this->menu_active = 0;
@@ -314,6 +326,26 @@
 		}
 
 		/**
+		 * Set role
+		 *
+		 * @param string $role
+		 */
+		public function setRole($role)
+		{
+			$this->role = $role;
+		}
+
+		/**
+		 * Get role
+		 *
+		 * @return string
+		 */
+		public function getRole()
+		{
+			return $this->role;
+		}
+
+		/**
 		 * Set menu_depth
 		 *
 		 * @param integer $menuDepth
@@ -331,6 +363,32 @@
 		public function getMenuDepth()
 		{
 			return $this->menu_depth;
+		}
+
+		/**
+		 * Set content_items
+		 *
+		 * @param Content $content_items
+		 */
+		public function setContentItems(Content $content_items)
+		{
+			$this->content_items = $content_items;
+			$content_items->setMenuItem($this);
+		}
+
+		/**
+		 * Get $content_items
+		 *
+		 * @return integer
+		 */
+		public function getContent()
+		{
+			return $this->content_items;
+		}
+
+		public function getHierarchyName()
+		{
+			return $this->getParent()->getName().' >> '.$this->getName();
 		}
 
 		/**

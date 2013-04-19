@@ -3,7 +3,7 @@
 
 	namespace Poa\UserBundle\Entity;
 
-	use FOS\UserBundle\Entity\Group as BaseGroup;
+	use Sonata\UserBundle\Entity\BaseGroup as BaseGroup;
 	use Doctrine\ORM\Mapping as ORM;
 
 	/**

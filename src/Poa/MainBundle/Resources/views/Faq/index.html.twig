@@ -1,0 +1,20 @@
+{% extends "PoaMainBundle::layout.html.twig" %}
+
+{% block content %}
+    <tr><td>
+        <table width="94%" border="0" align="center" cellpadding="0" cellspacing="0" class="text">
+            <!-- begin boxes -->
+            <tr><td>
+                    <div id='top'></div><ul class="decoda-list">
+    {% for item in content %}
+                            <li><a href="#{{ item.getSequence }}">{{ item.getQuestion }}</a></li>
+    {% endfor %}
+                    </ul><br/><br/>
+    {% for item in content %}
+                    <div id="{{ item.getSequence }}"><span style="font-size:1.17em"><b>{{ item.getQuestion }}</b></span></div><br/><br/>{{ item.getAnswer | bbcode_filter('my_default_filter') | raw }}<br/><br/><a href="#top">Goto Top</a><br/><br/>
+    {% endfor %}
+            </td></tr>
+            <!-- end boxes -->
+        </table>
+     </td></tr>
+{% endblock %}

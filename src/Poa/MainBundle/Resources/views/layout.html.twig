@@ -16,6 +16,9 @@
 {% stylesheets 'bundles/poamain/css/css.css' output='css/css.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
 {% endstylesheets %}
+{% stylesheets 'bundles/poamain/css/editor.css' output='css/editor.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
     <title>Ballard Woods</title>
 </head>
 <body class="body">
@@ -36,16 +39,12 @@
                             <tr><td>&nbsp;</td></tr>
                             <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/welcome.gif') }}" border="0" /></div></td></tr>
                             <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
-
                             {{ knp_menu_render('welcome', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
-
                             </table></td></tr>
                             <tr><td><div align="center">&nbsp;</div></td></tr>
                             <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/members.gif') }}" border="0" /></div></td></tr>
                             <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
-
                             {{ knp_menu_render('residents', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
-
                             </table></td></tr>
 
                             {#

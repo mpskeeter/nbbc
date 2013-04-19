@@ -8,6 +8,11 @@
         <service id="poa_main.menu_builder" class="Poa\MainBundle\Menu\MenuBuilder">
             <argument type="service" id="knp_menu.factory" />
             <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="security.context" />
+        </service>
+
+        <service id="poa_main.content_builder" class="Poa\MainBundle\Content\ContentBuilder">
+            <argument type="service" id="doctrine.orm.entity_manager" />
         </service>
 
         <service id="poa_main.menu.login" class="Knp\Menu\MenuItem" factory-service="poa_main.menu_builder" factory-method="createLoginMenu" scope="request">
@@ -25,6 +30,10 @@
             <argument type="service" id="request" />
         </service>
 
+        <!--<service id="poa_main.content.about" factory-service="poa_main.content_builder" factory-method="createContent" scope="request">-->
+            <!--<argument type="service" id="request" />-->
+        <!--</service>-->
+
         <service id="twig.extension.poa.main" class="Poa\MainBundle\Twig\Extension\MainExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="twig.loader" />
@@ -34,5 +43,23 @@
             <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
             <argument type="service" id="twig.extension.poa.main" />
         </service>
+
+        <!--<service id="poa.main.admin.menu" class="Poa\MainBundle\Admin\MenuAdmin">-->
+            <!--<tag name="sonata.admin" manager_type="orm" group="system" label="menu"/>-->
+            <!--<argument />-->
+            <!--<argument>Poa\MainBundle\Entity\Menu</argument>-->
+            <!--<argument>SonataAdminBundle:CRUD</argument>-->
+        <!--</service>-->
+
+        <!--<service id="poa.main.admin.content" class="Poa\MainBundle\Admin\ContentAdmin">-->
+            <!--<tag name="sonata.admin" manager_type="orm" group="system" label="content"/>-->
+            <!--<argument />-->
+            <!--<argument>Poa\MainBundle\Entity\Content</argument>-->
+            <!--<argument>SonataAdminBundle:CRUD</argument>-->
+        <!--</service>-->
+
+        <!--<service id="poa_main.decoda.filter.bbcode" class="Poa\MainBundle\BbCode\Filter\BbCodeFilter">-->
+            <!--<tag name="fm_bbcode.decoda.filter" alias="bbcode" />-->
+        <!--</service>-->
     </services>
 </container>

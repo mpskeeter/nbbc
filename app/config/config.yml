@@ -1,8 +1,11 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: @UserBundle/Resources/config/services.yml }
+#    - { resource: @UserBundle/Resources/config/services.yml }
 #    - { resource: services.yml }
+    - { resource: poa/config.yml }
+#    - { resource: poa/services.xml }
+
 framework:
     #esi:             ~
     translator:      { fallback: %locale% }
@@ -25,6 +28,7 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    cache: ~
 
 # Assetic Configuration
 assetic:
@@ -52,10 +56,21 @@ doctrine:
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: %kernel.root_dir%/data/data.db3
         # path:     %database_path%
+        types:
+            json: Sonata\Doctrine\Types\JsonType
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+        #auto_mapping: true
+        #remove the auto_mapping: true which was right here, we moved it below
+        entity_managers:
+            default:
+                auto_mapping: true
+                mappings:
+                    FOSUserBundle: ~
+                    SonataUserBundle: ~
+                    SonataMediaBundle: ~
+                    SonataNotificationBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -64,31 +79,6 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
-
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    user_class: Poa\UserBundle\Entity\User
-    group:
-        group_class: Poa\UserBundle\Entity\Group
-    registration:
-        form:
-            type:               poa_user_registration
-#            name:               fos_user_registration
-#            validation_groups:  [Registration, Default]
-        confirmation:
-            from_email: # Use this node only if you don't want the global email address for the confirmation email
-                address:        "mpskeeter@gmail.com"
-                sender_name:    "Mark Peters"
-            enabled:    true # change to true for required email confirmation
-            template:   FOSUserBundle:Registration:email.txt.twig
-
-knp_menu:
-#    twig:
-#        template: PoaMainBundle::knp_menu.html.twig
-    providers:
-        builder_alias: false    # disable the builder-based provider
-        container_aware: true   # keep this one enabled. Can be omitted as it is the default
 
 #fos_facebook:
 #    alias:  facebook
@@ -126,3 +116,4 @@ raul_fraile_ladybug:
         show_quotes:          true
     css:
         path:                 /Asset/tree.min.css
+
