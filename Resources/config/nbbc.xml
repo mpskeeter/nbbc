@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="nbbc.templating.helper.class">Nbbc\Templating\Helper\NbbcHelper</parameter>
+        <parameter key="nbbc.twig.extension.class">Nbbc\Templating\NbbcExtension</parameter>
+    </parameters>
+
+	<services>
+        <service id="nbbc.nbbc_manager" class="Nbbc\Manager\NbbcManager">
+            <argument type="collection">
+                <argument key="allow_ampersand">%nbbc.config.allow_ampersand%</argument>
+                <argument key="detect_urls">%nbbc.config.detect_urls%</argument>
+                <argument key="url_targetable">%nbbc.config.url_targetable%</argument>
+                <argument key="set_url_target">%nbbc.config.set_url_target%</argument>
+                <argument key="local_img_url">%nbbc.config.local_img_url%</argument>
+                <argument key="local_img_dir">%nbbc.config.local_img_dir%</argument>
+                <argument key="rules">%nbbc.rules%</argument>
+                <argument key="smileys">%nbbc.smileys.path%</argument>
+            </argument>
+        </service>
+
+        <service id="nbbc.twig.extension" class="%nbbc.twig.extension.class%" public="false">
+            <argument type="service" id="nbbc.nbbc_manager"/>
+            <tag name="twig.extension" />
+        </service>
+
+        <service id="nbbc.templating.helper" class="%nbbc.templating.helper.class%">
+            <argument type="service" id="nbbc.nbbc_manager" />
+            <tag name="templating.helper" alias="nbbc_help" />
+        </service>
+	</services>
+
+</container>
