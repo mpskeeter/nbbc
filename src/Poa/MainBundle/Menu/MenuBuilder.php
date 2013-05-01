@@ -40,13 +40,16 @@
 		{
 			$menu = $this->factory->createItem('login');
 
-			if( $this->securityContext->isGranted('IS_AUTHENTICATED_FULLY') ){
-				$menu->addChild('Logout',    array('route' => 'fos_user_security_logout'));			// fos_user_security_login
+			if( $this->securityContext->isGranted('IS_AUTHENTICATED_FULLY') ) {
+				if( $this->securityContext->isGranted('ROLE_SUPER_ADMIN') ) {
+					$menu->addChild('Dashboard', array('route' => '_sonata_admin'));
+				}
+				$menu->addChild('Logout',    array('route' => 'fos_user_security_logout'));
 			}
 			else
 			{
-				$menu->addChild('Login',    array('route' => 'fos_user_security_login'));			// fos_user_security_login
-				$menu->addChild('Register', array('route' => 'fos_user_registration_register'));	// fos_user_registration_register
+				$menu->addChild('Login',    array('route' => 'fos_user_security_login'));
+				$menu->addChild('Register', array('route' => 'fos_user_registration_register'));
 			}
 			return $menu;
 		}

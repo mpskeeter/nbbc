@@ -6,8 +6,8 @@
             <!-- begin boxes -->
             <tr><td>
     {% for item in content %}
-        {#{{ item.getText | bbcode_filter('my_default_filter') | ladybug_dump }}#}
-        <p><div>{{ item.getText | bbcode_filter('my_default_filter') | raw }}</div></p>
+        {#{{ item.getText | bbcode_filter | ladybug_dump }}#}
+        <p><div>{{ item.getText | bbcode_filter | raw }}</div></p>
     {% endfor %}
             </td></tr>
             <!-- end boxes -->

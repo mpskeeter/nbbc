@@ -693,7 +693,7 @@
 	cursor:pointer;
 	line-height:145%;
 	display:inline-block;
-	background-image:url("../grfx/media/default.png");
+	background-image:url(../bundles/nbbc/images/default.png);
 	background-repeat:repeat-x;
 	border:none;
 	margin:0 5px;
@@ -822,7 +822,7 @@
 #Editor #attachments a{background-position:-216px -18px;}
 
 #Editor #bbcode-toolbar li a,#Editor #attachments a {
-	background-image:url(../grfx/forum/editor_buttons.png);
+	background-image:url(../bundles/nbbc/images/editor_buttons.png);
 }
 
 #Editor .file-input-textbox {

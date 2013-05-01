@@ -62,8 +62,9 @@
                             <tr align="center">
                                 <td bgcolor="#D2D8A8" align="center">
                                     <div align="center">
-                                        <img src="{{ asset('bundles/poamain/images/header2b.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="255" height="199" border="0"/>
-                                        <img src="{{ asset('bundles/poamain/images/header2c.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="255" height="199" border="0"/>
+                                        <img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" style="object-fit: cover; overflow: hidden;" border="0"/>
+                                        {#<img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="740" height="202" border="0"/>#}
+                                        {#<img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="500" height="199" border="0"/>#}
                                     </div>
                                 </td>
                             </tr>
@@ -77,7 +78,7 @@
                 </tr>
                 <tr>
                     <td height="21" valign="top">&nbsp;</td>
-                    <td align="center" height="60" background="{{ asset('bundles/poamain/images/bg_footer.jpg') }}"><span class="copyright">&copy; Copyright 2013 <a href="/controller.php?view=index">Ballard Woods</a></span></td>
+                    <td align="center" height="60" background="{{ asset('bundles/poamain/images/bg_footer.jpg') }}"><span class="copyright">&copy; Copyright 2012-2013 <a href="{{  path('_welcome') }}">Ballard Woods</a></span></td>
                 </tr>
             </table>
         </div><!-- / content -->
@@ -100,6 +101,10 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
+        function push_download(var1)
+        {
+            _gaq.push(['_trackEvent', 'Downloads', 'Download', var1]);
+        }
     </script>
 </body>
 </html>

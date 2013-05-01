@@ -24,6 +24,7 @@
 
         "friendsofsymfony/user-bundle": "*@dev",
         "friendsofsymfony/facebook-bundle": "1.1.*",
+	"friendsofsymfony/comment-bundle": "dev-master",
 
         "knplabs/knp-menu": "1.1.x-dev",
         "knplabs/knp-menu-bundle": "1.1.x-dev",
@@ -37,7 +38,10 @@
         "sonata-project/cache-bundle": "dev-master",
         "sonata-project/formatter-bundle": "dev-master",
         "sonata-project/notification-bundle": "dev-master",
-        "sonata-project/media-bundle": "dev-master"
+        "sonata-project/media-bundle": "dev-master",
+	"sonata-project/news-bundle": "dev-master",
+
+	"egeloen/ckeditor-bundle": "2.*"
     },
     "scripts": {
         "post-install-cmd": [

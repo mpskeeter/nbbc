@@ -386,9 +386,14 @@
 			return $this->content_items;
 		}
 
-		public function getHierarchyName()
+		public function getSpacedName()
 		{
-			return $this->getParent()->getName().' >> '.$this->getName();
+			$level = '';
+			for ($i=0; $i<$this->getMenuDepth(); $i++)
+			{
+				$level .= '-';
+			}
+			return ($level <> '' ? ' '.$level.' ' : '').$this->getName();
 		}
 
 		/**

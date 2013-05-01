@@ -70,7 +70,7 @@
     {% endif %}
 {% endblock %}
 
-{% block linkElement %}<a href="{{ item.uri }}">{{ block('label') }}</a>{% if not item.actsLikeFirst and not item.actsLikeLast %}{{ ' | ' }}{% endif %}{% endblock %}
+{% block linkElement %}<a href="{{ item.uri }}">{{ block('label') }}</a>{% if not item.actsLikeLast %}{{ ' | ' }}{% endif %}{% endblock %}
 
 {% block spanElement %}<span{{ _self.attributes(item.labelAttributes) }}>{{ block('label') }}</span>{% endblock %}
 

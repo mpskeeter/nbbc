@@ -16,6 +16,25 @@ fos_user:
             enabled:    true # change to true for required email confirmation
             template:   FOSUserBundle:Registration:email.txt.twig
 
+#ivory_ck_editor:
+##    toolbars:
+##        items:
+##            bbcode_document:     [ 'Source', '-', 'Save', '-', 'Undo', 'Redo' ]
+##            bbcode_find_replace: [ 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat' ]
+##        configs:
+##            bbcode_toolbar: [ [ '@bbcode_document' ], [ '@bbcode_find_replace' ], [ 'Link', 'Unlink', 'Image' ], '/', [ 'Bold', 'Italic', 'Strike', 'Underline' ], [ 'BulletedList', 'NumberedList', '-', 'Blockquote' ], [ 'Style' ], [ 'Format' ], [ 'FontSize' ], [ 'TextColor' ], [ 'Smiley', 'SpecialChar', '-', 'Maximize' ] ]
+#    plugins:
+#        bbcode:
+#            path:     'bundles/ivoryckeditor/plugins/bbcodedecoda'
+##            path:     'ckeditor/plugins/bbcode/'
+#            filename: 'plugin.js'
+##    configs:
+##        my_bbcode:
+##            extraPlugins: 'bbcode'
+##            toolbar:      'bbcode_toolbar'
+##    base_path: 'ckeditor'
+##    js_path:   'ckeditor/ckeditor.js'
+
 knp_menu:
 #    twig:
 #        template: PoaMainBundle::knp_menu.html.twig
@@ -23,13 +42,71 @@ knp_menu:
 #        builder_alias: false    # disable the builder-based provider
         builder_alias: true    # disable the builder-based provider
         container_aware: true   # keep this one enabled. Can be omitted as it is the default
+#
+#fm_bbcode:
+#    filter_sets:
+#        my_default_filter:
+#          locale: en
+#          xhtml: true
+#          strict: false
+#          filters: [ default, text, image, block, list, url ]
 
-fm_bbcode:
-    filter_sets:
-        my_default_filter:
-          locale: en
-          xhtml: true
-          filters: [ default, text, image, block, list, url ]
+nbbc:
+    config:
+        allow_ampersand: true
+        detect_urls: true
+        url_targetable: 'true'
+        set_url_target: '_blank'
+        local_img_url: '../bundles/poamain/images'
+        local_img_dir: '/var/www/frameworks/Symfony-2.2.0/web/bundles/poamain/images'
+        smileys:
+            path: '/smileys'
+    rules:
+        imgsize:
+            mode: 4
+            template: '<img width="{$width}" height="{$height}" src="{$_content}" />'
+            class: 'block'
+            allow:
+                width:  '/^[1-9][0-9]*$/'
+                height: '/^[1-9][0-9]*$/'
+            default:
+                width:  '501'
+                height: '291'
+            allow_in: [ 'listitem', 'block', 'columns', 'inline', 'link' ]
+        anchor:
+            mode: 4
+            template: '<div id="{$name}">{$_content}</div>'
+            class: 'block'
+            allow:
+                name: '/^[a-zA-Z0-9._ -]+$/'
+            allow_in: [ 'listitem', 'block', 'columns', 'inline' ]
+        goto:
+            mode: 4
+            template: '<a href="#{$name}">{$_content}</a>'
+            class: 'block'
+            allow:
+                name: '/^[a-zA-Z0-9._ -]+$/'
+            allow_in: [ 'listitem', 'block', 'columns', 'inline' ]
+        line:
+            mode: 4
+            template: '<div style="width:90%;overflow:auto; zoom:1">{$_content}</div>'
+            class: 'block'
+            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
+        lineleft:
+            mode: 4
+            template: '<div style="margin:0; text-align:left; float:left;">{$_content}</div>'
+            class: 'block'
+            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
+        lineright:
+            mode: 4
+            template: '<div style="margin:0; text-align:right; float:left;">{$_content}</div>'
+            class: 'block'
+            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
+
+bbc_editor:
+    enable:    true
+    base_path: '/test/web/bundles/nbbc/'
+    js_path:   '/test/web/bundles/nbbc/editor.js'
 
 sonata_admin:
     # default value, change it to sonata.admin.security.handler.acl to use ACL
@@ -41,7 +118,8 @@ sonata_admin:
     title_logo: /test/web/bundles/poamain/images/logo.jpg
     templates:
         # default global templates
-        layout:    SonataAdminBundle::standard_layout.html.twig
+#        layout:    SonataAdminBundle::standard_layout.html.twig
+        layout:    SonataAdminBundle::layout.html.twig
         ajax:      SonataAdminBundle::ajax_layout.html.twig
         dashboard: SonataAdminBundle:Core:dashboard.html.twig
 #        markup:    SonataAdminBundle::layout.html.twig
@@ -136,6 +214,8 @@ sonata_doctrine_orm_admin:
                 integer:    SonataAdminBundle:CRUD:base_list_field.html.twig
                 decimal:    SonataAdminBundle:CRUD:base_list_field.html.twig
                 identifier: SonataAdminBundle:CRUD:base_list_field.html.twig
+                bbcode:     AdminBundle:CRUD:bbcode.html.twig
+                bbc_editor: BBCEditor:Form:bbc_editor_widget.html.twig
 
             show:
                 array:      SonataAdminBundle:CRUD:show_array.html.twig
@@ -178,39 +258,39 @@ sonata_cache:
             servers:
                 - { domain: kooqit.local, ip: 127.0.0.1, port: 80}
 
-sonata_formatter:
-    formatters:
-        markdown:
-            service: sonata.formatter.text.markdown
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        text:
-            service: sonata.formatter.text.text
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        rawhtml:
-            service: sonata.formatter.text.raw
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        richhtml:
-            service: sonata.formatter.text.raw
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        twig:
-            service: sonata.formatter.text.twigengine
-            extensions: [] # Twig formatter cannot have extensions
+#sonata_formatter:
+#    formatters:
+#        markdown:
+#            service: sonata.formatter.text.markdown
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        text:
+#            service: sonata.formatter.text.text
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        rawhtml:
+#            service: sonata.formatter.text.raw
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        richhtml:
+#            service: sonata.formatter.text.raw
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        twig:
+#            service: sonata.formatter.text.twigengine
+#            extensions: [] # Twig formatter cannot have extensions
 
 sonata_media:
     default_context: default

@@ -26,6 +26,9 @@ class AppKernel extends Kernel
 
 			new FOS\UserBundle\FOSUserBundle(),
 
+			new Nbbc\NbbcBundle(),
+			new BBCEditor\BBCEditor(),
+
 			new Sonata\BlockBundle\SonataBlockBundle(),
 			new Sonata\jQueryBundle\SonatajQueryBundle(),
 			new Sonata\AdminBundle\SonataAdminBundle(),
@@ -35,14 +38,15 @@ class AppKernel extends Kernel
 			new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
 			new Sonata\NotificationBundle\SonataNotificationBundle(),
 			new Sonata\MediaBundle\SonataMediaBundle(),
-			new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
-			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
-			new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-			new Sonata\FormatterBundle\SonataFormatterBundle(),
+
+//			new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
+//			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+//			new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+//			new Sonata\FormatterBundle\SonataFormatterBundle(),
 
 #			new FOS\FacebookBundle\FOSFacebookBundle(),
 			new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-			new FM\BbcodeBundle\FMBbcodeBundle(),
+//			new FM\BbcodeBundle\FMBbcodeBundle(),
 
 //			new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 			new \Poa\UserBundle\UserBundle(),

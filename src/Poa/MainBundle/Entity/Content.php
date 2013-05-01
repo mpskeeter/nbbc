@@ -4,6 +4,7 @@
 
 	use Doctrine\Common\Collections\ArrayCollection;
 	use Doctrine\ORM\Mapping as ORM;
+	use FM\BbcodeBundle\Decoda\Decoda;
 
 	/**
 	 * Poa\MainBundle\Entity\Content
@@ -116,7 +117,6 @@
 		{
 			$this->text = $text;
 		}
-
 
 		/**
 		 * Get content_text
