@@ -1,6 +1,6 @@
 <?php
 
-namespace Nbbc\DependencyInjection;
+namespace MPeters\NbbcBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

@@ -1,6 +1,6 @@
 <?php
 
-	namespace Nbbc\src;
+	namespace MPeters\NbbcBundle\src;
 
 	class BBCodeEmailAddressValidator {
 		function check_email_address($strEmailAddress) {

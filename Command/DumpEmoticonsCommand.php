@@ -1,6 +1,6 @@
 <?php
 
-namespace Nbbc\Command;
+namespace MPeters\NbbcBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;

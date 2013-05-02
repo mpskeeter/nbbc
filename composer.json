@@ -1,10 +1,10 @@
 {
-	"name": "mpeters/Nbbc",
-	"type": "library",
-	"description": "A lightweight lexical string parser for BBCode styled markup.",
-	"keywords": ["bbcode", "markup", "nbbc", "parser"],
+	"name": "mpeters/nbbc-bundle",
+	"type": "symfony-bundle",
+	"description": "A lightweight parser for BBCode styled markup.",
+	"keywords": ["bbcode", "markup", "nbbc"],
 	"homepage": "http://github.com/mpskeeter/Nbbc",
-	"license": "MIT",
+	"license": "",
 	"authors": [
 		{
 			"name": "Mark Peters",
@@ -13,12 +13,13 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-		"ext-mbstring": "*"
+        "symfony/framework-bundle": ">=2.0,<2.3-dev"
 	},
 	"support": {
 		"source": "https://github.com/mpskeeter/Nbbc"
 	},
-	"autoload": {
-		"psr-0": { "Nbbc": "/" }
-	}
+    "autoload":     {
+        "psr-0": { "MPeters\\NbbcBundle": "" }
+    },
+    "target-dir": "MPeters/NbbcBundle"
 }

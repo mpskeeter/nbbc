@@ -1,9 +1,9 @@
 <?php
 
-namespace Nbbc\Templating;
+namespace MPeters\NbbcBundle\Templating;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Nbbc\Manager\NbbcManager as NbbcManager;
+use MPeters\NbbcBundle\Manager\NbbcManager as NbbcManager;
 use Twig_Environment;
 
 /**
@@ -40,6 +40,8 @@ class NbbcExtension extends \Twig_Extension
     }
 
     /**
+	 * @param $env Twig_Environment
+	 *
      * @param $value string
      *
      * @return string

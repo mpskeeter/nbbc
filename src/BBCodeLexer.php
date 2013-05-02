@@ -1,6 +1,6 @@
 <?php
 
-	namespace Nbbc\src;
+	namespace MPeters\NbbcBundle\src;
 
 	class BBCodeLexer {
 		var $token;

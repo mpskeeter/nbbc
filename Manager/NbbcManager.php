@@ -1,7 +1,7 @@
 <?php
-namespace Nbbc\Manager;
+namespace MPeters\NbbcBundle\Manager;
 
-use Nbbc\src\bbcode as bbcode;
+use MPeters\NbbcBundle\src\bbcode as bbcode;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

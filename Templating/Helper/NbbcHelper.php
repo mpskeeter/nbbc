@@ -1,10 +1,10 @@
 <?php
 
-namespace Nbbc\Templating\Helper;
+namespace MPeters\NbbcBundle\Templating\Helper;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Templating\Helper\Helper;
-use Nbbc\Manager\NbbcManager as NbbcManager;
+use MPeters\NbbcBundle\Manager\NbbcManager as NbbcManager;
 
 /**
  * @author Al Ganiev <helios.ag@gmail.com>

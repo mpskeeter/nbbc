@@ -1,6 +1,6 @@
 <?php
 
-namespace Nbbc\Composer;
+namespace MPeters\NbbcBundle\Composer;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\PhpExecutableFinder;

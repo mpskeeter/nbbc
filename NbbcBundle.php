@@ -1,6 +1,6 @@
 <?php
 
-namespace Nbbc;
+namespace MPeters\NbbcBundle;
 
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -30,7 +30,7 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-	namespace Nbbc\src;
+	namespace MPeters\NbbcBundle\src;
 
 	define("BBCODE_VERSION", "1.4.5");
 	define("BBCODE_RELEASE", "2010-09-17");
@@ -67,9 +67,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		}
 	}
 
-	use Nbbc\src\BBCodeLexer;
-	use Nbbc\src\BBCodeLibrary;
-	use Nbbc\src\BBCodeEmailAddressValidator;
+	use MPeters\NbbcBundle\src\BBCodeLexer;
+	use MPeters\NbbcBundle\src\BBCodeLibrary;
+	use MPeters\NbbcBundle\src\BBCodeEmailAddressValidator;
 
 	class bbcode
 	{

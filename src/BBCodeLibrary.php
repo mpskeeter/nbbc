@@ -1,6 +1,6 @@
 <?php
 
-	namespace Nbbc\src;
+	namespace MPeters\NbbcBundle\src;
 
 	class BBCodeLibrary {
 		var /** @noinspection PhpDuplicateArrayKeysInspection */
@@ -461,6 +461,11 @@
 				. htmlspecialchars($title) . "</a>";
 		}
 
+		function getParam($input,$parse_string) {
+			$str_pos = strpos($input,$parse_string);
+			$start = $str_pos + strlen($parse_string);
+			return substr($input,$start,strpos($parse_string,'"',$start)-$start);
+		}
 		/**
 		 * @param $bbcode bbcode
 		 * @param $action
@@ -474,15 +479,15 @@
 			if ($action == BBCODE_CHECK) return true;
 			$content = trim($bbcode->UnHTMLEncode(strip_tags($content)));
 			if (preg_match("/\\.(?:gif|jpeg|jpg|jpe|png)$/", $content)) {
-				if (preg_match("/^[a-zA-Z0-9_][^:]+\-$/", $content)) {
+				if (preg_match("/^[a-zA-Z0-9_][^:]+$/", $content)) {
 					if (!preg_match("/(?:\\/\\.\\.\\/)|(?:^\\.\\.\\/)|(?:^\\/)/", $content)) {
-						$info = @getimagesize("{$bbcode->local_img_dir}/{$content}");
+						$file = $bbcode->local_img_dir.'/'.$content;
+						$info = @getimagesize("{$file}");
 						if ($info[2] == IMAGETYPE_GIF || $info[2] == IMAGETYPE_JPEG || $info[2] == IMAGETYPE_PNG) {
-							return '<img src="'
-								. htmlspecialchars("{$bbcode->local_img_url}/{$content}") . '" '
+							return '<img src="' . htmlspecialchars("{$bbcode->local_img_url}/{$content}") . '" '
 								. 'alt="' . htmlspecialchars(basename($content)) . '" '
-								. isset($params['width'])  ? ' width="'  . $params['width']  . '" ' : ''
-								. isset($params['height']) ? ' height="' . $params['height'] . '" ' : ''
+								. 'width="'  . (isset($params['width'])  ? $params['width']  : $this->getParam($info[3],'width="'))  . '" '
+								. 'height="' . (isset($params['height']) ? $params['height'] : $this->getParam($info[3],'height="')) . '" '
 								. 'class="bbcode_img" />';
 						}
 					}
