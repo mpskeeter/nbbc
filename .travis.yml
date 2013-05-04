@@ -1,11 +1,15 @@
 language: php
 
 php:
-    - 5.3
-    - 5.4
-env:
-  - SYMFONY_VERSION=v2.0.10
-  - SYMFONY_VERSION=origin/2.0
-  - SYMFONY_VERSION=origin/master
+  - 5.3
+  - 5.3.3
+  - 5.4
+  - 5.5
 
-before_script: php vendor/vendors.php
+env:
+  - SYMFONY_VERSION=v2.2.1
+  - SYMFONY_VERSION=v2.2.0
+  - SYMFONY_VERSION=v2.0.23
+
+before_script:
+  - composer install --dev
