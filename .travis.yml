@@ -12,4 +12,5 @@ env:
   - SYMFONY_VERSION=v2.0.23
 
 before_script:
+  - /home/travis/.phpenv/versions/5.3.23/bin/composer.phar self-update
   - composer install --dev
