@@ -14,3 +14,4 @@ env:
 before_script:
   - composer self-update
   - composer install --dev
+  - composer require mpskeeter/Nbbc
