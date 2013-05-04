@@ -5,24 +5,28 @@
  * @link		http://github.com/mpskeeter/Nbbc
  */
 
-namespace MPeters\NbbcBundle\Tests\Test;
+namespace MPeters\NbbcBundle\Tests\Nbbc\Test;
 
-use MPeters\NbbcBundle\src\bbcode as bbcode;
+use MPeters\NbbcBundle\Manager\NbbcManager;
 
 class TestCase extends \PHPUnit_Framework_TestCase {
 
 	/**
-	 * bbcode instance.
+	 * NbbcManager instance.
 	 *
-	 * @var bbcode
+	 * @var NbbcManager
 	 */
+	protected $manager;
+
 	protected $object;
 
 	/**
 	 * Set up bbcode.
 	 */
 	protected function setUp() {
-		$this->object = new bbcode();
+		$this->manager = new NbbcManager(array());
+
+		$this->object = $this->manager->get(NbbcManager::NBBC_DEFAULT);
 	}
 
 	/**
