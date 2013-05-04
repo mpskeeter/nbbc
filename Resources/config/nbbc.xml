@@ -12,14 +12,27 @@
 	<services>
         <service id="nbbc.nbbc_manager" class="MPeters\NbbcBundle\Manager\NbbcManager">
             <argument type="collection">
+                <argument key="debug">%nbbc.config.debug%</argument>
+                <argument key="tag_marker">%nbbc.config.tag_marker%</argument>
                 <argument key="allow_ampersand">%nbbc.config.allow_ampersand%</argument>
+                <argument key="ignore_new_lines">%nbbc.config.ignore_new_lines%</argument>
+                <argument key="plain_mode">%nbbc.config.plain_mode%</argument>
+                <argument key="limit">%nbbc.config.limit%</argument>
+                <argument key="limit_precision">%nbbc.config.limit_precision%</argument>
+                <argument key="limit_tail">%nbbc.config.limit_tail%</argument>
+                <argument key="pre_trim">%nbbc.config.pre_trim%</argument>
+                <argument key="post_trim">%nbbc.config.post_trim%</argument>
+                <argument key="wiki_url">%nbbc.config.wiki_url%</argument>
+                <argument key="rule_html">%nbbc.config.rule_html%</argument>
                 <argument key="detect_urls">%nbbc.config.detect_urls%</argument>
                 <argument key="url_targetable">%nbbc.config.url_targetable%</argument>
-                <argument key="set_url_target">%nbbc.config.set_url_target%</argument>
+                <argument key="url_target">%nbbc.config.url_target%</argument>
                 <argument key="local_img_url">%nbbc.config.local_img_url%</argument>
                 <argument key="local_img_dir">%nbbc.config.local_img_dir%</argument>
                 <argument key="rules">%nbbc.rules%</argument>
-                <argument key="smileys">%nbbc.smileys.path%</argument>
+                <argument key="smileys_enable">%nbbc.smileys.enable%</argument>
+                <argument key="smileys_url">%nbbc.smileys.url%</argument>
+                <argument key="smileys_dir">%nbbc.smileys.dir%</argument>
             </argument>
         </service>
 

@@ -70,15 +70,27 @@ class NbbcManager
     private function setOptions(array $options)
     {
         $this->options = array(
+			'debug'              => false,
+			'tag_marker'         => '[',
             'allow_ampersand'    => false,
+			'ignore_new_lines'   => false,
+			'plain_mode'         => false,
+			'limit'              => 0,
+			'limit_precision'    => null,
+			'limit_tail'         => '...',
+			'pre_trim'           => null,
+			'post_trim'          => null,
+			'wiki_url'           => null,
             'detect_urls'        => false,
             'url_targetable'     => false,
-			'set_url_target'     => false,
+			'url_target'         => false,
 			'local_img_url'      => null,
 			'local_img_dir'      => null,
+			'rule_html'          => '<hr />',
             'rules'              => array(),
-			'smileys'            => 'smileys/',
-			'extension'          => 'extension',
+			'smileys_enable'     => false,
+			'smileys_url'        => null,
+			'smileys_dir'        => 'smileys/'
         );
 
         // check option names and live merge, if errors are encountered Exception will be thrown
@@ -159,8 +171,51 @@ class NbbcManager
 			$options = $this->options;
 		}
 
+		if(isset($options['debug']) && $options['debug'] != false) {
+			$nbbc->SetDebug($options['debug']);
+		}
+
+		if(isset($options['tag_marker'])) {
+			$nbbc->SetTagMarker($options['tag_marker']);
+		}
+
 		if(isset($options['allow_ampersand'])) {
 			$nbbc->SetAllowAmpersand($options['allow_ampersand']);
+		}
+
+		if(isset($options['ignore_new_lines'])) {
+			$nbbc->SetIgnoreNewlines($options['ignore_new_lines']);
+		}
+
+		if(isset($options['plain_mode'])) {
+			$nbbc->SetIgnoreNewlines($options['plain_mode']);
+		}
+
+		if(isset($options['limit']) && $options['limit'] != 0) {
+			$nbbc->SetLimit($options['limit']);
+			if(isset($options['limit_precision']) && !is_null($options['limit_precision'])) {
+				$nbbc->SetLimitPrecision($options['limit_precision']);
+			}
+
+			if(isset($options['limit_tail'])) {
+				$nbbc->SetLimitTail($options['limit_tail']);
+			}
+		}
+
+		if(isset($options['pre_trim']) && !is_null($options['pre_trim'])) {
+			$nbbc->SetIgnoreNewlines($options['pre_trim']);
+		}
+
+		if(isset($options['post_trim']) && !is_null($options['post_trim'])) {
+			$nbbc->SetIgnoreNewlines($options['post_trim']);
+		}
+
+		if(isset($options['wiki_url']) && !is_null($options['wiki_url'])) {
+			$nbbc->SetWikiURL($options['wiki_url']);
+		}
+
+		if (isset($options['rule_html'])) {
+			$nbbc->SetRuleHTML($options['rule_html']);
 		}
 
 		if (isset($options['detect_urls'])) {
@@ -182,8 +237,8 @@ class NbbcManager
 					$setURLTarget = true;
 					break;
 			}
-			if($setURLTarget == true && isset($options['set_url_target'])) {
-				switch ($options['set_url_target']) {
+			if($setURLTarget == true && isset($options['url_target'])) {
+				switch ($options['url_target']) {
 					case 'true':
 						$nbbc->SetURLTarget(true);
 						break;
@@ -191,7 +246,7 @@ class NbbcManager
 						$nbbc->SetURLTarget(false);
 						break;
 					default:
-						$nbbc->SetURLTarget($options['set_url_target']);
+						$nbbc->SetURLTarget($options['url_target']);
 						break;
 				}
 			}
@@ -205,8 +260,16 @@ class NbbcManager
 			$nbbc->SetLocalImgDir($options['local_img_dir']);
 		}
 
-		if (isset($options['smileys'])) {
-			$nbbc->SetSmileyDir($options['smileys']);
+		if (isset($options['smileys_enable'])) {
+			$nbbc->SetEnableSmileys($options['smileys_enable']);
+		}
+
+		if (isset($options['smileys_url']) && !is_null($options['smileys_url'])) {
+			$nbbc->SetSmileyURL($options['smileys_url']);
+		}
+
+		if (isset($options['smileys_dir']) && !is_null($options['smileys_dir'])) {
+			$nbbc->SetSmileyDir($options['smileys_dir']);
 		}
 
 		foreach($options['rules'] as $key => $params)
