@@ -19,7 +19,7 @@
 		"source": "https://github.com/mpskeeter/nbbc"
 	},
     "autoload":     {
-        "psr-0": { "MPeters": "/vendor/mpeters/nbbc-bundle" }
+        "psr-0": { "MPeters\\NbbcBundle": "" }
     },
     "target-dir": "MPeters/NbbcBundle"
 }
