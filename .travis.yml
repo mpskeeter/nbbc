@@ -14,5 +14,4 @@ env:
 before_script:
   - composer self-update
   - composer install --dev
-  - composer require mpskeeter/nbbc:dev-travis
   - composer update
