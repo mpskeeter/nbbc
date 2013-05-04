@@ -3,12 +3,12 @@
 	"type": "symfony-bundle",
 	"description": "A lightweight parser for BBCode styled markup.",
 	"keywords": ["bbcode", "markup", "nbbc"],
-	"homepage": "http://github.com/mpskeeter/Nbbc",
+	"homepage": "http://github.com/mpskeeter/nbbc",
 	"license": "",
 	"authors": [
 		{
 			"name": "Mark Peters",
-			"homepage": "http://www.skeeter-net.net"
+			"homepage": "http://github.com/mpskeeter/nbbc"
 		}
 	],
 	"require": {
@@ -16,7 +16,7 @@
         "symfony/framework-bundle": ">=2.0,<2.3-dev"
 	},
 	"support": {
-		"source": "https://github.com/mpskeeter/Nbbc"
+		"source": "https://github.com/mpskeeter/nbbc"
 	},
     "autoload":     {
         "psr-0": { "MPeters\\NbbcBundle": "" }
