@@ -45,3 +45,4 @@
 [18-May-2013 08:00:14 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/modules/twig.so' - /usr/lib/php/modules/twig.so: undefined symbol: zend_unmangle_property_name in Unknown on line 0
 [18-May-2013 08:01:20 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/modules/twig.so' - /usr/lib/php/modules/twig.so: undefined symbol: zend_unmangle_property_name in Unknown on line 0
 [18-May-2013 08:01:24 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/modules/twig.so' - /usr/lib/php/modules/twig.so: undefined symbol: zend_unmangle_property_name in Unknown on line 0
+[19-May-2013 17:29:50 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/modules/twig.so' - /usr/lib/php/modules/twig.so: undefined symbol: zend_unmangle_property_name in Unknown on line 0

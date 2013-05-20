@@ -44,6 +44,8 @@
         "sonata-project/media-bundle": "dev-master",
 	"sonata-project/news-bundle": "dev-master",
 
+	"frequence-web/calendr-bundle": "dev-master",
+
 	"egeloen/ckeditor-bundle": "2.*",
 	"white-october/pagerfanta-bundle": "dev-master",
 	"herzult/forum-bundle": "dev-master",
