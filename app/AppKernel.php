@@ -25,9 +25,11 @@ class AppKernel extends Kernel
 			new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
 
 			new FOS\UserBundle\FOSUserBundle(),
+			new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+#			new FOS\FacebookBundle\FOSFacebookBundle(),
 
-			new Nbbc\NbbcBundle(),
-			new BBCEditor\BBCEditor(),
+			new MPeters\NbbcBundle\NbbcBundle(),
+			new MPeters\BBCEditorBundle\BBCEditorBundle(),
 
 			new Sonata\BlockBundle\SonataBlockBundle(),
 			new Sonata\jQueryBundle\SonatajQueryBundle(),
@@ -43,14 +45,20 @@ class AppKernel extends Kernel
 //			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
 //			new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 //			new Sonata\FormatterBundle\SonataFormatterBundle(),
-
-#			new FOS\FacebookBundle\FOSFacebookBundle(),
-			new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 //			new FM\BbcodeBundle\FMBbcodeBundle(),
 
+			new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
+			new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+//			new Herzult\Bundle\ForumBundle\HerzultForumBundle(),
+			new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
+
 //			new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-			new \Poa\UserBundle\UserBundle(),
-			new \Poa\AdminBundle\PoaAdminBundle(),
+			new Poa\UserBundle\UserBundle(),
+			new Poa\AdminBundle\PoaAdminBundle(),
+//			new Poa\BlogBundle\PoaBlogBundle(),
+//			new Poa\ForumBundle\ForumBundle(),
+			new Poa\ForumBundle\PoaForumBundle(),
 		);
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

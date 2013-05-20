@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.crop { width: 400px; height: 140px; overflow: hidden; }
+.crop img { width: 700px; height: 280px; margin: -115px 0 0 -50px; }
+
+.menu_title {
+    font-family: 'Marck Script', cursive;
+    font-size: 32px;
+}
+
 body .title2	{
     height: 20px;
 }
@@ -134,7 +142,7 @@ a:hover, a:active {
 	font-weight: bold;
 	color: #990000;
 	letter-spacing: 3px;
-    background: #DCE0BB url(../bundles/poamain/images/bg_title.jpg) no-repeat;
+    /*background: #DCE0BB url(../bundles/poamain/images/bg_title.jpg) no-repeat;*/
     padding-right: 20px;
 	text-align: right;
 }
@@ -657,6 +665,9 @@ div.posts {
 /*    border-spacing: 10px;*/
 }
 
+.forumline thead tr{background-color:#316D22;color:#ffffff}
+
+
 .comment_ui {
 /*
   background-color:#f2f2f2;
@@ -710,6 +721,7 @@ div.posts {
 /*    display:inline;
     float: left;*/
     padding: 10px;
+    color: #000000;
 }
 
 a.largeButton:link, a.largeButton:visited, input[type="button"].largeButton {

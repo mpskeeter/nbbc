@@ -50,13 +50,17 @@ _directory:
     pattern: /directory
     defaults: {_controller: PoaMainBundle:Content:index }
 
-_board:
-    pattern: /board
-    defaults: {_controller: PoaMainBundle:Content:index }
+_board_only:
+    pattern:  /
+    defaults: { _controller: PoaMainBundle:Welcome:index }
 
 _download:
     pattern:  /download/{filename}
     defaults: {_controller: PoaMainBundle:Content:download }
+
+#_forum:
+#    pattern: /blog
+#    defaults: {_controller: PoaMainBundle:Welcome:index }
 
 _user_bundle:
     resource: "@UserBundle/Resources/config/routing.yml"
@@ -85,3 +89,10 @@ media:
 sonata_page_cache:
     resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
     prefix: /
+
+poa_forum:
+    resource: '@PoaForumBundle/Resources/config/routing/forum.xml'
+    prefix: /forum
+
+#blog_bundle:
+#    resource: "@PoaBlogBundle/Resources/config/routing.yml"

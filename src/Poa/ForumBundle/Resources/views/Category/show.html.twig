@@ -1,0 +1,17 @@
+{% extends 'PoaForumBundle::layout.html.twig' %}
+{% block forum_content %}
+    <tr><td>
+        <div class="crumbs">
+            <a href="{{ path('forum_index') }}">Forum</a>
+        </div>
+    </td></tr>
+    {#<tr>#}
+        {#<td>#}
+            {#<div class="main topics">#}
+                {#{{ category.name }} <a href="{{ forum_urlForCategoryAtomFeed(category) }}" title="Atom feed" class="feed atom"><image width="12" height="12" src="{{ asset('bundles/poamain/images/feed.png') }}" /></a>#}
+            {#</div>#}
+        {#</td>#}
+    {#</tr>#}
+    <tr><td>&nbsp;</td></tr>
+    {% render(controller('PoaForumBundle:Topic:list',{'categorySlug': category.slug, 'pagerOptions': {'page': page, 'routeName': 'forum_category_show', 'routeParams': {'slug': category.slug}}})) %}
+{% endblock %}

@@ -16,6 +16,11 @@ fos_user:
             enabled:    true # change to true for required email confirmation
             template:   FOSUserBundle:Registration:email.txt.twig
 
+ornicar_gravatar:
+    rating: g
+    size: 80
+    default: mm
+
 #ivory_ck_editor:
 ##    toolbars:
 ##        items:
@@ -56,23 +61,23 @@ nbbc:
         allow_ampersand: true
         detect_urls: true
         url_targetable: 'true'
-        set_url_target: '_blank'
-        local_img_url: '../bundles/poamain/images'
-        local_img_dir: '/var/www/frameworks/Symfony-2.2.0/web/bundles/poamain/images'
-        smileys:
-            path: '/smileys'
+        url_target:     '_blank'
+        local_img_url:  '../bundles/poamain/images'
+        local_img_dir:  '/var/www/frameworks/Symfony-2.2.0/web/bundles/poamain/images'
+    smileys:
+        dir: '/smileys'
     rules:
-        imgsize:
-            mode: 4
-            template: '<img width="{$width}" height="{$height}" src="{$_content}" />'
-            class: 'block'
-            allow:
-                width:  '/^[1-9][0-9]*$/'
-                height: '/^[1-9][0-9]*$/'
-            default:
-                width:  '501'
-                height: '291'
-            allow_in: [ 'listitem', 'block', 'columns', 'inline', 'link' ]
+#        imgsize:
+#            mode: 4
+#            template: '<img width="{$width}" height="{$height}" src="{$_content}" />'
+#            class: 'block'
+#            allow:
+#                width:  '/^[1-9][0-9]*$/'
+#                height: '/^[1-9][0-9]*$/'
+#            default:
+#                width:  '501'
+#                height: '291'
+#            allow_in: [ 'listitem', 'block', 'columns', 'inline', 'link' ]
         anchor:
             mode: 4
             template: '<div id="{$name}">{$_content}</div>'
@@ -105,8 +110,8 @@ nbbc:
 
 bbc_editor:
     enable:    true
-    base_path: '/test/web/bundles/nbbc/'
-    js_path:   '/test/web/bundles/nbbc/editor.js'
+    base_path: '/test/web/bundles/bbceditor/'
+    js_path:   '/test/web/bundles/bbceditor/editor.js'
 
 sonata_admin:
     # default value, change it to sonata.admin.security.handler.acl to use ACL
@@ -215,7 +220,7 @@ sonata_doctrine_orm_admin:
                 decimal:    SonataAdminBundle:CRUD:base_list_field.html.twig
                 identifier: SonataAdminBundle:CRUD:base_list_field.html.twig
                 bbcode:     AdminBundle:CRUD:bbcode.html.twig
-                bbc_editor: BBCEditor:Form:bbc_editor_widget.html.twig
+                bbc_editor: BBCEditorBundle:Form:bbc_editor_widget.html.twig
 
             show:
                 array:      SonataAdminBundle:CRUD:show_array.html.twig
@@ -318,3 +323,84 @@ sonata_media:
 
 sonata_notification:
     backend: sonata.notification.backend.runtime
+
+#herzult_forum:
+#    db_driver: orm
+#    class:
+#        model:
+#            category:   Poa\ForumBundle\Model\Category
+#            topic:      Poa\ForumBundle\Model\Topic
+#            post:       Poa\ForumBundle\Model\Post
+#        blamer:
+#            topic:      Poa\ForumBundle\Blamer\TopicBlamer
+#            post:       Poa\ForumBundle\Blamer\PostBlamer
+
+poa_forum:
+    db_driver: orm
+    class:
+        model:
+            category:   Poa\ForumBundle\Entity\Category
+            topic:      Poa\ForumBundle\Entity\Topic
+            post:       Poa\ForumBundle\Entity\Post
+        blamer:
+            topic:      Poa\ForumBundle\Blamer\TopicBlamer
+            post:       Poa\ForumBundle\Blamer\PostBlamer
+
+hwi_oauth:
+    #this is my custom user provider, created from FOSUBUserProvider - will manage the
+    #automatic user registration on your site, with data from the provider (facebook. google, etc.)
+    #and also, the connecting part (get the token and the user_id)
+    connect:
+        account_connector: my_user_provider
+
+    # name of the firewall in which this bundle is active, this setting MUST be set
+    firewall_name: main
+
+    # an optional setting to configure a query string parameter which can be used to redirect
+    # the user after authentication, e.g. /connect/facebook?_destination=/my/destination will
+    # redirect the user to /my/destination after facebook authenticates them.  If this is not
+    # set then the user will be redirected to the original resource that they requested, or
+    # the base address if no resource was requested.  This is similar to the behaviour of
+    # [target_path_parameter for form login](http://symfony.com/doc/2.0/cookbook/security/form_login.html).
+    # target_path_parameter: _destination
+
+    # here you will add one (or more) configurations for resource owners
+    # and other settings you want to adjust in this bundle, just checkout the list below!
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           "%facebook_app_id%"
+            client_secret:       "%facebook_app_secret%"
+            scope:               "email, user_birthday, user_location, user_about_me, offline_access"
+        google:
+            type:                google
+            client_id:           "%google_app_id%"
+            client_secret:       "%google_app_secret%"
+            scope:               "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+    fosub:
+        # try 30 times to check if a username is available (foo, foo1, foo2 etc)
+        username_iterations: 30
+
+        # mapping between resource owners (see below) and properties
+        properties:
+#            github: githubId
+            google: googleUid
+            facebook: facebookUid
+#            my_custom_provider: customId
+    http_client:
+        timeout:       10 # Time in seconds, after library will shutdown request, by default: 5
+        verify_peer:   false # Setting allowing you to turn off SSL verification, by default: true
+        ignore_errors: false # Setting allowing you to easier debug request errors, by default: true
+        max_redirects: 1 # Number of HTTP redirection request after which library will shutdown request,
+                         # by default: 5
+
+parameters:
+    my_user_provider.class: Poa\UserBundle\Security\User\Provider\FOSUBUserProvider
+
+#https://gist.github.com/danvbe/4476697
+services:
+    my_user_provider:
+        class: "%my_user_provider.class%"
+        #this is the place where the properties are passed to the UserProvider - see config.yml
+#        arguments: [@fos_user.user_manager,{facebook: facebook_id, google: google_id}]
+        arguments: [@fos_user.user_manager,{facebook: facebookUid, google: googleUid}]

@@ -8,7 +8,7 @@
 
 	/**
 	 * @ORM\Entity
-	 * @ORM\Table(name="poa_group")
+	 * @ORM\Table(name="groups")
 	 */
 	class Group extends BaseGroup
 	{

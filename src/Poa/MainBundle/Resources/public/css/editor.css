@@ -585,7 +585,7 @@
 #Editor ul.post-profile li.post-online-img img{vertical-align:text-top;}
 
 #Editor span.karma-minus {
-	background:url("../../default/media/iconsets/profile/default/default.png") no-repeat 0 -294px;
+	background:url('../bundles/bbceditor/images/default.png') no-repeat 0 -294px;
 	height:14px;
 	width:14px;
 	display:inline-block;
@@ -593,7 +593,7 @@
 }
 
 #Editor span.karma-plus {
-	background:url("../../default/media/iconsets/profile/default/default.png") no-repeat 0 -313px;
+	background:url('../bundles/bbceditor/images/default.png') no-repeat 0 -313px;
 	height:14px;
 	width:14px;
 	display:inline-block;
@@ -693,7 +693,7 @@
 	cursor:pointer;
 	line-height:145%;
 	display:inline-block;
-	background-image:url("../grfx/media/default.png");
+	background-image:url('../bundles/bbceditor/images/default.png');
 	background-repeat:repeat-x;
 	border:none;
 	margin:0 5px;

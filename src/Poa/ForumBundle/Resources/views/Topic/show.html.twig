@@ -1,0 +1,32 @@
+{% extends 'PoaForumBundle::layout.html.twig' %}
+{% block forum_content %}
+    <tr><td>
+        <div class="crumbs">
+            <a href="{{ path('forum_index') }}">Forum</a> &gt;&gt;
+            <a href="{{ forum_urlForCategory(topic.category) }}">{{ topic.category.name }}</a> &gt;&gt;
+            {{ topic.subject }}
+        </div>
+    </td></tr>
+    <tr><td>&nbsp;</td></tr>
+    {% if is_granted('ROLE_MEMBER') %}
+    <tr><td>
+        <a href="{{ forum_urlForTopicReply(topic) }}" title="Reply Topic" class="largeButton" rel="nofollow">&nbsp;Reply Topic <img src="{{ asset('bundles/poaforum/images/reply.png') }}" border="0" alt="Reply Topic" /></a>
+    </td></tr>
+    <tr><td>&nbsp;</td></tr>
+    {% endif %}
+    <tr><td>
+
+        <div id="Kunena">
+            <div class="kblock">
+                <div class="kheader">
+                    <h2><span>&nbsp;&nbsp;TOPIC: {{ topic.subject }} <a href="{{ forum_urlForTopicAtomFeed(topic) }}" title="Atom feed" class="feed atom"><image width="12" height="12" src="{{ asset('bundles/poamain/images/feed.png') }}" /></a></span></h2>
+                </div>
+                <div class="kcontainer">
+                    <div class="kbody">
+                        {% include 'PoaForumBundle:Post:list.html.twig' with {'posts': posts} %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td></tr>
+{% endblock %}

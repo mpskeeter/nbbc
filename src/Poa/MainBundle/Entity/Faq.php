@@ -7,7 +7,7 @@
 	/**
 	 * Poa\MainBundle\Entity\Content
 	 *
-	 * @ORM\Table(name="poa_faq")
+	 * @ORM\Table(name="faq")
 	 * @ORM\Entity(repositoryClass="Poa\MainBundle\Entity\FaqRepository")
 	 * @ORM\HasLifecycleCallbacks()
 	 */

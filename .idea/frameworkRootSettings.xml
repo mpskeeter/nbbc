@@ -3,10 +3,10 @@
   <component name="FrameworkRootSettings" id="Symfony2">
     <option name="typedPaths">
       <list>
+        <element elementPath="X:/app" typeId="app_directory" />
         <element elementPath="X:/src" typeId="src_directory" />
         <element elementPath="X:/vendor" typeId="vendor_directory" />
         <element elementPath="X:/web" typeId="web_directory" />
-        <element elementPath="X:/app" typeId="app_directory" />
       </list>
     </option>
   </component>

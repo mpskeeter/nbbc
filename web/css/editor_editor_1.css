@@ -96,7 +96,7 @@
 
 #Editor .newchar{color:#090;font-weight:bold;font-family:Arial,Helvetica,sans-serif;margin-left:3px;font-size:.75em;vertical-align:top;white-space:nowrap;}
 
-#Editor table{width:97%;border-collapse:collapse;padding:4px 4px 4xp 4px;margin:0 12px 0 12px;}
+#Editor table{width:97%;border-collapse:collapse;padding:4px 4px 4px 4px;margin:0 12px 0 12px;}
 
 #Editor div.block{display:table;table-layout:fixed;width:100%;border:none;margin:5px 0 0 0;clear:both;border-bottom:4px solid #BFC3C6;background:#FFF;}
 
@@ -822,7 +822,7 @@
 #Editor #attachments a{background-position:-216px -18px;}
 
 #Editor #bbcode-toolbar li a,#Editor #attachments a {
-	background-image:url(../bundles/nbbc/images/editor_buttons.png);
+	background-image:url('../bundles/bbceditor/images/editor_buttons.png');
 }
 
 #Editor .file-input-textbox {
@@ -1009,9 +1009,9 @@ label.poll-term-lbl{display:inline-block;margin:10px 15px 10px 30px;}
 #Editor div.banhistory th.banfrom{width:14%;}
 #Editor div.banhistory th.banstart,#Editor div.banhistory th.banexpire,#Editor div.banhistory th.bancreate{width:20%;}
 #Editor div.banhistory th.banmodify{width:24%;}
-#Editor .icon-profile{background-repeat:no-repeat;width:16px;height:16px;display:inline-block;vertical-align:text-top;margin-right:3px;background-image:url("../../default/media/iconsets/profile/default/default.png");}
 #Editor span.icon-profile-website,#Editor span.kicon-profile-pm{vertical-align:top;margin-top:3px;}
 #Editor .icon-profile-aim{background-position:0 0;}
+#Editor .icon-profile{background-repeat:no-repeat;width:16px;height:16px;display:inline-block;vertical-align:text-top;margin-right:3px;background-image:url('../bundles/bbceditor/images/default.png');}
 #Editor .icon-profile-bebo{background-position:0 -21px;}
 #Editor .kicon-profile-birthdate{background-position:0 -42px;}
 #Editor .icon-profile-blogspot{background-position:0 -63px;}

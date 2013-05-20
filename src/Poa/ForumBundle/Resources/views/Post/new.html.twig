@@ -1,0 +1,50 @@
+{% extends 'PoaForumBundle::layout.html.twig' %}
+{% block forum_content %}
+    <tr><td>
+        <div class="crumbs">
+            <a href="{{ path('forum_index') }}">Forum</a> &gt;&gt;
+            <a href="{{ forum_urlForCategory(topic.category) }}">{{ topic.category.name }}</a> &gt;&gt;
+            <a href="{{ forum_urlForTopic(topic) }}">{{ topic.subject }}</a>
+        </div>
+    </td></tr>
+    <tr><td>&nbsp;</td></tr>
+
+    <tr><td class="Kunena">
+        <div class="forum kblock">
+            <form action="{{ url('forum_topic_post_create', { 'slug': topic.slug, 'categorySlug' : topic.category.slug }) }}" method="post">
+                {#{{ form_widget(form) }}#}
+                <div class="kheader">
+                    <h2><span>New Reply</span></h2>
+                </div>
+                <div class="invalid">
+                    {{ form_errors(form) }}
+                </div>
+                <div class="kcontainer">
+                    <div class="kbody">
+                        <table class="kblocktable" id="kpostmessage" style="width:100%">
+                            <tbody id="kpost-message">
+                            <tr id="kpost-message" class="krow2">
+                                <td class="kcol-first">
+                                    <strong>{{ form_label(form.message) }}</strong>
+                                </td>
+
+                                <td class="kcol-last kcol-editor-field">
+                                    {{ form_widget(form.message, { 'id': 'kbbcode-message', 'name' : 'message' }) }}
+                                </td>
+                            </tr>
+
+                            <tr id="kpost-buttons" class="krow1">
+                                <td id="kpost-buttons" colspan="2" style="align:center">
+                                    {{ form_rest(form) }}
+                                    <button type="submit" name="create" class="kbutton">Submit</button>
+                                    <button type="submit" name="cancel" class="kbutton">Cancel</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </td></tr>
+{% endblock %}

@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.crop { width: 400px; height: 140px; overflow: hidden; }
+.crop img { width: 700px; height: 280px; margin: -115px 0 0 -50px; }
+
+.menu_title {
+    font-family: 'Marck Script', cursive;
+    font-size: 20px;
+}
+
 body .title2	{
     height: 20px;
 }
@@ -134,7 +142,7 @@ a:hover, a:active {
 	font-weight: bold;
 	color: #990000;
 	letter-spacing: 3px;
-    background: #DCE0BB url(../bundles/poamain/images/bg_title.jpg) no-repeat;
+    /*background: #DCE0BB url(../bundles/poamain/images/bg_title.jpg) no-repeat;*/
     padding-right: 20px;
 	text-align: right;
 }

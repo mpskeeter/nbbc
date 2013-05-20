@@ -12,73 +12,107 @@
     <meta name="description" content="Visit Ballard Woods. A residential community in Harnett County, North Carolina. Browse our neighborhood information and resouces in Harnett County, North Carolina. Homeowners Association for Ballard Woods" />
     <meta name="generator" content="POA Content Management System (Mark Peters)">
     <link rel="icon" sizes="16x16" href="{{ asset('bundles/poamain/images/favicon.ico') }}" />
-
-{% stylesheets 'bundles/poamain/css/css.css' output='css/css.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-{% endstylesheets %}
-{% stylesheets 'bundles/poamain/css/editor.css' output='css/editor.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-{% endstylesheets %}
-    <title>Ballard Woods</title>
+    {% block javascripts %}
+    {% endblock %}
+    {% block stylesheets %}
+        <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+        {% stylesheets 'bundles/poamain/css/css.css' output='css/css.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {#{% stylesheets 'bundles/poamain/css/editor.css' output='css/editor.css' %}#}
+            {#<link rel="stylesheet" href="{{ asset_url }}" />#}
+        {#{% endstylesheets %}#}
+    {% endblock %}
+    <title>Ballard Woods{%  block title %}{% endblock %}</title>
 </head>
 <body class="body">
-
     {#
         {% include "login.twig" %}
     #}
     <div id="container">
         <div id="content" style="padding-top:100px; width: 100%">
-            <table width="915" border="0" align="center" cellpadding="0" cellspacing="0" class="main"> <!-- main -->
+            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" class="main"> <!-- main -->
                 <tr>
-                    <td width="175" valign="top" class="leftnavbg">
+                    <td width="175" valign="top">
                         <table width="170" border="0" align="right" cellpadding="0" cellspacing="0">
                             <tr><td height="30" valign="bottom" class="textsmred">&nbsp;</td></tr>
                             <tr><td height="120" valign="bottom" class="textsmred" align="center"><a href="{{  path('_welcome') }}"><img src="{{ asset('bundles/poamain/images/logo.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="140" height="75" border="0"></a><br/>Harnett County, NC</td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><div align="center">{{ knp_menu_render('login', {template: 'PoaMainBundle:Menu:login.html.twig', allow_safe_labels: true}) }}</div></td></tr>
-                            <tr><td>&nbsp;</td></tr>
-                            <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/welcome.gif') }}" border="0" /></div></td></tr>
-                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
-                            {{ knp_menu_render('welcome', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
-                            </table></td></tr>
-                            <tr><td><div align="center">&nbsp;</div></td></tr>
-                            <tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/members.gif') }}" border="0" /></div></td></tr>
-                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
-                            {{ knp_menu_render('residents', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
-                            </table></td></tr>
-
-                            {#
-                                                        <!-- begin nav -->
-                                                        {{ nav(nav_welcome) }}
-                                                        <tr><td><div align="center">&nbsp;</div></td></tr>
-                                                        {{ nav(nav_members) }}
-                                                        <!-- end nav -->
-                            #}
-
+                            <tr><td><div align="center">
+                                {{ knp_menu_render('login', {template: 'PoaMainBundle:Menu:login.html.twig', allow_safe_labels: true}) }}
+                            </div></td></tr>
+                            {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <tr><td><div align="center">
+                                    <a href="{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}" alt="Sign in with Facebook"><img src="{{ asset('bundles/poamain/images/facebook32.png') }}"/></a>
+                                    <a href="{{ path('hwi_oauth_service_redirect', {'service': 'google' }) }}" alt="Sign in with Google"><img src="{{ asset('bundles/poamain/images/google32.png') }}"/></a>
+                                </div></td></tr>
+                            {%  endif %}
                         </table>
                     </td>
-                    <td valign="top" background="{{ asset('bundles/poamain/images/bg_main.jpg') }}" bgcolor="#FAF9F4" align="center">
+                    <td valign="top" align="center">
                         <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" class="text"> <!-- table content -->
                             <tr align="center">
-                                <td bgcolor="#D2D8A8" align="center">
-                                    <div align="center">
-                                        <img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" style="object-fit: cover; overflow: hidden;" border="0"/>
-                                        {#<img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="740" height="202" border="0"/>#}
-                                        {#<img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="500" height="199" border="0"/>#}
+                                <td align="center">
+                                    <div align="center" class="crop">
+                                        {#<img src="{{ asset('bundles/poamain/images/header.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" border="0"/>#}
+                                        <img src="{{ asset('bundles/poamain/images/header_compressed.png') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" border="0"/>
                                     </div>
                                 </td>
                             </tr>
                             <tr><td height="45" valign="middle" class="title"><div align="right">{#{{ page_title }}#}</div></td></tr>
+                            {#<tr><td>&nbsp;</td></tr>#}
+
+                            {#{% block content %}{% endblock %}#}
+
+                        </table> <!-- table content -->
+                    </td>
+                    <td width="175" valign="top">
+                        {#<table width="170" border="0" align="right" cellpadding="0" cellspacing="0">#}
+                            {#<tr><td height="158">&nbsp;</td></tr>#}
+                            {#<tr><td><div align="center">&nbsp;</div></td></tr>#}
+                            {#<tr><td><div align="center">&nbsp;</div></td></tr>#}
+                            {#<tr><td><div align="center">&nbsp;</div></td></tr>#}
+                            {#<tr><td><div align="center">&nbsp;</div></td></tr>#}
+                            {#<tr><td><div align="center">&nbsp;</div></td></tr>#}
+                            {#<tr><td><div align="center"><img src="{{ asset('bundles/poamain/images/members.gif') }}" border="0" /></div></td></tr>#}
+                            {#<tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">#}
+                                        {#{{ knp_menu_render('residents', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}#}
+                                    {#</table></td></tr>#}
+                        {#</table>#}
+                    </td>
+                </tr>
+            {#</table>#}
+            {#<table>#}
+                <tr>
+                    <td width="175" valign="top">
+                        <table width="170" border="0" align="right" cellpadding="0" cellspacing="0">
+                            <tr><td><div align="center" class="menu_title">Welcome</div></td></tr>
+                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
+                                        {{ knp_menu_render('welcome', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
+                                    </table></td></tr>
+                        </table>
+                    </td>
+                    <td valign="top" align="center">
+                        <table width="100%"  border="0" cellpadding="0" cellspacing="0" class="text"> <!-- table content -->
                             <tr><td>&nbsp;</td></tr>
 
                             {% block content %}{% endblock %}
 
+                            <tr><td>&nbsp;</td></tr>
                         </table> <!-- table content -->
+                    </td>
+                    <td width="175" valign="top">
+                        <table width="170" border="0" align="right" cellpadding="0" cellspacing="0">
+                            <tr><td><div align="center" class="menu_title">Residents</div></td></tr>
+                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="leftnav">
+                                        {{ knp_menu_render('residents', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
+                                    </table></td></tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>
                     <td height="21" valign="top">&nbsp;</td>
-                    <td align="center" height="60" background="{{ asset('bundles/poamain/images/bg_footer.jpg') }}"><span class="copyright">&copy; Copyright 2012-2013 <a href="{{  path('_welcome') }}">Ballard Woods</a></span></td>
+                    <td align="center" height="60"><span class="copyright">&copy; Copyright 2012-2013 <a href="{{  path('_welcome') }}">Ballard Woods</a></span></td>
                 </tr>
             </table>
         </div><!-- / content -->

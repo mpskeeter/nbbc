@@ -28,7 +28,7 @@
 			$pages = $this->createQueryBuilder('c')
 				->andWhere('c.active = ?1')
 				->andWhere('c.menu_item = ?2')
-				->andWhere('(c.expires IS NULL OR c.expires >=  CURRENT_TIMESTAMP())')
+				->andWhere('(c.expires IS NULL OR c.expires >= CURRENT_TIMESTAMP())')
 				->addOrderBy('c.sequence')
 				->setParameter(1, true)
 				->setParameter(2, $parent_id)

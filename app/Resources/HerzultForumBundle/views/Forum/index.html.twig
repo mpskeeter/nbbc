@@ -1,0 +1,20 @@
+{% extends 'HerzultForumBundle::layout.html.twig' %}
+{% block title %}Simple forum bundle for Symfony{% endblock %}
+{% block content %}
+<div class="forum forum_index">
+    <ul class="crumbs">
+        <li>Forum</li>
+    </ul>
+    <div class="main topics">
+        <h2>Latest topics</h2>
+        {#{% render 'HerzultForumBundle:Topic:list' with {'categorySlug': null, 'pagerOptions': {'page': page}} %}#}
+        {% render(controller('HerzultForumBundle:Topic:list', {'categorySlug': null, 'pagerOptions': {'page': page}})) %}
+    </div>
+    {#<div class="side categories">#}
+        {#<h2>Categories</h2>#}
+        {#&#123;&#35;{% render 'HerzultForumBundle:Category:list' %}&#35;&#125;#}
+        {#{% render(controller('HerzultForumBundle:Category:list')) %}#}
+    {#</div>#}
+</div>
+{% endblock %}
+

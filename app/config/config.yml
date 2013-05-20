@@ -30,7 +30,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
         resources:
-            - 'BBCEditor:Form:bbc_editor_widget.html.twig'
+            - 'BBCEditorBundle:Form:bbc_editor_widget.html.twig'
     cache: ~
 
 # Assetic Configuration
@@ -74,6 +74,7 @@ doctrine:
                     SonataUserBundle: ~
                     SonataMediaBundle: ~
                     SonataNotificationBundle: ~
+#                    ForumBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -82,13 +83,6 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
-
-#fos_facebook:
-#    alias:  facebook
-#    app_id: %facebook_app_id%
-#    secret: %facebook_app_secret%
-#    cookie: true
-#    permissions: [email, user_birthday, user_location, user_about_me, offline_access]
 
 raul_fraile_ladybug:
     general:
@@ -119,4 +113,3 @@ raul_fraile_ladybug:
         show_quotes:          true
     css:
         path:                 /Asset/tree.min.css
-

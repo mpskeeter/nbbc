@@ -9,7 +9,7 @@
 
 	/**
 	 * @ORM\Entity
-	 * @ORM\Table(name="poa_user")
+	 * @ORM\Table(name="users")
 	 * @ORM\HasLifecycleCallbacks()
 	 */
 	class User extends BaseUser
@@ -23,7 +23,7 @@
 
 		/**
 		 * @ORM\ManyToMany(targetEntity="Poa\UserBundle\Entity\Group")
-		 * @ORM\JoinTable(name="poa_user_group",
+		 * @ORM\JoinTable(name="user_group",
 		 *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
 		 *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
 		 * )
@@ -60,19 +60,26 @@
 		 */
 		private $address;
 
-		/**
-		 * @var datetime $date_registered
-		 *
-		 * @ORM\Column(name="date_registered", type="datetime", nullable=false)
-		 */
-		private $date_registered;
+//		/**
+//		 * @var \Datetime $date_registered
+//		 *
+//		 * @ORM\Column(name="date_registered", type="datetime", nullable=false)
+//		 */
+//		private $date_registered;
 
 		/**
 		 * @var string
 		 *
-		 * @ORM\Column(name="facebookId", type="string", length=255, nullable=true)
+		 * @ORM\Column(name="facebookAccessToken", type="string", length=255, nullable=true)
 		 */
-		protected $facebookId;
+		protected $facebookAccessToken;
+
+		/**
+		 * @var string
+		 *
+		 * @ORM\Column(name="gplusAccessToken", type="string", length=255, nullable=true)
+		 */
+		protected $gplusAccessToken;
 
 		public function __construct()
 		{
@@ -82,12 +89,12 @@
 
 		public function serialize()
 		{
-			return serialize(array($this->facebookId, parent::serialize()));
+			return serialize(array($this->facebookUid, parent::serialize()));
 		}
 
 		public function unserialize($data)
 		{
-			list($this->facebookId, $parentData) = unserialize($data);
+			list($this->facebookUid, $parentData) = unserialize($data);
 			parent::unserialize($parentData);
 		}
 
@@ -111,25 +118,25 @@
 			return $this->address;
 		}
 
-		/**
-		 * Set date_registered
-		 *
-		 * @param datetime $dateRegistered
-		 */
-		public function setDateRegistered($dateRegistered)
-		{
-			$this->date_registered = $dateRegistered;
-		}
+//		/**
+//		 * Set date_registered
+//		 *
+//		 * @param \Datetime $dateRegistered
+//		 */
+//		public function setDateRegistered($dateRegistered)
+//		{
+//			$this->date_registered = $dateRegistered;
+//		}
 
-		/**
-		 * Get date_registered
-		 *
-		 * @return datetime
-		 */
-		public function getDateRegistered()
-		{
-			return $this->date_registered;
-		}
+//		/**
+//		 * Get date_registered
+//		 *
+//		 * @return \Datetime
+//		 */
+//		public function getDateRegistered()
+//		{
+//			return $this->date_registered;
+//		}
 
 		/**
 		 * Get the full name of the user (first + last name)
@@ -141,13 +148,22 @@
 		}
 
 		/**
-		 * @param string $facebookId
+		 * Get the full name of the user (first + last name)
+		 * @return string
+		 */
+		public function getEmail()
+		{
+			return $this->email;
+		}
+
+		/**
+		 * @param string $facebookUid
 		 * @return void
 		 */
-		public function setFacebookId($facebookId)
+		public function setFacebookId($facebookUid)
 		{
-			$this->facebookId = $facebookId;
-			$this->setUsername($facebookId);
+			$this->setFacebookUid($facebookUid);
+			$this->setUsername($facebookUid);
 			$this->salt = '';
 		}
 
@@ -156,7 +172,24 @@
 		 */
 		public function getFacebookId()
 		{
-			return $this->facebookId;
+			return $this->getFacebookUid();
+		}
+
+		/**
+		 * @param string $facebookAccessToken
+		 * @return void
+		 */
+		public function setFacebookAccessToken($facebookAccessToken)
+		{
+			$this->facebookAccessToken = $facebookAccessToken;
+		}
+
+		/**
+		 * @return string
+		 */
+		public function getFacebookAccessToken()
+		{
+			return $this->facebookAccessToken;
 		}
 
 		/**
@@ -165,7 +198,7 @@
 		public function setFBData($fbdata)
 		{
 			if (isset($fbdata['id'])) {
-				$this->setFacebookId($fbdata['id']);
+				$this->setFacebookUid($fbdata['id']);
 				$this->addRole('ROLE_FACEBOOK');
 			}
 			if (isset($fbdata['first_name'])) {
@@ -180,10 +213,111 @@
 		}
 
 		/**
-		 * @ORM\PrePersist
+		 * @param string $gplusId
+		 * @return void
 		 */
-		public function prePersist()
+		public function setGplusId($gplusId)
 		{
-			$this->date_registered = new \DateTime();
+			$this->setGplusUid($gplusId);
+			$this->setUsername($gplusId);
+			$this->salt = '';
 		}
+
+		/**
+		 * @return string
+		 */
+		public function getGplusId()
+		{
+			return $this->getGplusUid();
+		}
+
+		/**
+		 * @param string $gplusAccessToken
+		 * @return void
+		 */
+		public function setGplusAccessToken($gplusAccessToken)
+		{
+			$this->gplusAccessToken = $gplusAccessToken;
+		}
+
+		/**
+		 * @return string
+		 */
+		public function getGplusAccessToken()
+		{
+			return $this->gplusAccessToken;
+		}
+
+		/**
+		 * @param Array
+		 */
+		public function setGplusData($gplusData)
+		{
+			parent::setGplusData($gplusData);
+
+			if (isset($gplusData['id'])) {
+				$this->setGplusId($gplusData['id']);
+				$this->addRole('ROLE_GPLUS');
+			}
+			if (isset($gplusData['first_name'])) {
+				$this->setFirstname($gplusData['first_name']);
+			}
+			if (isset($gplusData['last_name'])) {
+				$this->setLastname($gplusData['last_name']);
+			}
+			if (isset($gplusData['email'])) {
+				$this->setEmail($gplusData['email']);
+			}
+		}
+
+		/**
+		 * @return string
+		 */
+		public function getGoogleId()
+		{
+			return $this->getGplusId();
+		}
+
+		/**
+		 * @param string $gplusId
+		 * @return void
+		 */
+		public function setGoogleId($gplusId)
+		{
+			$this->setGplusId($gplusId);
+		}
+
+		/**
+		 * @param string $gplusAccessToken
+		 * @return void
+		 */
+		public function setGoogleAccessToken($gplusAccessToken)
+		{
+			$this->setGplusAccessToken($gplusAccessToken);
+		}
+
+		/**
+		 * @return string
+		 */
+		public function getGoogleAccessToken()
+		{
+			return $this->getGplusAccessToken();
+		}
+
+		/**
+		 * @param Array
+		 */
+		public function setGoogleData($gplusData)
+		{
+			$this->setGplusData($gplusData);
+		}
+
+//		/**
+//		 * @ORM\PrePersist
+//		 */
+//		public function prePersist()
+//		{
+////			$this->setDateRegistered(new \DateTime());
+//			$this->setCreatedAt(new \DateTime());
+//		}
 	}

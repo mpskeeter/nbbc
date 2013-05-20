@@ -1,0 +1,119 @@
+{% for post in posts %}
+
+    <div class="kmsg-header kmsg-header-left">
+        <h2>
+            <span class="kmsgtitle kmsg-title-left">
+			{{ post.topic.subject }}		</span>
+            <span class="kmsgdate kmsgdate-left" title="{{ post.createdAt | date('D M d, Y h:i a') | default('None') }}">			{{ time_ago_in_words(post.createdAt) }}		</span>
+            <span class="kmsg-id-left"><a id="{{ post.id }}"></a><a href="#{{ post.id }}" rel="nofollow">#{{ post.number }}</a></span>
+        </h2>
+    </div>
+    <table class="kmsg">
+        <tbody>
+        <tr>
+            <td rowspan="2" class="kprofile-left">
+                <ul class="kpost-profile">
+                    {#<li class="kpost-username"><a class="kwho-user" href="/index.php/en/forum/profile/3064-wimniny" title="View wimniny's Profile" rel="nofollow">wimniny</a></li>#}
+                    <li class="kpost-username">
+                        {#<a class="kwho-user" href="#" title="View {{ post.authorName }} Profile" rel="nofollow">#}
+                            {{ post.authorName }}
+                        {#</a>#}
+                    </li>
+                    {% if gravatar_exists(post.authorEmail) %}
+                        <li class="kpost-avatar">
+                            <span class="kavatar">
+                                {#<a class="kwho-user" href="#" title="View {{ post.authorName }} Profile" rel="nofollow">#}
+                                    <img class="kavatar" src="{{ gravatar(post.authorEmail) }}" alt="{{ post.authorName }} Avatar">
+                                {#</a>#}
+                            </span>
+                        </li>
+                    {% endif %}
+                    {#<li>#}
+                                        {#<span class="kicon-button kbuttononline-no">#}
+                                            {#<span class="online-no"><span>OFFLINE</span></span>#}
+                                        {#</span>#}
+                    {#</li>#}
+                    {#<li class="kpost-userrank">Junior</li>#}
+                    {#<li class="kpost-userrank-img"><img src="/media/kunena/ranks/rank2.gif" alt=""></li>#}
+                    {#<li class="kpost-userposts">Posts: 155</li>#}
+                    {#<li class="kpost-karma"><span class="kmsgkarma"></span></li>#}
+                    {#<li class="kpost-smallicons"><span class="kicon-profile kicon-profile-gender-male" title="Gender: Male"></span>			<span class="kicon-profile kicon-profile-birthdate" title="Birthdate: 22 Jun 1946"></span>			<span class="kicon-profile kicon-profile-location" title="Location: IJhorst"></span>			<a href="http://www.vleeshhouwer.nl" target="_blank"><span class="kicon-profile kicon-profile-website" title="Web site: Wim en Niny Vleeshhouwer"></span></a></li>#}
+                </ul>
+            </td>
+            <td class="kmessage-left">
+                <div class="kmsgbody">
+                    <div class="kmsgtext">
+                        {{ post.message | bbcode_filter | raw }}
+                    </div>
+                </div>
+                {#<div>#}
+                    {#<div id="kreply36998_form" class="kreply-form" style="display: none">#}
+                        {#<form action="/index.php/en/forum" method="post" name="postform" enctype="multipart/form-data">#}
+                            {#<input type="hidden" name="view" value="topic">#}
+                            {#<input type="hidden" name="task" value="post">#}
+                            {#<input type="hidden" name="parentid" value="36998">#}
+                            {#<input type="hidden" name="catid" value="34">#}
+                            {#<input type="hidden" name="3b7a886ed19d6221fde0e4d0bfbbce4e" value="1">#}
+                            {#<input type="hidden" name="authorname" value="wimniny">#}
+                            {#<input type="text" name="subject" size="35" class="inputbox" maxlength="50" value="Inbreeding"><br>#}
+                            {#<textarea class="inputbox" name="message" rows="6" cols="60"></textarea><br>#}
+                            {#<input type="checkbox" name="subscribeMe" value="1" checked="checked">#}
+                            {#<i>Check this box to be notified of replies to this topic.</i><br>#}
+                            {#<input type="submit" class="kbutton kreply-submit" name="submit" value="Submit" title="Click here to submit your message">#}
+                            {#<input type="reset" class="kbutton kreply-cancel" name="cancel" value="Cancel" title="Click here to cancel your message">#}
+                            {#<small>Note: BBcode and smileys are still usable.</small>#}
+                        {#</form>#}
+                    {#</div>#}
+                {#</div>#}
+            </td>
+        </tr>
+        <tr>
+            <td class="kbuttonbar-left">
+                <div></div>
+                <div class="kmessage-editmarkup-cover">
+                {% if post.modifiedAuthor %}
+                    <span class="kmessage-editmarkup" title="{{ post.updatedAt | date('D M d, Y h:i a') | default('None') }}">Last Edit: {{ time_ago_in_words(post.updatedAt) }}
+                    {#<a class="kwho-user" href="/index.php/en/forum/profile/2929-norwegian-sardines" title="View norwegian_sardines's Profile" rel="nofollow">#}
+                        {{ post.modifiedAuthorName }}
+                    {#</a>#}.
+                    </span>
+                {% endif %}
+                    {#<span class="kmessage-informmarkup">#}
+                        {#<a href="/index.php/en/forum/help-for-ver-1-4-1-latest-release/27791-inbreeding/report/36998" rel="nofollow" title="Report to moderator">Report to moderator</a>#}
+                    {#</span>#}
+                </div>
+                {% if is_granted('ROLE_MEMBER') %}
+                <div class="kmessage-buttons-cover">
+                    <div class="kmessage-buttons-row">
+{#
+                        {% if app.user == post.author %}
+                            <a href="{{ forum_urlForPostEdit(post) }}" title="Edit Post" class="largeButton" rel="nofollow">&nbsp;Edit Post <img src="{{ asset('bundles/poaforum/images/reply.png') }}" border="0" alt="Edit Post" /></a>
+                        {% endif %}
+#}
+                        {#<a id="kreply36998" class="kicon-button kbuttoncomm kqreply btn-left" href="/index.php/en/forum/help-for-ver-1-4-1-latest-release/27791-inbreeding/reply/36998" rel="nofollow" title="Quick reply this message."><span class="reply"><span>Quick Reply</span></span></a>#}
+                        {#<div class="forum-add-node forum-add-forum"><a href="{{ forum_urlForTopicReply(post.topic) }}" class="af-button-large"><span>Reply  topic</span></a></div>#}
+                        <a href="{{ forum_urlForTopicReply(post.topic) }}" title="Reply Topic" class="largeButton" rel="nofollow">&nbsp;Reply Topic <img src="{{ asset('bundles/poaforum/images/reply.png') }}" border="0" alt="Reply Topic" /></a>
+                        {#<a class="kicon-button kbuttoncomm btn-left" href="/index.php/en/forum/help-for-ver-1-4-1-latest-release/27791-inbreeding/reply/36998?quote=1" rel="nofollow" title="Quote this message."><span class="quote"><span>Quote</span></span></a>#}
+                    </div>
+                </div>
+                {% endif %}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    {#<table width="100%" border="1" align="center" cellpadding="2" cellspacing="1" class="text">#}
+    {#<tr><td class="kmsg-header kmsg-header-left">#}
+        {#<h2 class="kmsgdate kmsgdate-left" title="{{ post.createdAt | date('D M d, Y h:i a') | default('None') }}">{{ time_ago_in_words(post.createdAt) }}</h2>#}
+    {#</td></tr>#}
+    {#<tr><td class="kmsg-header kmsg-header-left">#}
+        {#<h2 class="kmsgauthor kmsg-title-left">{{ post.authorName }}</h2>#}
+    {#</td></tr>#}
+    {#<tr><td class="posts">#}
+        {#<div class="postbody">{{ post.message | bbcode_filter | raw }}</div>#}
+    {#</td></tr>#}
+    {#</table>#}
+{% endfor %}
+

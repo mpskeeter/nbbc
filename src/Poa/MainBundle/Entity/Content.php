@@ -9,7 +9,7 @@
 	/**
 	 * Poa\MainBundle\Entity\Content
 	 *
-	 * @ORM\Table(name="poa_menu_content")
+	 * @ORM\Table(name="menu_content")
 	 * @ORM\Entity(repositoryClass="Poa\MainBundle\Entity\ContentRepository")
 	 */
 	class Content

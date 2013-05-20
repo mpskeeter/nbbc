@@ -1,0 +1,408 @@
+{% extends 'PoaMainBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {#{{ parent() }}#}
+    <script type="text/javascript" src="{{ asset('bundles/bbceditor/template.js.php') }}"></script>
+    {#<script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>#}
+    <script type="text/javascript" src="{{ asset('bundles/bbceditor/mootools-more.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/bbceditor/default.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/bbceditor/editor.js') }}"></script>
+    {#<script type="text/javascript" src="{{ asset('bundles/bbceditor/jquery.min.js') }}"></script>#}
+
+    <script type="text/javascript">
+    // <![CDATA[
+    var kunena_toggler_close = "Collapse";
+    var kunena_toggler_open = "Expand";
+    // ]]>
+    var arrayanynomousbox={}
+    var pollcategoriesid = {"27":1};
+    window.addEvent('domready', function() {
+        $$('.hasTip').each(function(el) {
+            var title = el.get('title');
+            if (title) {
+                var parts = title.split('::', 2);
+                el.store('tip:title', parts[0]);
+                el.store('tip:text', parts[1]);
+            }
+        });
+        var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+    });
+    function keepAlive() {	var myAjax = new Request({method: "get", url: "index.php"}).send();} window.addEvent("domready", function(){ keepAlive.periodical(1740000); });
+    config_attachment_limit = 8
+    // <![CDATA[
+    window.addEvent('domready', function() {
+        kbbcode = new kbbcode('kbbcode-message', 'kbbcode-toolbar', {
+            dispatchChangeEvent: true,
+            changeEventDelay: 1000,
+            interceptTab: true
+        });
+
+        kbbcode.addFunction('bold', function() {
+            this.focus().wrapSelection('[b]', '[/b]', true);
+        }, {
+            'title': 'Bold',
+            'alt': 'Bold text: [b]text[/b]',
+            'id': 'kbbcode-bold-button'
+        });
+
+        kbbcode.addFunction('italic', function() {
+            this.focus().wrapSelection('[i]', '[/i]', true);
+        }, {
+            'title': 'Italic',
+            'alt': 'Italic text: [i]text[/i]',
+            'id': 'kbbcode-italic-button'
+        });
+
+        kbbcode.addFunction('underline', function() {
+            this.focus().wrapSelection('[u]', '[/u]', true);
+        }, {
+            'title': 'Underline',
+            'alt': 'Underline text: [u]text[/u]',
+            'id': 'kbbcode-underline-button'
+        });
+
+        kbbcode.addFunction('strike', function() {
+            this.focus().wrapSelection('[strike]', '[/strike]', true);
+        }, {
+            'title': 'Strikethrough',
+            'alt': 'Strikethrough Text: [strike]Text[/strike]',
+            'id': 'kbbcode-strike-button'
+        });
+
+        kbbcode.addFunction('sub', function() {
+            this.focus().wrapSelection('[sub]', '[/sub]', true);
+        }, {
+            'title': 'Subscript',
+            'alt': 'Subscript Text: [sub]Text[/sub]',
+            'id': 'kbbcode-sub-button'
+        });
+
+        kbbcode.addFunction('sup', function() {
+            this.focus().wrapSelection('[sup]', '[/sup]', true);
+        }, {
+            'title': 'Superscript',
+            'alt': 'Superscript Text: [sup]Text[/sup]',
+            'id': 'kbbcode-sup-button'
+        });
+
+        kbbcode.addFunction('size', function() {
+            kToggleOrSwap('kbbcode-size-options');
+        }, {
+            'title': 'Font size',
+            'alt': 'Fontsize: Select Fontsize and Apply to current selection',
+            'id': 'kbbcode-size-button'
+        });
+
+        kbbcode.addFunction('color', function() {
+            kToggleOrSwap('kbbcode-color-options');
+        }, {
+            'title': 'Color',
+            'alt': 'Color: [color=#FF6600]text[/color]',
+            'id': 'kbbcode-color-button'
+        });
+
+        kbbcode.addFunction('#', function() {
+        }, {
+            'class': 'kbbcode-separator'});
+
+        kbbcode.addFunction('ulist', function() {
+            selection = this.focus().getSelection();
+            if (selection) {
+                this.processEachLine(function(line) {
+                    return '  [li]' + line + '[/li]';
+                }, false);
+                this.wrapSelection('[ul]\n', '\n[/ul]', false);
+            } else {
+                this.wrapSelection('[ul]\n  [li]', '[/li]\n  [li][/li]\n[/ul]', false);
+            }
+        }, {
+            'title': 'Unordered List',
+            'alt': 'Unordered List: [ul] [li]text[/li] [/ul] - Tip: a list must contain List Items',
+            'id': 'kbbcode-ulist-button'
+        });
+
+        kbbcode.addFunction('olist', function() {
+            selection = this.focus().getSelection();
+            if (selection) {
+                this.processEachLine(function(line) {
+                    return '  [li]' + line + '[/li]';
+                }, false);
+                this.wrapSelection('[ol]\n', '\n[/ol]', false);
+            } else {
+                this.wrapSelection('[ol]\n  [li]', '[/li]\n  [li][/li]\n[/ol]', false);
+            }
+        }, {
+            'title': 'Ordered List',
+            'alt': 'Ordered List: [ol] [li]text[/li] [/ol] - Tip: a list must contain List Items',
+            'id': 'kbbcode-olist-button'
+        });
+
+        kbbcode.addFunction('list', function() {
+            this.focus().wrapSelection('[li]', '[/li]', true);
+        }, {
+            'title': 'List Item',
+            'alt': 'List Item: [li] list item [/li]',
+            'id': 'kbbcode-list-button'
+        });
+
+        kbbcode.addFunction('left', function() {
+            this.focus().wrapSelection('[left]', '[/left]', true);
+        }, {
+            'title': 'Align left',
+            'alt': 'Align left: [left]Text[/left]',
+            'id': 'kbbcode-left-button'
+        });
+
+        kbbcode.addFunction('center', function() {
+            this.focus().wrapSelection('[center]', '[/center]', true);
+        }, {
+            'title': 'Align center',
+            'alt': 'Align center: [center]Text[/center]',
+            'id': 'kbbcode-center-button'
+        });
+
+        kbbcode.addFunction('right', function() {
+            this.focus().wrapSelection('[right]', '[/right]', true);
+        }, {
+            'title': 'Align right',
+            'alt': 'Align right: [right]Text[/right]',
+            'id': 'kbbcode-right-button'
+        });
+
+        kbbcode.addFunction('#', function() {
+        }, {
+            'class': 'kbbcode-separator'});
+
+        kbbcode.addFunction('quote', function() {
+            this.focus().wrapSelection('[quote]', '[/quote]', true);
+        }, {
+            'title': 'Quote',
+            'alt': 'Quote text: [quote]text[/quote]',
+            'id': 'kbbcode-quote-button'
+        });
+
+        kbbcode.addFunction('code', function() {
+            this.focus().wrapSelection('[code]', '[/code]', true);
+        }, {
+            'title': 'Code',
+            'alt': 'Code display: [code]code[/code]',
+            'id': 'kbbcode-code-button'
+        });
+
+        kbbcode.addFunction('table', function() {
+            selection = this.focus().getSelection();
+            if (selection) {
+                this.processEachLine(function(line) {
+                    return '  [tr]\n    [td]' + line + '[/td]\n  [/tr]';
+                }, false);
+                this.wrapSelection('\n[table]\n', '\n[/table]\n', false);
+            } else {
+                this.wrapSelection('[table]\n  [tr]\n    [td]', '[/td]\n    [td][/td]\n  [/tr]\n  [tr]\n    [td][/td]\n    [td][/td]\n  [/tr]\n[/table]', false);
+            }
+        }, {
+            'title': 'Table',
+            'alt': 'Create an embedded table: [table][tr][td]line1[/td][/tr][tr][td]lines[/td][/tr][/table]',
+            'id': 'kbbcode-table-button'
+        });
+
+        kbbcode.addFunction('hide', function() {
+            this.focus().wrapSelection('[hide]', '[/hide]', true);
+        }, {
+            'title': 'Hide text from Guests',
+            'alt': 'Hidden text: [hide]any hidden text[/hide] - hide part of message from Guests',
+            'id': 'kbbcode-hide-button'
+        });
+
+        kbbcode.addFunction('#', function() {
+        }, {
+            'class': 'kbbcode-separator'});
+
+        kbbcode.addFunction('image', function() {
+            kToggleOrSwap('kbbcode-image-options');
+        }, {
+            'title': 'Image link',
+            'alt': 'Image link: [img size=400]http://www.google.com/images/web_logo_left.gif[/img]',
+            'id': 'kbbcode-image-button'
+        });
+
+        kbbcode.addFunction('link', function() {
+            sel = this.focus().getSelection(); if (sel) { document.id('kbbcode-link_text').set('value', sel); }
+            kToggleOrSwap('kbbcode-link-options');
+        }, {
+            'title': 'Link',
+            'alt': 'Link: [url=http://www.zzz.com/]This is a link[/url]',
+            'id': 'kbbcode-link-button'
+        });
+
+        kbbcode.addFunction('#', function() {
+        }, {
+            'class': 'kbbcode-separator'});
+
+        kbbcode.addFunction('map', function() {
+            this.focus().wrapSelection('[map]', '[/map]', true);
+        }, {
+            'title': 'Map',
+            'alt': 'Insert a Map into the message: [map]Address[/map]',
+            'id': 'kbbcode-map-button'
+        });
+
+        kbbcode.addFunction('#', function() {
+        }, {
+            'class': 'kbbcode-separator'});
+
+        kbbcode.addFunction('help', function() {
+            window.open('http://docs.kunena.org/index.php/bbcode');
+        }, {
+            'title': 'BBCode Help',
+            'alt': 'Get Help on how to use the bbcode editor',
+            'id': 'kbbcode-help-button'
+        });
+    });
+
+    // ]]>
+    // <![CDATA[
+    function kPreviewHelper()
+    {
+        if (_previewActive == true){
+            previewRequest = new Request.JSON({secure: false, url: "index.php?option=com_kunena&view=topic&layout=edit&format=raw",
+                onSuccess: function(response){
+                    var __message = document.id("kbbcode-preview");
+                    if (__message) {
+                        __message.set("html", response.preview);
+                        __message.fireEvent('updated');
+                    }
+                }}).post({body: document.id("kbbcode-message").get("value")
+                    });
+        }
+    }
+
+    window.addEvent('domready', function() {
+
+
+//        kbbcode.addFunction('Poll', function() {
+//            kToggleOrSwap("kbbcode-poll-options");
+//        }, {'id': 'kbbcode-poll-button',
+//            'class': 'kbbcode-poll-button',
+//            'style':'display: none;',	'title': 'Poll',
+//            'alt': 'Add or edit a poll to this message'});
+
+
+        kEditorInitialize();
+    });
+
+    // ]]>
+//    // <![CDATA[
+//    var KUNENA_POLL_CATS_NOT_ALLOWED = "The polls are not allowed in this category";
+//    var KUNENA_EDITOR_HELPLINE_OPTION = "Poll: Option for the poll";
+//    var KUNENA_POLL_OPTION_NAME = "Option";
+//    var KUNENA_POLL_NUMBER_OPTIONS_MAX_NOW = "The maximum number of poll options has been reached.";
+//    var KUNENA_ICON_ERROR = "\/components\/com_kunena\/template\/blue_eagle\/images\/publish_x.png";
+//    var kunena_anonymous_name = "Anonymous";
+//
+//    window.addEvent('domready', function(){
+//
+//        function kunenaSelectUsername(obj, kuser) {
+//            if (obj.get('checked')) {
+//                document.id('kauthorname').set('value',kunena_anonymous_name).removeProperty('disabled');
+//                document.id('kanynomous-check-name').setStyle('display');
+//            } else {
+//                document.id('kanynomous-check-name').setStyle('display','none');
+//                document.id('kauthorname').set('value',kuser).set('disabled', 'disabled');
+//            }
+//        }
+//
+//        function kunenaCheckPollallowed(catid) {
+//            if ( pollcategoriesid[catid] !== undefined ) {
+//                document.id('kbbcode-poll-button').setStyle('display');
+//            } else {
+//                document.id('kbbcode-poll-button').setStyle('display','none');
+//            }
+//        }
+//
+//        function kunenaCheckAnonymousAllowed(catid) {
+//            if(document.id('kanynomous-check') !== null && document.id('kanonymous') !== null) {
+//                if ( arrayanynomousbox[catid] !== undefined ) {
+//                    document.id('kanynomous-check').setStyle('display');
+//                    document.id('kanonymous').set('checked','checked');
+//                } else {
+//                    document.id('kanynomous-check').setStyle('display','none');
+//                    kbutton.removeProperty('checked');
+//                }
+//            }
+//            kunenaSelectUsername(kbutton,kuser);
+//        }
+//        //	for hide or show polls if category is allowed
+//        if(document.id('postcatid') !== null) {
+//            document.id('postcatid').addEvent('change', function(e) {
+//                kunenaCheckPollallowed(this.value);
+//            });
+//        }
+//
+//        if(document.id('kauthorname') !== undefined) {
+//            var kuser = document.id('kauthorname').get('value');
+//            var kbutton = document.id('kanonymous');
+//            kunenaSelectUsername(kbutton, kuser);
+//            kbutton.addEvent('click', function(e) {
+//                kunenaSelectUsername(this, kuser);
+//            });
+//        }
+//        //	to select if anynomous option is allowed on new topic tab
+//        if(document.id('postcatid') !== null) {
+//            document.id('postcatid').addEvent('change', function(e) {
+//                var postcatid = document.id('postcatid').value;
+//                kunenaCheckAnonymousAllowed(postcatid);
+//            });
+//        }
+//
+//        if(document.id('postcatid') !== null) {
+//            kunenaCheckPollallowed(document.id('postcatid').getSelected().get("value"));
+//            kunenaCheckAnonymousAllowed(document.id('postcatid').getSelected().get("value"));
+//        }
+//    });
+//
+//
+//    // ]]>
+//    Calendar._DN = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"); Calendar._SDN = new Array ("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"); Calendar._FD = 0; Calendar._MN = new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"); Calendar._SMN = new Array ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"); Calendar._TT = {};Calendar._TT["INFO"] = "About the Calendar"; Calendar._TT["ABOUT"] =
+//            "DHTML Date/Time Selector\n" +
+//                    "(c) dynarch.com 2002-2005 / Author: Mihai Bazon\n" +
+//                    "For latest version visit: http://www.dynarch.com/projects/calendar/\n" +
+//                    "Distributed under GNU LGPL.  See http://gnu.org/licenses/lgpl.html for details." +
+//                    "\n\n" +
+//                    "Date selection:\n" +
+//                    "- Use the « and » buttons to select year\n" +
+//                    "- Use the < and > buttons to select month\n" +
+//                    "- Hold mouse button on any of the above buttons for faster selection.";
+//    Calendar._TT["ABOUT_TIME"] = "\n\n" +
+//            "Time selection:\n" +
+//            "- Click on any of the time parts to increase it\n" +
+//            "- or Shift-click to decrease it\n" +
+//            "- or click and drag for faster selection.";
+//
+//    Calendar._TT["PREV_YEAR"] = "Click to move to the previous year. Click and hold for a list of years."; Calendar._TT["PREV_MONTH"] = "Click to move to the previous month. Click and hold for a list of the months."; Calendar._TT["GO_TODAY"] = "Go to today"; Calendar._TT["NEXT_MONTH"] = "Click to move to the next month. Click and hold for a list of the months."; Calendar._TT["NEXT_YEAR"] = "Click to move to the next year. Click and hold for a list of years."; Calendar._TT["SEL_DATE"] = "Select a date."; Calendar._TT["DRAG_TO_MOVE"] = "Drag to move"; Calendar._TT["PART_TODAY"] = "Today"; Calendar._TT["DAY_FIRST"] = "Display %s first"; Calendar._TT["WEEKEND"] = "0,6"; Calendar._TT["CLOSE"] = "Close"; Calendar._TT["TODAY"] = "Today"; Calendar._TT["TIME_PART"] = "(Shift-)Click or Drag to change the value."; Calendar._TT["DEF_DATE_FORMAT"] = "%Y-%m-%d"; Calendar._TT["TT_DATE_FORMAT"] = "%a, %b %e"; Calendar._TT["WK"] = "wk"; Calendar._TT["TIME"] = "Time:";
+//    window.addEvent('domready', function() {Calendar.setup({
+//        // Id of the input field
+//        inputField: "kpoll-time-to-live",
+//        // Format of the input field
+//        ifFormat: "%Y-%m-%d",
+//        // Trigger for the calendar (button ID)
+//        button: "kpoll-time-to-live_img",
+//        // Alignment (defaults to "Bl")
+//        align: "Tl",
+//        singleClick: true,
+//        firstDay: 0
+//    });});
+    </script>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbceditor/editor.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/poamain/css/forum.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/poaforum/css/pager.css') }}" />
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    {% block forum_content %}{% endblock %}
+{% endblock %}
+

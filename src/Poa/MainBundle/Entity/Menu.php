@@ -8,7 +8,7 @@
 	/**
 	 * Poa\MainBundle\Entity\Menu
 	 *
-	 * @ORM\Table(name="poa_menu")
+	 * @ORM\Table(name="menu")
 	 * @ORM\Entity(repositoryClass="Poa\MainBundle\Entity\MenuRepository")
 	 * @ORM\HasLifecycleCallbacks()
 	 */

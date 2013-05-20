@@ -41,8 +41,8 @@
 			$menu = $this->factory->createItem('login');
 
 			if( $this->securityContext->isGranted('IS_AUTHENTICATED_FULLY') ) {
-				if( $this->securityContext->isGranted('ROLE_SUPER_ADMIN') ) {
-					$menu->addChild('Dashboard', array('route' => '_sonata_admin'));
+				if( $this->securityContext->isGranted('ROLE_SONATA_ADMIN') ) {
+					$menu->addChild('Dashboard', array('route' => 'sonata_admin_dashboard'));
 				}
 				$menu->addChild('Logout',    array('route' => 'fos_user_security_logout'));
 			}

@@ -23,8 +23,11 @@
         "raulfraile/ladybug-bundle": "dev-master",
 
         "friendsofsymfony/user-bundle": "*@dev",
-        "friendsofsymfony/facebook-bundle": "1.1.*",
 	"friendsofsymfony/comment-bundle": "dev-master",
+
+	"gedmo/doctrine-extensions": "*",
+	"stof/doctrine-extensions-bundle": "~1.1@dev",
+        "hwi/oauth-bundle": "*",
 
         "knplabs/knp-menu": "1.1.x-dev",
         "knplabs/knp-menu-bundle": "1.1.x-dev",
@@ -41,7 +44,12 @@
         "sonata-project/media-bundle": "dev-master",
 	"sonata-project/news-bundle": "dev-master",
 
-	"egeloen/ckeditor-bundle": "2.*"
+	"egeloen/ckeditor-bundle": "2.*",
+	"white-october/pagerfanta-bundle": "dev-master",
+	"herzult/forum-bundle": "dev-master",
+	"mpeters/nbbc-bundle": "dev-master",
+	"mpeters/bbc-editor-bundle": "dev-master",
+	"ornicar/gravatar-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
