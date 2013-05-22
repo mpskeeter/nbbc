@@ -9,7 +9,7 @@
     color: #171717;
     margin-right: .2em;
     padding: .25em .35em;
-}
+ }
 
 /*.pagerfanta a {*/
     /*text-decoration: none;*/
@@ -18,18 +18,18 @@
 
 .pagerfanta a:hover {
     background: #6eb47a;
-}
+ }
 
 .pagerfanta .dots {
     border-width: 0;
-}
+    }
 
 .pagerfanta .current {
     background: #6eb47a;
     font-weight: bold;
-}
+    }
 
 .pagerfanta .disabled {
     border-color: #6eb47a;
     color: #171717;
-}
+    }

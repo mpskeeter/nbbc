@@ -41,12 +41,14 @@
                             <tr><td><div align="center">
                                 {{ knp_menu_render('login', {template: 'PoaMainBundle:Menu:login.html.twig', allow_safe_labels: true}) }}
                             </div></td></tr>
+                            <tr><td><div align="center">
                             {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-                                <tr><td><div align="center">
-                                    <a href="{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}" alt="Sign in with Facebook"><img src="{{ asset('bundles/poamain/images/facebook32.png') }}"/></a>
-                                    <a href="{{ path('hwi_oauth_service_redirect', {'service': 'google' }) }}" alt="Sign in with Google"><img src="{{ asset('bundles/poamain/images/google32.png') }}"/></a>
-                                </div></td></tr>
+                                <a href="{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}" alt="Sign in with Facebook"><img src="{{ asset('bundles/poamain/images/facebook32.png') }}"/></a>
+                                <a href="{{ path('hwi_oauth_service_redirect', {'service': 'google' }) }}" alt="Sign in with Google"><img src="{{ asset('bundles/poamain/images/google32.png') }}"/></a>
+                            {% else %}
+                                <a href="{{ path('sonata_user_profile_show') }}" alt="Profile">Profile</a>
                             {%  endif %}
+                            </div></td></tr>
                         </table>
                     </td>
                     <td valign="top" align="center">

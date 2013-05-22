@@ -1,0 +1,1 @@
+[21-May-2013 03:00:56 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/modules/twig.so' - /usr/lib/php/modules/twig.so: undefined symbol: zend_unmangle_property_name in Unknown on line 0

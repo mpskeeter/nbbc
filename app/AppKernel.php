@@ -40,7 +40,7 @@ class AppKernel extends Kernel
 			new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
 			new Sonata\NotificationBundle\SonataNotificationBundle(),
 			new Sonata\MediaBundle\SonataMediaBundle(),
-
+			new Sonata\IntlBundle\SonataIntlBundle(),
 //			new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
 //			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
 //			new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
