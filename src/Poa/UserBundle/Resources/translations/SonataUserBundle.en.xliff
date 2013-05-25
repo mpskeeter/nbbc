@@ -390,6 +390,12 @@
                 <source>breadcrumb.link_user_show</source>
                 <target>Show</target>
             </trans-unit>
+
+			<trans-unit id="label_profile_firstname">
+				<source>label_profile_firstname</source>
+				<target>Firstname</target>
+			</trans-unit>
+
         </body>
     </file>
 </xliff>

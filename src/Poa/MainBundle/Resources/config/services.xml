@@ -4,6 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <parameters>
+        <parameter key="genders" type="collection">
+            <parameter key="m">Male</parameter>
+            <parameter key="f">Female</parameter>
+        </parameter>
+    </parameters>
+
     <services>
         <service id="poa_main.menu_builder" class="Poa\MainBundle\Menu\MenuBuilder">
             <argument type="service" id="knp_menu.factory" />
@@ -42,6 +49,11 @@
         <service id="poa.main.listener" class="Poa\MainBundle\EventListener\ControllerListener">
             <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
             <argument type="service" id="twig.extension.poa.main" />
+        </service>
+
+        <service id="poa.form.type.gender" class="Poa\MainBundle\Form\Type\GenderType">
+            <tag name="form.type" alias="gender" />
+            <argument>%genders%</argument>
         </service>
 
         <!--<service id="poa.main.admin.menu" class="Poa\MainBundle\Admin\MenuAdmin">-->

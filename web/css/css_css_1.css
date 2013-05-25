@@ -76,27 +76,54 @@ a:hover, a:active {
 	color: #333333;
 	text-decoration: underline;
 }
+.nav {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #00C;
+    font-weight: bold;
+    text-align: right;
+}
+.nav a:link, .nav a:visited {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #990000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav a:hover, .leftnav a:active {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
 .leftnav {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #00C;
-	font-weight: bold;
-	text-align: right;
+    text-align: right;
 }
-.leftnav a:link, .leftnav a:visited {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #990000;
-	text-decoration: none;
-	font-weight: bold;
+.rightnav {
+    text-align: left;
 }
-.leftnav a:hover, .leftnav a:active {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #000000;
-	text-decoration: none;
-	font-weight: bold;
-}
+/*.leftnav {*/
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	/*font-size: 12px;*/
+	/*color: #00C;*/
+	/*font-weight: bold;*/
+	/*text-align: right;*/
+/*}*/
+/*.leftnav a:link, .leftnav a:visited {*/
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	/*font-size: 12px;*/
+	/*color: #990000;*/
+	/*text-decoration: none;*/
+	/*font-weight: bold;*/
+/*}*/
+/*.leftnav a:hover, .leftnav a:active {*/
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	/*font-size: 12px;*/
+	/*color: #000000;*/
+	/*text-decoration: none;*/
+	/*font-weight: bold;*/
+/*}*/
 .leftnavbg {
     background: url(../bundles/poamain/images/bg_leftnav.jpg) no-repeat;
 }

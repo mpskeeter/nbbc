@@ -1,0 +1,59 @@
+{% extends 'PoaMainBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/poauser/css/profile.css') }}" />
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    {% if app.user.gender == 'm' %}
+        {% set gender = 'male' %}
+    {% else %}
+        {% set gender = 'female' %}
+    {% endif %}
+
+    <tr><td><div align="center">
+    <div class="kblock k-profile">
+        <div class="kheader">
+            <h2>
+                <span class="k-name">Profile for {{ app.user.fullname }}</span>
+                {% if app.user == user %}
+                    <span class="kheadbtn kright"><a href="{{ path('sonata_user_profile_edit') }}" title="" rel="nofollow">Edit</a></span>
+                {% endif %}
+            </h2>
+        </div>
+        <div class="kcontainer">
+            <div class="kbody">
+                <table class="kblocktable" id="kprofile">
+                    <tbody>
+                        <tr>
+                            <td class="kcol-first kcol-left">
+                                <div id="kprofile-leftcol">
+                                    <div class="kavatar-lg">
+                                        <img class="kavatar" src="{{ gravatar(app.user.email) }}" alt="{{ app.user.fullname }} Avatar" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="kcol-mid kcol-right">
+                                <div id="kprofile-rightcol">
+                                    <div id="kprofile-rightcoltop">
+                                        <div class="kprofile-rightcol1">
+                                            <ul style="list-style-type:none;padding:0;margin:0;">
+                                                <li><span class="kicon-profile kicon-profile-location"></span><strong>Address:</strong> <a href="http://maps.google.com?q={{ app.user.address }}" target="_blank">{{ app.user.address }}</a></li>
+                                                <li><span class="kicon-profile kicon-profile-gender-{{ gender }}"></span><strong>Gender:</strong> {{ gender|title }}</li>
+                                                <li class="bd"><span class="kicon-profile kicon-profile-birthdate"></span><strong>Birthdate:</strong> <span title="Unknown">{{ app.user.dateOfBirth | date('M d, Y') | default('None') }}</span></li>
+                                                <li class="bd"><span class="kicon-profile kicon-profile-phone"></span><strong>Phone Number:</strong> <span title="Unknown">{{ app.user.phonenumber }}</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </td></tr>
+{% endblock %}

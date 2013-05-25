@@ -81,6 +81,11 @@
 		 */
 		protected $gplusAccessToken;
 
+		/**
+		 * @ORM\OneToMany(targetEntity="Pets", mappedBy="id")
+		 **/
+		protected $pets;
+
 		public function __construct()
 		{
 			parent::__construct();
@@ -101,7 +106,7 @@
 		/**
 		 * Set address
 		 *
-		 * @param text $address
+		 * @param string $address
 		 */
 		public function setAddress($address)
 		{
@@ -111,7 +116,7 @@
 		/**
 		 * Get address
 		 *
-		 * @return text
+		 * @return string
 		 */
 		public function getAddress()
 		{

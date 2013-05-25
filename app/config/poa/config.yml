@@ -1,3 +1,6 @@
+#parameters:
+#    sonata.user.profile.type.class: Poa\UserBundle\Form\Type\ProfileType
+
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
@@ -177,7 +180,7 @@ sonata_block:
 sonata_user:
     security_acl:     false
     class:
-        user:         Poa\UserBundle\Entity\User
+        user:               Poa\UserBundle\Entity\User
     admin:                  # Admin Classes
         user:
             class:          Sonata\UserBundle\Admin\Entity\UserAdmin
@@ -190,7 +193,7 @@ sonata_user:
             translation:    SonataUserBundle
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               sonata_user_profile
+            type:               poa_user_profile
             handler:            sonata.user.profile.form.handler.default
             name:               sonata_user_profile_form
             validation_groups:  [Profile]
@@ -394,8 +397,14 @@ hwi_oauth:
         max_redirects: 1 # Number of HTTP redirection request after which library will shutdown request,
                          # by default: 5
 
+sonata_intl:
+    timezone:
+        # default timezone used as fallback
+        default: America/New_York
+
 parameters:
     my_user_provider.class: Poa\UserBundle\Security\User\Provider\FOSUBUserProvider
+    my_user_profile.class:  Poa\UserBundle\Form\Type\ProfileType
 
 #https://gist.github.com/danvbe/4476697
 services:
@@ -404,3 +413,10 @@ services:
         #this is the place where the properties are passed to the UserProvider - see config.yml
 #        arguments: [@fos_user.user_manager,{facebook: facebook_id, google: google_id}]
         arguments: [@fos_user.user_manager,{facebook: facebookUid, google: googleUid}]
+
+    poa_user.profile.form:
+        class: "%my_user_profile.class%"
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: poa_user_profile }
+

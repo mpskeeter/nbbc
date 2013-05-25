@@ -11,9 +11,13 @@
 		{
 			// add your custom field
 			$builder
-				->add('firstname', null,  array( 'label' => 'form.firstname', 'translation_domain' => 'FOSUserBundle' ))
-				->add('lastname',  null,  array( 'label' => 'form.lastname',  'translation_domain' => 'FOSUserBundle' ))
-				->add('address',  'text', array( 'label' => 'form.address',   'translation_domain' => 'FOSUserBundle', 'invalid_message' => 'register.empty.field' ));
+				->add('firstname', null,  array( 'label'              => 'form.firstname',
+												 'translation_domain' => 'FOSUserBundle' ))
+				->add('lastname',  null,  array( 'label'              => 'form.lastname',
+												 'translation_domain' => 'FOSUserBundle' ))
+				->add('address',  'text', array( 'label'              => 'form.address',
+												 'translation_domain' => 'FOSUserBundle',
+												 'invalid_message'    => 'register.empty.field' ));
 
 			parent::buildForm($builder, $options);
 		}
