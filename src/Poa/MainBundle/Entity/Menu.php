@@ -234,6 +234,7 @@
 			$this->children[] = $children;
 			$children->setParent($this);
 		}
+
 		/**
 		 * Get children
 		 *

@@ -5,6 +5,10 @@ namespace Poa\ForumBundle\Entity;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 
+/**
+ * Class PostRepository
+ * @package Poa\ForumBundle\Entity
+ */
 class PostRepository extends ObjectRepository implements PostRepositoryInterface
 {
     /**
@@ -64,15 +68,17 @@ class PostRepository extends ObjectRepository implements PostRepositoryInterface
         return $qb->getQuery()->execute();
     }
 
-    /**
-     * Gets the post that proceeds this one
-     *
-     * @return \Poa\ForumBundle\Entity\Post or null
-     **/
+	/**
+	 * Gets the post that proceeds this one
+	 *
+	 * @param \Poa\ForumBundle\Entity\Post $post
+	 * @return \Poa\ForumBundle\Entity\Post or null
+	 */
     public function getPostBefore($post)
     {
         $candidate = null;
-        foreach ($this->findAllByTopic($post->getTopic()) as $p) {
+		/** @var $p \Poa\ForumBundle\Entity\Post */
+		foreach ($this->findAllByTopic($post->getTopic()) as $p) {
             if ($p !== $post) {
                 if ($p->getNumber() > $post->getNumber()) {
                     break;

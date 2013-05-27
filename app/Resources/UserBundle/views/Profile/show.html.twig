@@ -68,13 +68,13 @@
                 {% endif %}
                     </h2>
                 </div>
-    {% if app.user.pets %}
+    {% if app.user.pets is not null %}
                 <div class="kcontainer">
                     <div class="kbody">
                         <table class="kblocktable" id="kprofile">
                             <thead>
                             <tr>
-                                <td class="kcol-first kcol-left"></td>
+                                <td class="kcol-first kcol-left">Picture</td>
                                 <td class="kcol-first kcol-left">Name</td>
                                 <td class="kcol-first kcol-left">Type</td>
                                 <td class="kcol-first kcol-left">Breed</td>

@@ -2,52 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705c0410-eab6-4a9a-9bcb-aaf8dab99855" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/public/images/default.png" />
-      <change type="NEW" beforePath="" afterPath="X:/web/bundles/poauser/images/default.png" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/MainBundle/Entity/Document.php" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/MainBundle/Form/Type/GenderType.php" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Entity/Pets.php" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Controller/ProfileController.php" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Form/Type/ProfileType.php" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/views/Profile/edit_authentication.html.twig" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/views/Profile/edit_profile.html.twig" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/config/form.yml" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/public/css/profile.css" />
-      <change type="NEW" beforePath="" afterPath="X:/web/bundles/poauser/css/profile.css" />
-      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Resources/views/Profile/show.html.twig" />
-      <change type="DELETED" beforePath="X:\web\bundles\poaforum\images\large_grey_button.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/Entity/Content.php" afterPath="X:/src/Poa/MainBundle/Entity/Content.php" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/DependencyInjection/PoaUserExtension.php" afterPath="X:/src/Poa/UserBundle/DependencyInjection/PoaUserExtension.php" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Form/Type/RegistrationFormType.php" afterPath="X:/src/Poa/UserBundle/Form/Type/RegistrationFormType.php" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Resources/translations/SonataUserBundle.en.xliff" afterPath="X:/src/Poa/UserBundle/Resources/translations/SonataUserBundle.en.xliff" />
+      <change type="NEW" beforePath="" afterPath="X:/src/Poa/UserBundle/Entity/Pet.php" />
+      <change type="DELETED" beforePath="X:\src\Poa\MainBundle\Entity\Document.php" afterPath="" />
+      <change type="DELETED" beforePath="X:\src\Poa\UserBundle\Entity\Pets.php" afterPath="" />
+      <change type="DELETED" beforePath="X:\web\css\css.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="X:/.idea/dataSources.ids" afterPath="X:/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="X:/web/.htaccess" afterPath="X:/web/.htaccess" />
+      <change type="MODIFICATION" beforePath="X:/app/AppKernel.php" afterPath="X:/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Security/User/Provider/FOSUBUserProvider.php" afterPath="X:/src/Poa/UserBundle/Security/User/Provider/FOSUBUserProvider.php" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/DataFixtures/ORM/LoadContentData.php" afterPath="X:/src/Poa/MainBundle/DataFixtures/ORM/LoadContentData.php" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/Entity/Menu.php" afterPath="X:/src/Poa/MainBundle/Entity/Menu.php" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/ForumBundle/Entity/PostRepository.php" afterPath="X:/src/Poa/ForumBundle/Entity/PostRepository.php" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Form/Type/ProfileType.php" afterPath="X:/src/Poa/UserBundle/Form/Type/ProfileType.php" />
       <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Entity/User.php" afterPath="X:/src/Poa/UserBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="X:/web/app.php" afterPath="X:/web/app.php" />
+      <change type="MODIFICATION" beforePath="X:/composer.json" afterPath="X:/composer.json" />
       <change type="MODIFICATION" beforePath="X:/composer.lock" afterPath="X:/composer.lock" />
-      <change type="MODIFICATION" beforePath="X:/web/config.php" afterPath="X:/web/config.php" />
       <change type="MODIFICATION" beforePath="X:/app/config/poa/config.yml" afterPath="X:/app/config/poa/config.yml" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/Resources/public/css/css.css" afterPath="X:/src/Poa/MainBundle/Resources/public/css/css.css" />
-      <change type="MODIFICATION" beforePath="X:/web/css/css_css_1.css" afterPath="X:/web/css/css_css_1.css" />
-      <change type="MODIFICATION" beforePath="X:/app/Resources/SonataUserBundle/views/Profile/edit_authentication.html.twig" afterPath="X:/app/Resources/SonataUserBundle/views/Profile/edit_authentication.html.twig" />
-      <change type="MODIFICATION" beforePath="X:/app/Resources/SonataUserBundle/views/Profile/edit_profile.html.twig" afterPath="X:/app/Resources/SonataUserBundle/views/Profile/edit_profile.html.twig" />
+      <change type="MODIFICATION" beforePath="X:/.idea/dataSources.xml" afterPath="X:/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/Resources/views/layout.html.twig" afterPath="X:/src/Poa/MainBundle/Resources/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="X:/.idea/misc.xml" afterPath="X:/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="X:/app/config/parameters.yml" afterPath="X:/app/config/parameters.yml" />
       <change type="MODIFICATION" beforePath="X:/php_errors.log" afterPath="X:/php_errors.log" />
-      <change type="MODIFICATION" beforePath="X:\web\php_errors.log" afterPath="X:\web\php_errors.log" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Resources/public/css/profile.css" afterPath="X:/src/Poa/UserBundle/Resources/public/css/profile.css" />
+      <change type="MODIFICATION" beforePath="X:/web/bundles/poauser/css/profile.css" afterPath="X:/web/bundles/poauser/css/profile.css" />
       <change type="MODIFICATION" beforePath="X:/src/Poa/MainBundle/Resources/config/services.xml" afterPath="X:/src/Poa/MainBundle/Resources/config/services.xml" />
-      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Resources/config/services.yml" afterPath="X:/src/Poa/UserBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="X:/src/Poa/UserBundle/Resources/views/Profile/show.html.twig" afterPath="X:/src/Poa/UserBundle/Resources/views/Profile/show.html.twig" />
       <change type="MODIFICATION" beforePath="X:/.idea/workspace.xml" afterPath="X:/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="X:\src\Poa\MainBundle\Resources\public\css\css.css" afterPath="X:/src/Poa/MainBundle/Resources/public/css/css.css.old" />
     </list>
     <ignored path=".iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369102604803" ignored="false" />
-    <file path="/config.yml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369388787800" ignored="false" />
+    <file path="/config.yml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369668547039" ignored="false" />
     <file path="/MenuAdmin.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1365978899562" ignored="false" />
     <file path="/MainBlockService.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1365984372917" ignored="false" />
-    <file path="/a.dummy" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369487106618" ignored="false" />
-    <file path="/services.xml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369422033425" ignored="false" />
+    <file path="/a.dummy" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369668365564" ignored="false" />
+    <file path="/services.xml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369503038344" ignored="false" />
     <file path="/new.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368831775421" ignored="false" />
     <file path="/NewTopicFormType.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368874991021" ignored="false" />
     <file path="/bbc_editor_widget.html.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368439063949" ignored="false" />
-    <file path="/layout.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369485649874" ignored="false" />
+    <file path="/layout.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369569140863" ignored="false" />
     <file path="/bbc_editor_widget.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368487065481" ignored="false" />
     <file path="/editor.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368896554603" ignored="false" />
     <file path="/editor_editor_1.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368440715473" ignored="false" />
@@ -69,8 +64,8 @@
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema-instance.xsd" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368580865558" ignored="false" />
     <file path="/Topic.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368581630761" ignored="false" />
     <file path="/Symfony" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368583728588" ignored="false" />
-    <file path="/list.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369012933246" ignored="false" />
-    <file path="/show.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369478172990" ignored="false" />
+    <file path="/list.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369615263122" ignored="false" />
+    <file path="/show.html.twig" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369662017960" ignored="false" />
     <file path="/Post.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368783585083" ignored="false" />
     <file path="/PostController.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369004982925" ignored="false" />
     <file path="/CategoryRepositoryInterface.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1368874889122" ignored="false" />
@@ -107,11 +102,19 @@
     <file path="/PoaUserExtension.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369362830549" ignored="false" />
     <file path="/form.yml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369362865870" ignored="false" />
     <file path="/GenderType.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369421594451" ignored="false" />
-    <file path="/profile.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369477171927" ignored="false" />
-    <file path="/Pets.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369481716646" ignored="false" />
-    <file path="/User.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369480865461" ignored="false" />
+    <file path="/profile.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369528644728" ignored="false" />
+    <file path="/Pets.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369660947213" ignored="false" />
+    <file path="/User.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369656073905" ignored="false" />
     <file path="/Document.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369482936488" ignored="false" />
     <file path="/css_css_1.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369485475711" ignored="false" />
+    <file path="/Pet.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369496102792" ignored="false" />
+    <file path="/PetsRepository.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369501745160" ignored="false" />
+    <file path="/PetType.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369503557319" ignored="false" />
+    <file path="/.htaccess" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369655709135" ignored="false" />
+    <file path="/css.css" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369570259929" ignored="false" />
+    <file path="/parameters.yml" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369574592481" ignored="false" />
+    <file path="/FacebookResourceOwner.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369668476512" ignored="false" />
+    <file path="/FOSUBUserProvider.php" changelist="705c0410-eab6-4a9a-9bcb-aaf8dab99855" time="1369669225506" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,103 @@
     <favorites_list name="" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AdvancedPathUserResponse.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/Response/AdvancedPathUserResponse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="7" selection-start="685" selection-end="685" vertical-scroll-proportion="-7.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/app/config/poa/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="420" column="100" selection-start="17416" selection-end="17416" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoogleResourceOwner.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResourceOwner/GoogleResourceOwner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1038" selection-end="1220" vertical-scroll-proportion="-10.192307">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/src/Poa/UserBundle/Security/User/Provider/FacebookInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="23" selection-start="420" selection-end="437" vertical-scroll-proportion="-6.923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FOSUBUserProvider.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/src/Poa/UserBundle/Security/User/Provider/FOSUBUserProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="41" selection-start="1958" selection-end="1958" vertical-scroll-proportion="-5.8076925">
+              <folding>
+                <element signature="e#58#122#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookResourceOwner.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResourceOwner/FacebookResourceOwner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://X:/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="39" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.26426426">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FOSUBUserProvider.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/Security/Core/User/FOSUBUserProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="47" selection-start="869" selection-end="869" vertical-scroll-proportion="38.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OAuthAwareUserProviderInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/Security/Core/User/OAuthAwareUserProviderInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="69" selection-start="967" selection-end="988" vertical-scroll-proportion="-8.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="symfony_test.users" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/151ba/db822966-d370-499d-84ca-d9d0029115ad/symfony_test..users">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -153,22 +252,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="X:/src/Poa/MainBundle/Form/Type/GenderType.php" />
+        <option value="X:/src/Poa/MainBundle/DataFixtures/ORM/LoadContentData.php" />
         <option value="X:/src/Poa/UserBundle/Form/Type/ProfileType.php" />
-        <option value="X:/src/Poa/ForumBundle/Resources/public/css/profile.css" />
-        <option value="X:/web/bundles/poauser/profile.css" />
-        <option value="X:/src/Poa/UserBundle/Resources/public/css/profile.css" />
-        <option value="X:/web/bundles/poauser/css/profile.css" />
+        <option value="X:/src/Poa/UserBundle/Resources/views/Pets/list.html.twig" />
         <option value="X:/src/Poa/UserBundle/Resources/views/Profile/show.html.twig" />
-        <option value="X:/src/Poa/MainBundle/Entity/Content.php" />
-        <option value="X:/src/Poa/UserBundle/Entity/User.php" />
-        <option value="X:/src/Poa/MainBundle/Entity/Documents.php" />
+        <option value="X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/DependencyInjection/Configuration.php" />
+        <option value="X:/web/.htaccess" />
+        <option value="X:/src/Poa/MainBundle/Entity/Menu.php" />
+        <option value="dbtable:/151ba/db822966-d370-499d-84ca-d9d0029115ad/symfony_test..users_pets" />
         <option value="X:/src/Poa/UserBundle/Entity/Pets.php" />
-        <option value="X:/src/Poa/MainBundle/Entity/Document.php" />
-        <option value="dbtable:/151ba/db822966-d370-499d-84ca-d9d0029115ad/symfony_test..menu_content" />
-        <option value="X:/web/css/css_css_1.css" />
-        <option value="X:/src/Poa/MainBundle/Resources/public/css/css.css" />
-        <option value="X:/src/Poa/MainBundle/Resources/views/layout.html.twig" />
+        <option value="X:/app/Resources/UserBundle/views/Profile/show.html.twig" />
+        <option value="X:/src/Poa/UserBundle/Entity/User.php" />
+        <option value="X:/src/Poa/UserBundle/Security/User/Provider/FacebookResourceOwner.php" />
+        <option value="X:/src/Poa/UserBundle/Security/User/Provider/FacebookInterface.php" />
+        <option value="X:/app/config/poa/config.yml" />
+        <option value="X:/src/Poa/UserBundle/Security/User/Provider/FOSUBUserProvider.php" />
+        <option value="X:/composer.json" />
       </list>
     </option>
   </component>
@@ -248,11 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,19 +361,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
+              <option name="myItemId" value="hwi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="poaforum" />
+              <option name="myItemId" value="oauth-bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,15 +395,241 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
+              <option name="myItemId" value="hwi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="poaforum" />
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hwi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="User" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hwi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hwi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hwi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Response" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hwi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oauth-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuthBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OAuth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResourceOwner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,26 +664,8 @@
               <option name="myItemId" value="Poa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="X:" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Poa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MainBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,7 +687,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ForumBundle" />
+              <option name="myItemId" value="UserBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="User" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Provider" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,8 +720,32 @@
               <option name="myItemId" value="Poa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ForumBundle" />
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -416,15 +763,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Poa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ForumBundle" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -432,11 +771,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,15 +789,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Poa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ForumBundle" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -466,7 +797,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="UserBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="X:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -481,7 +890,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="X:/src/Poa/UserBundle/Resources/public/css" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="Database.TableEditor.Splitter" value="0.5676856" />
+    <property name="Database.TableEditor.Splitter" value="0.6253687" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="FullScreen" value="false" />
@@ -531,18 +940,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="X:\src\Poa\UserBundle\Resources\public\css" />
-      <recent name="X:\src\Poa\UserBundle\Resources\public" />
-      <recent name="X:\web\bundles\poauser" />
-      <recent name="X:\src\Poa\UserBundle\Resources\views\Profile" />
-      <recent name="X:\src\Poa\UserBundle\Controller" />
+      <recent name="X:\src\Poa\UserBundle\Security\User\Provider" />
+      <recent name="X:\app\Resources\UserBundle" />
+      <recent name="X:\app\Resources\UserBundle\views" />
+      <recent name="X:\web\css" />
+      <recent name="X:\src\Poa\MainBundle\Resources\public\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="X:\web\bundles\poauser\css" />
+      <recent name="X:\app\Resources\UserBundle\views\Profile" />
       <recent name="X:\src\Poa\UserBundle\Resources\public\css" />
+      <recent name="X:\web\bundles\poauser\css" />
       <recent name="X:\src\Poa\MainBundle\Form\Type" />
       <recent name="X:\src\Poa\UserBundle\Controller" />
-      <recent name="X:\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -575,7 +984,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21465077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -589,7 +998,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3060606" sideWeight="0.78534925" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3060606" sideWeight="0.78534925" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -663,104 +1072,49 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://X:/src/Poa/MainBundle/Entity/Document.php">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResourceOwner/FoursquareResourceOwner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="5" selection-start="782" selection-end="782" vertical-scroll-proportion="0.21253406">
-          <folding>
-            <element signature="e#41#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/src/Poa/UserBundle/Entity/Pets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="34" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.3705722">
-          <folding>
-            <element signature="e#199#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Type/ProfileFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.904">
+        <state line="30" column="73" selection-start="928" selection-end="928" vertical-scroll-proportion="-4.3076925">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/vendor/sonata-project/user-bundle/Sonata/UserBundle/Resources/config/routing/profile.xml">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResourceOwner/GoogleResourceOwner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="41" column="0" selection-start="1038" selection-end="1220" vertical-scroll-proportion="-10.192307">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/vendor/sonata-project/user-bundle/Sonata/UserBundle/Resources/views/Profile/edit_authentication.html.twig">
+    <entry file="file://X:/app/config/poa/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769">
+        <state line="420" column="100" selection-start="17416" selection-end="17416" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/src/Poa/UserBundle/Resources/public/css/profile.css">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/Response/PathUserResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="41" column="43" selection-start="916" selection-end="916" vertical-scroll-proportion="-0.460452">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/web/bundles/poauser/css/profile.css">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/Response/AdvancedPathUserResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="58" selection-start="1359" selection-end="1359" vertical-scroll-proportion="1.8933649">
+        <state line="30" column="7" selection-start="685" selection-end="685" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/src/Poa/MainBundle/Entity/Faq.php">
+    <entry file="file://X:/src/Poa/UserBundle/Security/User/Provider/FacebookProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1198044">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.992">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/src/Poa/MainBundle/Entity/Content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="966" selection-end="1092" vertical-scroll-proportion="0.56479216">
-          <folding>
-            <element signature="e#43#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/vendor/sonata-project/user-bundle/Sonata/UserBundle/Controller/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6742424">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/src/Poa/MainBundle/Resources/public/css/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="5" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/src/Poa/MainBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="52" selection-start="7086" selection-end="7086" vertical-scroll-proportion="0.49866667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/web/css/css_css_1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="1596" selection-end="2744" vertical-scroll-proportion="0.8459716">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/151ba/db822966-d370-499d-84ca-d9d0029115ad/symfony_test..menu_content">
+    <entry file="dbDummy://dbtable:/151ba/db822966-d370-499d-84ca-d9d0029115ad/symfony_test..users">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -770,16 +1124,67 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://X:/.gitignore">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResponseInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.14739884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://X:/web/php_errors.log">
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/Response/UserResponseInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4395" column="19" selection-start="768391" selection-end="768391" vertical-scroll-proportion="0.7180095">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/Response/AdvancedUserResponseInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="28" selection-start="549" selection-end="557" vertical-scroll-proportion="0.7369942">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/Security/Core/User/OAuthAwareUserProviderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="69" selection-start="967" selection-end="988" vertical-scroll-proportion="-8.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/src/Poa/UserBundle/Security/User/Provider/FacebookInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="420" selection-end="437" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/Security/Core/User/FOSUBUserProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="47" selection-start="869" selection-end="869" vertical-scroll-proportion="38.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/src/Poa/UserBundle/Security/User/Provider/FOSUBUserProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="41" selection-start="1958" selection-end="1958" vertical-scroll-proportion="-5.8076925">
+          <folding>
+            <element signature="e#58#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/vendor/hwi/oauth-bundle/HWI/Bundle/OAuthBundle/OAuth/ResourceOwner/FacebookResourceOwner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="39" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.26426426">
           <folding />
         </state>
       </provider>

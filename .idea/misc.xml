@@ -347,7 +347,7 @@
     <option name="state" value="project://fd996571-56bc-42d2-832d-0d81c1d9e7ba" />
   </component>
   <component name="ProjectResources">
-    <resource url="http://symfony.com/schema/dic/services" location="X:/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/schema/symfony-1.0.xsd" />
+    <resource url="http://symfony.com/schema/dic/symfony" location="X:/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/schema/symfony-1.0.xsd" />
   </component>
   <component name="ProjectRootManager" version="2" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">

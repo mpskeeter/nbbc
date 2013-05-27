@@ -24,7 +24,7 @@ parameters:
     facebook_app_id:      "126694607516663"
     facebook_app_secret:  "5741f397294cbf2e82f5cb5dfb32ac51"
     facebook_app_url:     "http://apps.facebook.com/bw_namespace_test/"
-    facebook_server_url:  "http://www.skeeter-net.net/test/app_dev.php"
+    facebook_server_url:  "http://beta.ballardwoods.org/app.php"
 # user this for BallardWoods production
 #    google_app_id:        "530110231244.apps.googleusercontent.com"
 #    google_app_secret:    "2jrUt2L5zlD7suVd99Wh30yV"

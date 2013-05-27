@@ -15,6 +15,7 @@
     border-bottom:2px solid;
     padding:0 10px 0 10px;
     border-bottom-color:#54b450;
+    width:95%;
     font:12px tahoma,arial,helvetica,sans-serif;
 }
 
@@ -49,3 +50,13 @@ h2 span.kheadbtn a {
 .kicon-profile-birthdate {background-position:0 -42px;}
 .kicon-profile-gender-male {background-position:0 -374px;}
 .kicon-profile-gender-female{background-position:0 -168px;}
+.kicon-profile-phone {
+    background-image:url("../images/phone.png");
+    background-repeat:no-repeat;
+    width:16px;
+    height:16px;
+    border-spacing: 3px;
+    display:inline-block;
+    vertical-align:text-top;
+    margin-right:3px;
+}

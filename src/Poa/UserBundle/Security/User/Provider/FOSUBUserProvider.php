@@ -43,7 +43,8 @@
 		public function loadUserByOAuthUserResponse(UserResponseInterface $response)
 		{
 			$username = $response->getUsername();
-			$user = $this->userManager->findUserBy(array($this->getProperty($response) => $username));
+			$useremail = $response->getEmail();
+			$user = $this->userManager->findUserBy(array('email' => $useremail));
 			//when the user is registering
 			if (null === $user) {
 				$service = $response->getResourceOwner()->getName();
@@ -57,6 +58,7 @@
 				$user->$setter_token($response->getAccessToken());
 				//I have set all requested data with the user's username
 				//modify here with relevant data
+				if($response is $response
 				$user->setUsername($username);
 				$user->setEmail($username);
 				$user->setPassword($username);

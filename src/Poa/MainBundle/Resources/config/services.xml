@@ -9,6 +9,11 @@
             <parameter key="m">Male</parameter>
             <parameter key="f">Female</parameter>
         </parameter>
+
+        <parameter key="pet_types" type="collection">
+            <parameter key="d">Dog</parameter>
+            <parameter key="c">Cat</parameter>
+        </parameter>
     </parameters>
 
     <services>
@@ -54,6 +59,11 @@
         <service id="poa.form.type.gender" class="Poa\MainBundle\Form\Type\GenderType">
             <tag name="form.type" alias="gender" />
             <argument>%genders%</argument>
+        </service>
+
+        <service id="poa.form.type.pet" class="Poa\MainBundle\Form\Type\PetType">
+            <tag name="form.type" alias="pet" />
+            <argument>%pet_types%</argument>
         </service>
 
         <!--<service id="poa.main.admin.menu" class="Poa\MainBundle\Admin\MenuAdmin">-->

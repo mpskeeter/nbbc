@@ -3,8 +3,9 @@
 
 	namespace Poa\UserBundle\Entity;
 
-	use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 	use Doctrine\ORM\Mapping as ORM;
+	use Doctrine\Common\Collections\ArrayCollection;
+	use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 	use Symfony\Component\Validator\Constraints as Assert;
 
 	/**
@@ -30,66 +31,32 @@
 		 */
 		protected $groups;
 
-//		/**
-//		 * @var string
-//		 *
-//		 * @ORM\Column(name="firstname", type="string", length=255)
-//		 * @Assert\NotBlank(message="Please enter your first name.", groups={"Registration", "Profile"})
-//		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
-//		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
-//		 */
-//		protected $firstname;
-//
-//		/**
-//		 * @var string
-//		 *
-//		 * @ORM\Column(name="lastname", type="string", length=255)
-//		 * @Assert\NotBlank(message="Please enter your last name.", groups={"Registration", "Profile"})
-//		 * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
-//		 * @Assert\MaxLength(limit="255", message="The name is too long.", groups={"Registration", "Profile"})
-//		 */
-//		protected $lastname;
-
 		/**
-		 * @var text
-		 *
-		 * @ORM\Column(name="address", type="text", nullable=false)
-		 * @Assert\NotBlank(message="Please enter your address.", groups={"Registration", "Profile"})
-		 * @Assert\MinLength(limit="10", message="The address is too short.", groups={"Registration", "Profile"})
-		 * @Assert\MaxLength(limit="255", message="The address is too long.", groups={"Registration", "Profile"})
+		 * @ORM\Column(name="address", type="text", nullable=true)
 		 */
 		private $address;
 
-//		/**
-//		 * @var \Datetime $date_registered
-//		 *
-//		 * @ORM\Column(name="date_registered", type="datetime", nullable=false)
-//		 */
-//		private $date_registered;
-
 		/**
-		 * @var string
-		 *
 		 * @ORM\Column(name="facebookAccessToken", type="string", length=255, nullable=true)
 		 */
 		protected $facebookAccessToken;
 
 		/**
-		 * @var string
-		 *
-		 * @ORM\Column(name="gplusAccessToken", type="string", length=255, nullable=true)
+\		 * @ORM\Column(name="gplusAccessToken", type="string", length=255, nullable=true)
 		 */
 		protected $gplusAccessToken;
 
 		/**
-		 * @ORM\OneToMany(targetEntity="Pets", mappedBy="id")
-		 **/
+		 * Inverse Side
+		 *
+		 * @ORM\ManyToMany(targetEntity="Pet", mappedBy="user")
+		 */
 		protected $pets;
 
 		public function __construct()
 		{
 			parent::__construct();
-			// your own logic
+			$this->pets = new ArrayCollection();
 		}
 
 		public function serialize()
@@ -122,26 +89,6 @@
 		{
 			return $this->address;
 		}
-
-//		/**
-//		 * Set date_registered
-//		 *
-//		 * @param \Datetime $dateRegistered
-//		 */
-//		public function setDateRegistered($dateRegistered)
-//		{
-//			$this->date_registered = $dateRegistered;
-//		}
-
-//		/**
-//		 * Get date_registered
-//		 *
-//		 * @return \Datetime
-//		 */
-//		public function getDateRegistered()
-//		{
-//			return $this->date_registered;
-//		}
 
 		/**
 		 * Get the full name of the user (first + last name)
@@ -317,12 +264,13 @@
 			$this->setGplusData($gplusData);
 		}
 
-//		/**
-//		 * @ORM\PrePersist
-//		 */
-//		public function prePersist()
-//		{
-////			$this->setDateRegistered(new \DateTime());
-//			$this->setCreatedAt(new \DateTime());
-//		}
+		/**
+		 * Get pets
+		 *
+		 * @return Pets[]|null
+		 */
+		public function getPets()
+		{
+			return $this->pets;
+		}
 	}

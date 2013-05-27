@@ -15,6 +15,7 @@
     border-bottom:2px solid;
     padding:0 10px 0 10px;
     border-bottom-color:#54b450;
+    width:95%;
     font:12px tahoma,arial,helvetica,sans-serif;
 }
 
@@ -25,22 +26,24 @@
     margin:0;
     text-transform:none;
     text-shadow:none;
-    text-align:left;}
+    text-align:left;
+}
 h2 span.kheadbtn {margin:0!important;}
-h2 span.kright {float:right;margin:0 10px;text-align:right;}
+h2 span.kright {
+    float:right;
+    /*margin:0 10px;*/
+    text-align:right;
+}
 h2 span.kheadbtn a {
-    border-color:#ff0000;
-    background-color:#ff0000!important;
+    /*border-color:#ff0000;*/
+    /*background-color:#ff0000!important;*/
     color:#fff!important;
     font-weight:900!important;
     text-transform:uppercase;
     font-size:11px!important;
-    line-height:23px;
+    /*line-height:23px;*/
     border:1px solid;
-    padding-top:1px;
-    padding-bottom:3px;
-    padding-left:3px;
-    padding-right:3px;
+    /*padding:1px;*/
 }
 
 .kheader h2 a {font-weight:bold;margin-bottom:0;padding:0;text-decoration:none;}
@@ -49,3 +52,13 @@ h2 span.kheadbtn a {
 .kicon-profile-birthdate {background-position:0 -42px;}
 .kicon-profile-gender-male {background-position:0 -374px;}
 .kicon-profile-gender-female{background-position:0 -168px;}
+.kicon-profile-phone {
+    background-image:url("../images/phone.png");
+    background-repeat:no-repeat;
+    width:16px;
+    height:16px;
+    border-spacing: 3px;
+    display:inline-block;
+    vertical-align:text-top;
+    margin-right:3px;
+}

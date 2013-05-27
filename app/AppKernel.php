@@ -53,16 +53,17 @@ class AppKernel extends Kernel
 //			new Herzult\Bundle\ForumBundle\HerzultForumBundle(),
 			new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
 
-//			new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+			new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+			new Vich\UploaderBundle\VichUploaderBundle(),
+
 			new Poa\UserBundle\UserBundle(),
-			new Poa\AdminBundle\PoaAdminBundle(),
-//			new Poa\BlogBundle\PoaBlogBundle(),
-//			new Poa\ForumBundle\ForumBundle(),
 			new Poa\ForumBundle\PoaForumBundle(),
+			new Poa\AdminBundle\PoaAdminBundle(),
+			new Poa\MainBundle\PoaMainBundle(),
 		);
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Poa\MainBundle\PoaMainBundle();
+//            $bundles[] = new Poa\MainBundle\PoaMainBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

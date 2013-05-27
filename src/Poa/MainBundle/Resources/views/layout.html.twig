@@ -16,6 +16,8 @@
     {% endblock %}
     {% block stylesheets %}
         <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Headland+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
         {% stylesheets 'bundles/poamain/css/css.css' output='css/css.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
@@ -38,7 +40,7 @@
                             <tr><td height="30" valign="bottom" class="textsmred">&nbsp;</td></tr>
                             <tr><td height="120" valign="bottom" class="textsmred" align="center"><a href="{{  path('_welcome') }}"><img src="{{ asset('bundles/poamain/images/logo.jpg') }}" alt="Ballard Woods. A residential community in Harnett County, North Carolina" width="140" height="75" border="0"></a><br/>Harnett County, NC</td></tr>
                             <tr><td>&nbsp;</td></tr>
-                            <tr><td><div align="center">
+                            <tr><td class="loginblock"><div align="center">
                                 {{ knp_menu_render('login', {template: 'PoaMainBundle:Menu:login.html.twig', allow_safe_labels: true}) }}
                             </div></td></tr>
                             <tr><td><div align="center">
@@ -61,7 +63,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr><td height="45" valign="middle" class="title"><div align="right">{#{{ page_title }}#}</div></td></tr>
+                            {#<tr><td height="45" valign="middle" class="title"><div align="right">&#123;&#35;{{ page_title }}&#35;&#125;</div></td></tr>#}
                             {#<tr><td>&nbsp;</td></tr>#}
 
                             {#{% block content %}{% endblock %}#}
@@ -89,9 +91,13 @@
                     <td width="175" valign="top">
                         <table width="170" border="0" align="right" cellpadding="0" cellspacing="0">
                             <tr><td><div align="right" class="menu_title">Welcome</div></td></tr>
-                            <tr><td><table width="150" border="0" cellpadding="4" cellspacing="0" class="nav leftnav">
+                            <tr>
+                                <td>
+                                    <table width="150" border="0" cellpadding="4" cellspacing="0" class="nav leftnav">
                                         {{ knp_menu_render('welcome', {template: 'PoaMainBundle:Menu:main.html.twig', allow_safe_labels: true}) }}
-                                    </table></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                     <td valign="top" align="center">

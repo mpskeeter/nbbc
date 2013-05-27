@@ -92,7 +92,7 @@ The playground is located behind the clubhouse and pool. The playground has a va
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/playground.jpg[/img][/center]
+[center][img height="291" width="501"]playground.jpg[/img][/center]
 ',
 			true
 		);
@@ -111,7 +111,7 @@ The clubhouse can be rented by Ballard Woods residents.
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/clubhouse.jpg[/img][/center]
+[center][img height="291" width="501"]clubhouse.jpg[/img][/center]
 ',
 			true
 		);
@@ -134,19 +134,19 @@ Residents use their keys to access the pool.
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/pool_deck1.jpg[/img][/center]
+[center][img height="291" width="501"]pool_deck1.jpg[/img][/center]
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/pool_deck2.jpg[/img][/center]
+[center][img height="291" width="501"]pool_deck2.jpg[/img][/center]
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/pool_deck3.jpg[/img][/center]
+[center][img height="291" width="501"pool_deck3.jpg[/img][/center]
 
 [br/]
 
-[center][img height="291" width="501"]/test/web/bundles/poamain/images/pool_deck4.jpg[/img][/center]
+[center][img height="291" width="501"]pool_deck4.jpg[/img][/center]
 ',
 			true
 		);
@@ -408,7 +408,7 @@ Oversight and development of the community webpage.  If you would like to learn 
 		$content = $this->build(
 			'_pool',
 			1,
-			'[center][img height="291" width="501"]/test/web/bundles/poamain/images/pool_deck1.jpg[/img][/center]
+			'[center][img height="291" width="501"]pool_deck1.jpg[/img][/center]
 
 
 

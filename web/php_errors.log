@@ -1,0 +1,246 @@
+[25-May-2013 16:33:57 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[25-May-2013 16:34:04 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[25-May-2013 16:34:14 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[25-May-2013 16:37:42 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:19:25 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:19:32 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:19:54 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:20:02 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:22:44 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:22:50 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:22:56 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:23:01 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:23:31 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:27:16 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:27:31 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:29:37 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:29:45 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:33:51 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:34:00 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:42:55 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:44:25 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:45:58 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 06:46:11 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:10:56 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:12:48 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:13:17 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:14:19 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:15:59 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:16:37 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:17:03 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:17:38 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:18:22 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:18:51 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:19:33 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 07:22:17 America/New_York] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '"PoaMainBundle" is not a valid bundle.' in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php:178
+Stack trace:
+#0 [internal function]: Symfony\Component\Config\Definition\Builder\ExprBuilder->Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#1 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/ExprBuilder.php(228): call_user_func(Object(Closure), 'PoaMainBundle')
+#2 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(302): Symfony\Component\Config\Definition\Builder\ExprBuilder::Symfony\Component\Config\Definition\Builder\{closure}('PoaMainBundle')
+#3 /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/PrototypedArrayNode.php(213): Symfony\Component\Config\Definition\BaseNode->finalize('PoaMainBundle')
+#4  in /var/www/frameworks/Symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php on line 306
+[26-May-2013 19:44:31 America/New_York] PHP Fatal error:  Call to undefined method Symfony\Component\Form\FormBuilder::with() in /var/www/frameworks/Symfony-2.2.0/src/Poa/UserBundle/Form/Type/ProfileType.php on line 37

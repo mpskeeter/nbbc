@@ -47,8 +47,8 @@
       <column name="audit_success" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
       <column name="audit_failure" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_46C8B806DF9183C9" columns="security_identity_id" ref-table="acl_security_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="FK_46C8B8063D9AB4A6" columns="object_identity_id" ref-table="acl_object_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_46C8B806DF9183C9" columns="security_identity_id" ref-table="acl_security_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="FK_46C8B806EA000B10" columns="class_id" ref-table="acl_classes" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <index name="UNIQ_46C8B806EA000B103D9AB4A64DEF17BCE4289BF4" unique="true" columns="class_id,object_identity_id,field_name,ace_order"/>
       <index name="IDX_46C8B806EA000B103D9AB4A6DF9183C9" unique="false" columns="class_id,object_identity_id,security_identity_id"/>
@@ -66,8 +66,8 @@
       <foreign-key name="FK_9407E54977FA751A" columns="parent_object_identity_id" ref-table="acl_object_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="FK_46C8B8063D9AB4A6" table="acl_entries" schema="" catalog="symfony_test" columns="object_identity_id"/>
       <exported-key name="FK_9407E54977FA751A" table="acl_object_identities" schema="" catalog="symfony_test" columns="parent_object_identity_id"/>
-      <exported-key name="FK_825DE299C671CEA1" table="acl_object_identity_ancestors" schema="" catalog="symfony_test" columns="ancestor_id"/>
       <exported-key name="FK_825DE2993D9AB4A6" table="acl_object_identity_ancestors" schema="" catalog="symfony_test" columns="object_identity_id"/>
+      <exported-key name="FK_825DE299C671CEA1" table="acl_object_identity_ancestors" schema="" catalog="symfony_test" columns="ancestor_id"/>
       <index name="UNIQ_9407E5494B12AD6EA000B10" unique="true" columns="object_identifier,class_id"/>
       <index name="IDX_9407E54977FA751A" unique="false" columns="parent_object_identity_id"/>
     </table>
@@ -75,8 +75,8 @@
       <column name="object_identity_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="ancestor_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="object_identity_id,ancestor_id"/>
-      <foreign-key name="FK_825DE299C671CEA1" columns="ancestor_id" ref-table="acl_object_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="FK_825DE2993D9AB4A6" columns="object_identity_id" ref-table="acl_object_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_825DE299C671CEA1" columns="ancestor_id" ref-table="acl_object_identities" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <index name="IDX_825DE2993D9AB4A6" unique="false" columns="object_identity_id"/>
       <index name="IDX_825DE299C671CEA1" unique="false" columns="ancestor_id"/>
     </table>
@@ -168,14 +168,18 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="Topic" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="User" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="modified_by" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="modified_reason" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_996BCC5A25F94802" columns="modified_by" ref-table="users" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_996BCC5A2DA17977" columns="User" ref-table="users" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_996BCC5A5C81F11F" columns="Topic" ref-table="forum_topic" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="FK_21BF9426CCA1A8D1" table="forum_category" schema="" catalog="symfony_test" columns="last_post"/>
-      <exported-key name="FK_853478CC95BF0803" table="forum_topic" schema="" catalog="symfony_test" columns="lastPost"/>
       <exported-key name="FK_853478CC273BB3DD" table="forum_topic" schema="" catalog="symfony_test" columns="firstPost"/>
+      <exported-key name="FK_853478CC95BF0803" table="forum_topic" schema="" catalog="symfony_test" columns="lastPost"/>
       <index name="IDX_996BCC5A5C81F11F" unique="false" columns="Topic"/>
       <index name="IDX_996BCC5A2DA17977" unique="false" columns="User"/>
+      <index name="IDX_996BCC5A25F94802" unique="false" columns="modified_by"/>
     </table>
     <table name="forum_topic" schema="" catalog="symfony_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -193,10 +197,10 @@
       <column name="User" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="lastPost" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_853478CC95BF0803" columns="lastPost" ref-table="forum_post" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_853478CC273BB3DD" columns="firstPost" ref-table="forum_post" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_853478CC2DA17977" columns="User" ref-table="users" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_853478CC64C19C1" columns="category" ref-table="forum_category" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_853478CC95BF0803" columns="lastPost" ref-table="forum_post" ref-schema="" ref-catalog="symfony_test" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="FK_21BF9426FF0BE800" table="forum_category" schema="" catalog="symfony_test" columns="last_topic"/>
       <exported-key name="FK_996BCC5A5C81F11F" table="forum_post" schema="" catalog="symfony_test" columns="Topic"/>
       <index name="UNIQ_853478CC273BB3DD" unique="true" columns="firstPost"/>
@@ -272,6 +276,15 @@
       <index name="owner_I_2" unique="false" columns="fname"/>
       <index name="owner_FI_1" unique="false" columns="mailing_address_id"/>
     </table>
+    <table name="pets" schema="" catalog="symfony_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="80" precision="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" length="80" precision="0" nullable="false" jdbcType="12"/>
+      <column name="breed" sqlType="VARCHAR" length="80" precision="0" nullable="true" jdbcType="12"/>
+      <column name="active" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7"/>
+      <column name="image_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="state" schema="" catalog="symfony_test" type="TABLE">
       <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="state" sqlType="VARCHAR" length="35" precision="0" nullable="false" jdbcType="12"/>
@@ -338,6 +351,7 @@
       <column name="gplusAccessToken" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="FK_C01551432DA17977" table="blog" schema="" catalog="symfony_test" columns="User"/>
+      <exported-key name="FK_996BCC5A25F94802" table="forum_post" schema="" catalog="symfony_test" columns="modified_by"/>
       <exported-key name="FK_996BCC5A2DA17977" table="forum_post" schema="" catalog="symfony_test" columns="User"/>
       <exported-key name="FK_853478CC2DA17977" table="forum_topic" schema="" catalog="symfony_test" columns="User"/>
       <exported-key name="FK_266E1B87A76ED395" table="user_group" schema="" catalog="symfony_test" columns="user_id"/>

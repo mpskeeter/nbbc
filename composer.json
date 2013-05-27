@@ -23,35 +23,38 @@
         "raulfraile/ladybug-bundle": "dev-master",
 
         "friendsofsymfony/user-bundle": "*@dev",
-	"friendsofsymfony/comment-bundle": "dev-master",
+	    "friendsofsymfony/comment-bundle": "dev-master",
 
-	"gedmo/doctrine-extensions": "*",
-	"stof/doctrine-extensions-bundle": "~1.1@dev",
-        "hwi/oauth-bundle": "*",
+	    "gedmo/doctrine-extensions": "*",
+	    "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "hwi/oauth-bundle": "dev-master",
 
         "knplabs/knp-menu": "1.1.x-dev",
         "knplabs/knp-menu-bundle": "1.1.x-dev",
-        "helios-ag/fm-bbcode-bundle": "dev-master",
+        "knplabs/knp-gaufrette-bundle" : "dev-master",
+        "knplabs/gaufrette": "0.2.*@dev",
 
-	"sonata-project/block-bundle": "2.2.*@dev",
-	"sonata-project/admin-bundle": "dev-master",
-	"sonata-project/user-bundle": "dev-master",
-	"sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "sonata-project/block-bundle": "2.2.*@dev",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/user-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
         "sonata-project/easy-extends-bundle": "dev-master",
         "sonata-project/cache-bundle": "dev-master",
         "sonata-project/formatter-bundle": "dev-master",
         "sonata-project/notification-bundle": "dev-master",
         "sonata-project/media-bundle": "dev-master",
-	"sonata-project/news-bundle": "dev-master",
+        "sonata-project/news-bundle": "dev-master",
 
-	"frequence-web/calendr-bundle": "dev-master",
+        "frequence-web/calendr-bundle": "dev-master",
 
-	"egeloen/ckeditor-bundle": "2.*",
-	"white-october/pagerfanta-bundle": "dev-master",
-	"herzult/forum-bundle": "dev-master",
-	"mpeters/nbbc-bundle": "dev-master",
-	"mpeters/bbc-editor-bundle": "dev-master",
-	"ornicar/gravatar-bundle": "dev-master"
+        "white-october/pagerfanta-bundle": "dev-master",
+        "herzult/forum-bundle": "dev-master",
+
+        "vich/uploader-bundle": "dev-master",
+
+        "mpeters/nbbc-bundle": "dev-master",
+        "mpeters/bbc-editor-bundle": "dev-master",
+        "ornicar/gravatar-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
