@@ -561,11 +561,6 @@ class NbbcTest extends TestCase {
 //[olist][li]Olist[/li][/olist]
 //[quote="Miles"]Quote[/quote]
 //[quote="Miles" date="10/10/2010"]Quote[/quote]
-//[code]<div class="posts">
-//	<?php foreach ($posts as $post) {
-//		echo renderPost($post);
-//	} ?>
-//</div>[/code]
 //Lorem ipsum dolor sit amet, consectetur [var]adipiscing elit[/var]. Nunc sem justo, faucibus vitae faucibus feugiat, pulvinar accumsan lacus. Sed et mauris est, quis convallis velit. Etiam ullamcorper eros sed eros facilisis imperdiet. Donec in mauris ut mauris congue tristique quis vitae velit. Cras ornare, magna ut laoreet sagittis, elit sem iaculis lorem, eu pharetra nibh massa eget arcu. [var]In varius gravida scelerisque[/var]. In hac habitasse platea dictumst. Mauris cursus mauris in arcu rutrum a lobortis ligula aliquet. Morbi ornare porttitor dolor, sit amet vehicula velit elementum quis. Vivamus in convallis sapien.
 //TEST;
 //
