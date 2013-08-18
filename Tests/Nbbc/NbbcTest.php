@@ -13,7 +13,7 @@ use \Exception;
 class NbbcTest extends TestCase {
 
 	public function testParse() {
-		$this->assertEquals('<br \>',$this->object->parse('[br]'));
+		$this->assertEquals('<br />',$this->clean($this->object->parse('[br]')));
 	}
 }
 //	/**

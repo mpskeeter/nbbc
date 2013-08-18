@@ -52,17 +52,6 @@ nbbc:
     smileys:
         dir: '/smileys'
     rules:
-#        imgsize:
-#            mode: 4
-#            template: '<img width="{$width}" height="{$height}" src="{$_content}" />'
-#            class: 'block'
-#            allow:
-#                width:  '/^[1-9][0-9]*$/'
-#                height: '/^[1-9][0-9]*$/'
-#            default:
-#                width:  '501'
-#                height: '291'
-#            allow_in: [ 'listitem', 'block', 'columns', 'inline', 'link' ]
         anchor:
             mode: 4
             template: '<div id="{$name}">{$_content}</div>'
