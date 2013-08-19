@@ -18,6 +18,9 @@ class TestCase extends \PHPUnit_Framework_TestCase {
 	 */
 	protected $manager;
 
+	/*
+	 * @var MPeters\NbbcBundle\Manager\NbbcManager
+	 */
 	protected $object;
 
 	/**
@@ -49,4 +52,25 @@ class TestCase extends \PHPUnit_Framework_TestCase {
 		return str_replace("\r", "", $string);
 	}
 
+	public function performTest($tests) {
+
+		foreach ($tests as $test) {
+
+			if (@$test['tag_marker'] == '<') {
+				$this->object->SetTagMarker('<');
+				$this->object->SetAllowAmpersand(true);
+			} elseif (isset($test['tag_marker'])) {
+				$this->object->SetTagMarker($test['tag_marker']);
+			}
+			else {
+				$this->object->SetTagMarker('[');
+			}
+
+			if (isset($test['regex'])) {
+				$this->assertRegExp($this->clean($test['regex']),$this->clean($this->object->parse($test['bbcode'])));
+			} elseif (isset($test['html'])) {
+				$this->assertEquals($this->clean($test['html']),$this->clean($this->object->parse($test['bbcode'])));
+			}
+		}
+	}
 }

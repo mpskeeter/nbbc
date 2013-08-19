@@ -102,9 +102,134 @@ class NbbcTest extends TestCase {
 			)
 		);
 
-		foreach ($BBCodeTestSuite as $test) {
-			$this->assertEquals($this->clean($test['html']),$this->clean($this->object->parse($test['bbcode'])));
-		}
+		$this->performTest($BBCodeTestSuite);
+	}
+
+	public function testSpecialCharacters() {
+
+		$BBCodeTestSuite = Array(
+			Array(
+				'descr' => "& and < and > and \" get replaced with HTML-safe equivalents.",
+				'bbcode' => "This <woo!> &\"yeah!\" 'sizzle'",
+				'html' => "This &lt;woo!&gt; &amp;&quot;yeah!&quot; 'sizzle'",
+			),
+			Array(
+				'descr' => ":-) produces a smiley <img> element.",
+				'bbcode' => "This is a test of the emergency broadcasting system :-)",
+				'regex' => "/This is a test of the emergency broadcasting system <img src=\\\"smileys\\/smile.gif\\\" width=\\\"[0-9]*\\\" height=\\\"[0-9]*\\\" alt=\\\":-\\)\\\" title=\\\":-\\)\\\" class=\\\"bbcode_smiley\\\" \\/>/",
+			),
+			Array(
+				'descr' => "--- does *not* produce a [rule] tag.",
+				'bbcode' => "This is a test of the --- emergency broadcasting system.",
+				'html' => "This is a test of the --- emergency broadcasting system.",
+			),
+			Array(
+				'descr' => "---- does *not* produce a [rule] tag.",
+				'bbcode' => "This is a test of the ---- emergency broadcasting system.",
+				'html' => "This is a test of the ---- emergency broadcasting system.",
+			),
+			Array(
+				'descr' => "----- produces a [rule] tag.",
+				'bbcode' => "This is a test of the ----- emergency broadcasting system.",
+				'html' => "This is a test of the\n<hr class=\"bbcode_rule\" />\nemergency broadcasting system.",
+			),
+			Array(
+				'descr' => "--------- produces a [rule] tag.",
+				'bbcode' => "This is a test of the --------- emergency broadcasting system.",
+				'html' => "This is a test of the\n<hr class=\"bbcode_rule\" />\nemergency broadcasting system.",
+			),
+			Array(
+				'descr' => "[-] does *not* produce a comment.",
+				'bbcode' => "This is a test of the [- emergency broadcasting] system.",
+				'html' => "This is a test of the [- emergency broadcasting] system.",
+			),
+			Array(
+				'descr' => "[--] produces a comment.",
+				'bbcode' => "This is a test of the [-- emergency broadcasting] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "[----] produces a comment.",
+				'bbcode' => "This is a test of the [---- emergency broadcasting] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "[--] comments may contain - and [ and \" and ' characters.",
+				'bbcode' => "This is a test of the [-- emergency - [ \" ' broadcasting] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "[--] comments may *not* contain newlines.",
+				'bbcode' => "This is a test of the [-- emergency\n\rbroadcasting] system.",
+				'html' => "This is a test of the [-- emergency<br />\nbroadcasting] system.",
+			),
+			Array(
+				'descr' => "['] produces a comment.",
+				'bbcode' => "This is a test of the ['emergency broadcasting] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "['] comments may contain [ and \" and ' characters.",
+				'bbcode' => "This is a test of the ['emergency [ \" ' broadcasting] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "['] comments may *not* contain newlines.",
+				'bbcode' => "This is a test of the [' emergency\n\rbroadcasting] system.",
+				'html' => "This is a test of the [' emergency<br />\nbroadcasting] system.",
+			),
+			Array(
+				'descr' => "[!-- --] produces a comment.",
+				'bbcode' => "This is a test of the [!-- emergency broadcasting --] system.",
+				'html' => "This is a test of the  system.",
+			),
+			Array(
+				'descr' => "[!-- ] does *not* produce a viable comment.",
+				'bbcode' => "This is a test of the [!-- emergency broadcasting ] system.",
+				'html' => "This is a test of the [!-- emergency broadcasting ] system.",
+			),
+			Array(
+				'descr' => "[!-- - -- ] [ --] produces a comment.",
+				'bbcode' => "This is a test of the [!-- emergency - broadcasting -- system ] thingy --].",
+				'html' => "This is a test of the .",
+			),
+			Array(
+				'descr' => "[!-- - -- ] [ --] --] produces a comment with a --] left over.",
+				'bbcode' => "This is a test of the [!-- emergency - broadcasting -- system ] thingy --] and other --] stuff.",
+				'html' => "This is a test of the  and other --] stuff.",
+			),
+			Array(
+				'descr' => "[!-- --] does not break any following tags outside it.",
+				'bbcode' => "The [!-- quick brown --]fox jumps over the [b]lazy[/b] [i]dog[/i].",
+				'html' => "The fox jumps over the <b>lazy</b> <i>dog</i>.",
+			),
+			Array(
+				'descr' => "Tag marker mode '<' works correctly.",
+				'bbcode' => "This is <b>a <i>test</b></i>.",
+				'html' => "This is <b>a <i>test</i></b>.",
+				'tag_marker' => '<',
+			),
+			Array(
+				'descr' => "Tag marker mode '{' works correctly.",
+				'bbcode' => "This is {b}a {i}test{/b}{/i}.",
+				'html' => "This is <b>a <i>test</i></b>.",
+				'tag_marker' => '{',
+			),
+			Array(
+				'descr' => "Tag marker mode '(' works correctly.",
+				'bbcode' => "This is (b)a (i)test(/b)(/i).",
+				'html' => "This is <b>a <i>test</i></b>.",
+				'tag_marker' => '(',
+			),
+			Array(
+				'descr' => "Ampersand pass-through mode works correctly.",
+				'bbcode' => "This is <b>a <i>test</b></i> &amp; some junk.",
+				'html' => "This is <b>a <i>test</i></b> &amp; some junk.",
+				'tag_marker' => '<',
+			)
+		);
+
+		$this->performTest($BBCodeTestSuite);
 	}
 
 	public function testParse() {
