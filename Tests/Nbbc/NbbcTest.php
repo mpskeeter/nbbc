@@ -12,6 +12,101 @@ use \Exception;
 
 class NbbcTest extends TestCase {
 
+	public function testValidation() {
+
+		$BBCodeTestSuite = Array(
+			Array(
+				'descr' => "Unknown tags like [foo] get ignored.",
+				'bbcode' => "This is [foo]a tag[/foo].",
+				'html' => "This is [foo]a tag[/foo].",
+			),
+			Array(
+				'descr' => "Broken tags like [foo get ignored.",
+				'bbcode' => "This is [foo a tag.",
+				'html' => "This is [foo a tag.",
+			),
+			Array(
+				'descr' => "Broken tags like [/foo get ignored.",
+				'bbcode' => "This is [/foo a tag.",
+				'html' => "This is [/foo a tag.",
+			),
+			Array(
+				'descr' => "Broken tags like [] get ignored.",
+				'bbcode' => "This is [] a tag.",
+				'html' => "This is [] a tag.",
+			),
+			Array(
+				'descr' => "Broken tags like [/  ] get ignored.",
+				'bbcode' => "This is [/  ] a tag.",
+				'html' => "This is [/  ] a tag.",
+			),
+			Array(
+				'descr' => "Broken tags like [/ get ignored.",
+				'bbcode' => "This is [/ a tag.",
+				'html' => "This is [/ a tag.",
+			),
+			Array(
+				'descr' => "Broken [ tags before [b]real tags[/b] don't break the real tags.",
+				'bbcode' => "Broken [ tags before [b]real tags[/b] don't break the real tags.",
+				'html' => "Broken [ tags before <b>real tags</b> don't break the real tags.",
+			),
+			Array(
+				'descr' => "Broken [tags before [b]real tags[/b] don't break the real tags.",
+				'bbcode' => "Broken [tags before [b]real tags[/b] don't break the real tags.",
+				'html' => "Broken [tags before <b>real tags</b> don't break the real tags.",
+			),
+			Array(
+				'descr' => "[i][b]Mis-ordered nesting[/i][/b] gets fixed.",
+				'bbcode' => "[i][b]Mis-ordered nesting[/i][/b] gets fixed.",
+				'html' => "<i><b>Mis-ordered nesting</b></i> gets fixed.",
+			),
+			Array(
+				'descr' => "[url=][b]Mis-ordered nesting[/url][/b] gets fixed.",
+				'bbcode' => "[url=http://www.google.com][b]Mis-ordered nesting[/url][/b] gets fixed.",
+				'html' => "<a href=\"http://www.google.com\" class=\"bbcode_url\"><b>Mis-ordered nesting</b></a> gets fixed.",
+			),
+			Array(
+				'descr' => "[i]Unended blocks are automatically ended.",
+				'bbcode' => "[i]Unended blocks are automatically ended.",
+				'html' => "<i>Unended blocks are automatically ended.</i>",
+			),
+			Array(
+				'descr' => "Unstarted blocks[/i] have their end tags ignored.",
+				'bbcode' => "Unstarted blocks[/i] have their end tags ignored.",
+				'html' => "Unstarted blocks[/i] have their end tags ignored.",
+			),
+			Array(
+				'descr' => "[b]Mismatched tags[/i] are not matched to each other.",
+				'bbcode' => "[b]Mismatched tags[/i] are not matched to each other.",
+				'html' => "<b>Mismatched tags[/i] are not matched to each other.</b>",
+			),
+			Array(
+				'descr' => "[center]Inlines and [b]blocks get[/b] nested correctly[/center].",
+				'bbcode' => "[center]Inlines and [b]blocks get[/b] nested correctly[/center].",
+				'html' => "\n<div class=\"bbcode_center\" style=\"text-align:center\">\nInlines and <b>blocks get</b> nested correctly\n</div>\n.",
+			),
+			Array(
+				'descr' => "[b]Inlines and [center]blocks get[/center] nested correctly[/b].",
+				'bbcode' => "[b]Inlines and [center]blocks get[/center] nested correctly[/b].",
+				'html' => "<b>Inlines and </b>\n<div class=\"bbcode_center\" style=\"text-align:center\">\nblocks get\n</div>\nnested correctly.",
+			),
+			Array(
+				'descr' => "BBCode is [B]case-insensitive[/b].",
+				'bbcode' => "[cEnTeR][b]This[/B] is a [I]test[/i].[/CeNteR]",
+				'html' => "\n<div class=\"bbcode_center\" style=\"text-align:center\">\n<b>This</b> is a <i>test</i>.\n</div>\n",
+			),
+			Array(
+				'descr' => "Plain text gets passed through unchanged.",
+				'bbcode' => "Plain text gets passed through unchanged.  b is not a tag and i is not a tag and neither is /i and neither is (b).",
+				'html' => "Plain text gets passed through unchanged.  b is not a tag and i is not a tag and neither is /i and neither is (b).",
+			)
+		);
+
+		foreach ($BBCodeTestSuite as $test) {
+			$this->assertEquals($this->clean($test['html']),$this->clean($this->object->parse($test['bbcode'])));
+		}
+	}
+
 	public function testParse() {
 		$this->assertEquals('<br />',$this->clean($this->object->parse('[br]')));
 	}
