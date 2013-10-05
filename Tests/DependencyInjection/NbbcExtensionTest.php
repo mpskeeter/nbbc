@@ -13,6 +13,20 @@ class NbbcExtensionTest extends \PHPUnit_Framework_TestCase
 	/**
 	 * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
 	 */
+	public function testThrowsExceptionUnlessClassSet()
+	{
+		$yaml = <<<EOF
+models:
+    test:
+        controller: AcmeMyBundle:Test
+EOF;
+		$config = $this->getConfiguration($yaml);
+	}
+
+
+	/**
+	 * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+	 */
 	public function testUserLoadThrowsExceptionUnlessDatabaseDriverSet()
 	{
 		$loader = new NbbcExtension();
@@ -51,43 +65,39 @@ nbbc:
         local_img_dir:  '/var/www/frameworks/Symfony-2.2.0/web/bundles/poamain/images'
     smileys:
         dir: '/smileys'
-    rules:
-        anchor:
-            mode: 4
-            template: '<div id="{$name}">{$_content}</div>'
-            class: 'block'
-            allow:
-                name: '/^[a-zA-Z0-9._ -]+$/'
-            allow_in: [ 'listitem', 'block', 'columns', 'inline' ]
-        goto:
-            mode: 4
-            template: '<a href="#{$name}">{$_content}</a>'
-            class: 'block'
-            allow:
-                name: '/^[a-zA-Z0-9._ -]+$/'
-            allow_in: [ 'listitem', 'block', 'columns', 'inline' ]
-        line:
-            mode: 4
-            template: '<div style="width:90%;overflow:auto; zoom:1">{$_content}</div>'
-            class: 'block'
-            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
-        lineleft:
-            mode: 4
-            template: '<div style="margin:0; text-align:left; float:left;">{$_content}</div>'
-            class: 'block'
-            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
-        lineright:
-            mode: 4
-            template: '<div style="margin:0; text-align:right; float:left;">{$_content}</div>'
-            class: 'block'
-            allow_in: [ 'list', 'listitem', 'block', 'columns', 'inline' ]
 EOF;
 		$parser = new Parser();
 
 		return  $parser->parse($yaml);
 	}
 
+	protected function getConfiguration($yaml = null)
+	{
+		if (null === $yaml) {
 
+			$yaml = <<<EOF
+models:
+    test:
+        class: Lyra\AdminBundle\Tests\Fixture\Entity\Dummy
+        controller: AcmeMyBundle:Test
+EOF;
+		}
+
+		$parsed = $this->parseConfiguration($yaml);
+		$loader = new NbbcExtension();
+		$configuration = new ContainerBuilder();
+		$loader->load(array($parsed), $configuration);
+//		$loader->configureFromMetadata($configuration);
+
+		return $configuration;
+	}
+
+	protected function parseConfiguration($yaml)
+	{
+		$parser = new Parser();
+
+		return $parser->parse($yaml);
+	}
 
 	protected function tearDown()
 	{

@@ -59,7 +59,7 @@ class DumpEmoticonsCommand extends ContainerAwareCommand
         $emoticonsFolder = $this->getContainer()->getParameter('kernel.root_dir').'/../vendor/mpeters/nbbc/smileys';
         $this->recurse_copy($emoticonsFolder,$webFolder);
 
-        $output->writeln('<comment>Emoticons dumped succesfully</comment>');
+        $output->writeln('<comment>NBBC Emoticons dumped succesfully</comment>');
     }
 
 }

@@ -28,6 +28,11 @@ class NbbcExtension extends Extension
 		$loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 		$loader->load('nbbc.xml');
 
+		$this->setContainer($container,$config);
+	}
+
+	public function setContainer(ContainerBuilder $container, array $config)
+	{
 		$container->setParameter('nbbc.config.debug'            , isset($config['config']['debug'])            ? $config['config']['debug']            : null);
 		$container->setParameter('nbbc.config.tag_marker'       , isset($config['config']['tag_marker'])       ? $config['config']['tag_marker']       : null);
 		$container->setParameter('nbbc.config.allow_ampersand'  , isset($config['config']['allow_ampersand'])  ? $config['config']['allow_ampersand']  : null);

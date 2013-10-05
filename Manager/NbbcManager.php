@@ -188,7 +188,7 @@ class NbbcManager
 		}
 
 		if(isset($options['plain_mode'])) {
-			$nbbc->SetIgnoreNewlines($options['plain_mode']);
+			$nbbc->SetPlainMode($options['plain_mode']);
 		}
 
 		if(isset($options['limit']) && $options['limit'] != 0) {
@@ -203,11 +203,11 @@ class NbbcManager
 		}
 
 		if(isset($options['pre_trim']) && !is_null($options['pre_trim'])) {
-			$nbbc->SetIgnoreNewlines($options['pre_trim']);
+			$nbbc->SetPreTrim($options['pre_trim']);
 		}
 
 		if(isset($options['post_trim']) && !is_null($options['post_trim'])) {
-			$nbbc->SetIgnoreNewlines($options['post_trim']);
+			$nbbc->SetPostTrim($options['post_trim']);
 		}
 
 		if(isset($options['wiki_url']) && !is_null($options['wiki_url'])) {
