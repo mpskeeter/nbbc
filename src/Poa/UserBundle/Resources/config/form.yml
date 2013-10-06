@@ -1,4 +1,0 @@
-poa_user:
-    profile:  # Profile Form (firstname, lastname, etc ...)
-        form:
-            type:               poa_user_profile

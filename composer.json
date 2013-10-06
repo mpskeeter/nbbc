@@ -1,84 +1,25 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
-    "autoload": {
-        "psr-0": { "": "src/" }
+	"name": "mpeters/nbbc-bundle",
+	"type": "symfony-bundle",
+	"description": "A lightweight parser for BBCode styled markup.",
+	"keywords": ["bbcode", "markup", "nbbc"],
+	"homepage": "http://github.com/mpskeeter/nbbc",
+	"license": "",
+	"authors": [
+		{
+			"name": "Mark Peters",
+			"homepage": "http://github.com/mpskeeter/nbbc"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+        "symfony/framework-bundle": ">=2.0,<2.4-dev"
+	},
+	"support": {
+		"source": "https://github.com/mpskeeter/nbbc"
+	},
+    "autoload":     {
+        "psr-0": { "MPeters\\NbbcBundle": "" }
     },
-    "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": "2.2.*",
-        "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "1.2.*",
-        "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.1.*",
-        "symfony/swiftmailer-bundle": "2.2.*",
-        "symfony/monolog-bundle": "2.2.*",
-        "sensio/distribution-bundle": "2.2.*",
-        "sensio/framework-extra-bundle": "2.2.*",
-        "sensio/generator-bundle": "2.2.*",
-        "jms/security-extra-bundle": "1.4.*",
-        "jms/di-extra-bundle": "1.3.*",
-
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "raulfraile/ladybug-bundle": "dev-master",
-
-        "friendsofsymfony/user-bundle": "*@dev",
-	    "friendsofsymfony/comment-bundle": "dev-master",
-
-	    "gedmo/doctrine-extensions": "*",
-	    "stof/doctrine-extensions-bundle": "~1.1@dev",
-        "hwi/oauth-bundle": "dev-master",
-
-        "knplabs/knp-menu": "1.1.x-dev",
-        "knplabs/knp-menu-bundle": "1.1.x-dev",
-        "knplabs/knp-gaufrette-bundle" : "dev-master",
-        "knplabs/gaufrette": "0.2.*@dev",
-
-        "sonata-project/block-bundle": "2.2.*@dev",
-        "sonata-project/admin-bundle": "dev-master",
-        "sonata-project/user-bundle": "dev-master",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
-        "sonata-project/easy-extends-bundle": "dev-master",
-        "sonata-project/cache-bundle": "dev-master",
-        "sonata-project/formatter-bundle": "dev-master",
-        "sonata-project/notification-bundle": "dev-master",
-        "sonata-project/media-bundle": "dev-master",
-        "sonata-project/news-bundle": "dev-master",
-
-        "frequence-web/calendr-bundle": "dev-master",
-
-        "white-october/pagerfanta-bundle": "dev-master",
-        "herzult/forum-bundle": "dev-master",
-
-        "vich/uploader-bundle": "dev-master",
-
-        "mpeters/nbbc-bundle": "dev-master",
-        "mpeters/bbc-editor-bundle": "dev-master",
-        "ornicar/gravatar-bundle": "dev-master"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
-        ],
-        "post-update-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
-        ]
-    },
-    "config": {
-        "bin-dir": "bin"
-    },
-    "minimum-stability": "alpha",
-    "extra": {
-        "symfony-app-dir": "app",
-        "symfony-web-dir": "web",
-        "branch-alias": {
-            "dev-master": "2.2-dev"
-        }
-    }
+    "target-dir": "MPeters/NbbcBundle"
 }
