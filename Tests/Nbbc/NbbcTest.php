@@ -267,11 +267,6 @@ class NbbcTest extends TestCase {
 //				'html' => 'This <span style="wstest:  Courier   New  ">is a test</span>.',
 //			),
 //			Array(
-//				'descr' => "Whitespace does matter inside 'quotes' in tags.",
-//				'bbcode' => "This [wstest='  Courier   New  ']is a test[/wstest].",
-//				'html' => "This <span style=\"wstest:  Courier   New  \">is a test</span>.",
-//			),
-//			Array(
 //				'descr' => "Whitespace is properly collapsed near block tags like [center].",
 //				'bbcode' => "Not centered.    \n    \n    [center]    \n    \n    A bold stone gathers no italics.    \n    \n    [/center]    \n    \n    Not centered.",
 //				'html' => "Not centered.<br />\n"
