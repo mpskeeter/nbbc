@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 before_commands:
     - wget http://getcomposer.org/composer.phar
     - php composer.phar install
-=======
->>>>>>> 8142a90465fdc1cd8fd4cff45f94a87340a9b2ec
 tools:
     php_code_coverage:
         enabled: true
@@ -32,29 +29,18 @@ tools:
         config:
             level: psr2
     php_analyzer:
-<<<<<<< HEAD
         filter:
             paths: [src/*, Tests/*]
-
         config:
             checkstyle: ~
             verify_php_doc_comments: ~
             doc_comment_fixes: ~
-
         path_configs:
             tests:
                 paths: [Tests/*]
                 checkstyle: false
                 verify_php_doc_comments: false
                 doc_comment_fixes: false
-=======
-        enabled: true
-        filter:
-            excluded_paths:
-                - '*/Tests/*'
-        extensions:
-            - php
->>>>>>> 8142a90465fdc1cd8fd4cff45f94a87340a9b2ec
     php_code_sniffer:
         enabled: true
         config:
