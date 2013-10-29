@@ -1,3 +1,6 @@
+before_commands:
+    - wget http://getcomposer.org/composer.phar
+    - php composer.phar install
 tools:
     php_code_coverage:
         enabled: true
@@ -26,12 +29,20 @@ tools:
         config:
             level: psr2
     php_analyzer:
-        enabled: true
         filter:
-            excluded_paths:
-                - '*/Tests/*'
-        extensions:
-            - php
+            paths: [src/*, Tests/*]
+
+        config:
+            checkstyle: ~
+            verify_php_doc_comments: ~
+            doc_comment_fixes: ~
+
+        path_configs:
+            tests:
+                paths: [Tests/*]
+                checkstyle: false
+                verify_php_doc_comments: false
+                doc_comment_fixes: false
     php_code_sniffer:
         enabled: true
         config:
